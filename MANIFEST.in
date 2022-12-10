@@ -1,0 +1,7 @@
+include CHANGELOG
+include COPYRIGHT
+include LICENSE
+include README.rst
+include README.md
+include doc/*
+include icons/LICENSE

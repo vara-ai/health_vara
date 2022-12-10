@@ -1,0 +1,5 @@
+[run]
+source = trytond.modules.health_vara
+
+[report]
+omit = */tests/*,*/setup.py
