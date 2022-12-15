@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository
+contains the full copyright notices and license terms. -->
+<data>
+    <xpath expr="/form/notebook/page[@id='orthanc_studies_page']" position="before">
+        <page string="Vara Results" id="vara_results_page">
+            <label name="result_report_cache"/>
+            <field name="result_report_cache"/>
+            <label name="report_link"/>
+            <field name="report_link" widget="url"/>
+            <label name="prior_study_considered"/>
+            <field name="prior_study_considered"/>
+            <newline/>
+            <label name="technical_quality_rcc"/>
+            <field name="technical_quality_rcc"/>
+            <label name="technical_quality_rmlo"/>
+            <field name="technical_quality_rmlo"/>
+            <label name="technical_quality_lcc"/>
+            <field name="technical_quality_lcc"/>
+            <label name="technical_quality_lmlo"/>
+            <field name="technical_quality_lmlo"/>
+            <label name="density"/>
+            <field name="density"/>
+            <label name="assessment"/>
+            <field name="assessment"/>
+            <label name="clinical_recall"/>
+            <field name="clinical_recall"/>
+            <field name="findings" colspan="4"/>
+        </page>
+    </xpath>
+</data>
+
