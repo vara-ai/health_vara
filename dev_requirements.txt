@@ -5,3 +5,8 @@ coverage
 flake8
 
 -r requirements.txt
+
+git+https://gitlab.com/m9s/company@mbs-6.0
+
+# needed by health_caldav https://savannah.gnu.org/bugs/index.php?63532
+vobject
