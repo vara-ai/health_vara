@@ -3,33 +3,31 @@
 contains the full copyright notices and license terms. -->
 <form>
     <!-- Mammography Patient -->
-    <group string="Main Info" id="patient_main_info">
-        <group colspan="3" id="patient_main_info_name">
-            <group id="patient_summary" string="Patient Summary">
-                <label name="name"/>
-                <field name="name" colspan="3"/>
-                <label name="dob"/>
-                <field name="dob" width="80"/>
-                <label name="puid"/>
-                <field name="puid"/>
-                <label name="image_acquisition_date"/>
-                <field name="image_acquisition_date"/>
-                <label name="assessment_date"/>
-                <field name="assessment_date"/>
-            </group>
-        <newline/>
-        <group string="Anamnesis" id="patient_anamnesis">
-        </group>
-        <newline/>
-        <group string="Other important information" id="patient_other_info">
-            <field height="100" name="general_info"/>
-        </group>
-        </group>
-        <group id="patient_image">
-            <field xfill="0" xexpand="1" name="photo" height="200" width="200" widget="image"/>
-        </group>
+    <group string="Patient Summary" id="patient_summary">
+        <label name="name"/>
+        <field name="name" colspan="3"/>
+        <label name="dob"/>
+        <field name="dob" width="80"/>
+        <label name="puid"/>
+        <field name="puid"/>
+        <field name="doctor_referrals" colspan="4"/>
+        <label name="image_acquisition_date"/>
+        <field name="image_acquisition_date"/>
+        <label name="assessment_date"/>
+        <field name="assessment_date"/>
     </group>
-    <separator string="Mammograpy Report" id="sep_mammography_report" colspan="4"/>
-    <group string="Mammography Report" id="patient_mammography_report">
+    <newline/>
+    <group string="Anamnesis" id="patient_anamnesis">
     </group>
+    <newline/>
+    <group string="Other important information" id="patient_other_info">
+        <label name="post_treatment_surveillance"/>
+        <field name="post_treatment_surveillance"/>
+        <label name="post_treatment_surveillance_comment" colspan="3">
+        <field height="100" name="general_info" colspan="4"/>
+    </group>
+    <!-- separator string="Mammograpy Report" id="sep_mammography_report" colspan="4"/ -->
+    <group string="Mammography Reports" id="patient_mammography_report">
+    </group>
+
 </form>

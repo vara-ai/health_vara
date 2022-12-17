@@ -11,6 +11,7 @@ __all__ = ['register']
 def register():
     Pool.register(
         health_vara.MammographyPatient,
+        health_vara.PatientEvaluation,
         health_imaging.ImagingTestResult,
         health_imaging.ImagingFinding,
         module='health_vara', type_='model')
