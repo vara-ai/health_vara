@@ -21,11 +21,13 @@ contains the full copyright notices and license terms. -->
     </group>
     <newline/>
     <group string="Other important information" id="patient_other_info">
+        <field height="100" name="general_info" colspan="4"/>
         <label name="post_treatment_surveillance"/>
         <field name="post_treatment_surveillance"/>
-        <label name="post_treatment_surveillance_comment" colspan="3">
-        <field height="100" name="general_info" colspan="4"/>
+        <label name="post_treatment_surveillance_comment"/>
+        <field name="post_treatment_surveillance_comment" colspan="3"/>
     </group>
+    <newline/>
     <!-- separator string="Mammograpy Report" id="sep_mammography_report" colspan="4"/ -->
     <group string="Mammography Reports" id="patient_mammography_report">
     </group>
