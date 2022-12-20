@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository
+contains the full copyright notices and license terms. -->
+<form>
+    <group colspan="4" col="8" id="evaluation_header">
+        <label name="patient"/>
+        <field name="patient" colspan="3"/>
+        <label name="visit_type"/>
+        <field name="visit_type"/>
+        <label name="code"/>
+        <field name="code"/>
+    </group>
+    <separator string="Chief Complaint" colspan="4" id="separator_chief_complaint"/>
+    <field name="chief_complaint" colspan="4"/>
+    <separator string="Present Illness" colspan="4" id="separator_present_illness"/>
+    <field name="present_illness" colspan="4"/>
+    <group colspan="4" col="4" id="evaluation_cancer_history">
+        <label name="breast_cancer_history_person"/>
+        <field name="breast_cancer_history_person"/>
+        <label name="breast_cancer_history_family"/>
+        <field name="breast_cancer_history_family"/>
+    </group>
+    <separator string="Diagnosis" colspan="4" id="sep_evaluation_diagnosis"/>
+    <field name="diagnosis" colspan="4"/>
+
+    <separator string="Information on Diagnosis" colspan="4" id="sep_evaluation_info_diagnosis"/>
+    <field name="info_diagnosis" colspan="4"/>
+    <group string="Treatment Plan" colspan="4" id="group_treatment_plan">
+        <field name="directions" colspan="4"/>
+    </group>
+
+    <separator string="Procedures" id="sep_evaluation_procedures"/>
+    <field name="actions" colspan="4"/>
+</form>

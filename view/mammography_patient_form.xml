@@ -16,7 +16,8 @@ contains the full copyright notices and license terms. -->
     </group>
     <separator string="Anamnesis" id="sep_patient_anamnesis" colspan="4"/>
     <group id="patient_anamnesis">
-        <field name="evaluations" string="" colspan="4"/>
+        <field name="evaluations" string="" colspan="4"
+            view_ids="health_vara.patient_evaluation_tree,health_vara.patient_evaluation_form"/>
     </group>
     <separator string="Other important information" id="sep_patient_other_info" colspan="4"/>
     <group id="patient_other_info">
