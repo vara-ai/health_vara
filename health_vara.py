@@ -34,6 +34,11 @@ class MammographyPatient(metaclass=PoolMeta):
         states={
             'invisible': ~Eval('post_treatment_surveillance'),
             }, depends=['post_treatment_surveillance'])
+    evaluations = fields.One2Many('gnuhealth.patient.evaluation', 'patient',
+        "Evaluations",
+        domain=[
+            ('patient', '=', Eval('id')),
+            ], depends=['id'])
 
     @staticmethod
     def default_post_treatment_surveillance():

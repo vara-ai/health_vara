@@ -18,6 +18,7 @@ contains the full copyright notices and license terms. -->
     </group>
     <newline/>
     <group string="Anamnesis" id="patient_anamnesis">
+        <field name="evaluations"/>
     </group>
     <newline/>
     <group string="Other important information" id="patient_other_info">
