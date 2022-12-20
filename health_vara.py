@@ -39,6 +39,11 @@ class MammographyPatient(metaclass=PoolMeta):
         domain=[
             ('patient', '=', Eval('id')),
             ], depends=['id'])
+    imaging_test_results = fields.One2Many('gnuhealth.imaging.test.result', 'patient',
+        "Mammography Reports",
+        domain=[
+            ('patient', '=', Eval('id')),
+            ], depends=['id'])
 
     @staticmethod
     def default_post_treatment_surveillance():
