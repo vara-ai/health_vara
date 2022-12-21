@@ -15,7 +15,6 @@ contains the full copyright notices and license terms. -->
             <field name="name">mammography_patient_form</field>
         </record>
 
-
         <!-- Mammography Menu -->
         <menuitem name="Mammography" sequence="0" id="mammography_menu" parent="health_imaging.menu_imaging" icon="gnuhealth.imaging"/>
 
@@ -71,8 +70,5 @@ contains the full copyright notices and license terms. -->
             <field name="type">tree</field>
             <field name="name">patient_evaluation_tree</field>
         </record>
-
-
-
     </data>
 </tryton>

@@ -1,17 +1,8 @@
 # The COPYRIGHT file at the top level of this repository
 # contains the full copyright notices and license terms.
-from datetime import datetime
-
-import pytz
-
-from dateutil.relativedelta import relativedelta
-
-from trytond.i18n import gettext
-from trytond.model import ModelSingleton, ModelSQL, ModelView, fields
-from trytond.pool import Pool, PoolMeta
-from trytond.transaction import Transaction
 from trytond.config import config
-
+from trytond.model import ModelSQL, ModelView, fields
+from trytond.pool import PoolMeta
 
 if config.getboolean('health_vara', 'filestore', default=True):
     file_id = 'result_report_cache_id'
@@ -19,6 +10,7 @@ if config.getboolean('health_vara', 'filestore', default=True):
 else:
     file_id = None
     store_prefix = None
+
 
 class ImagingTestResult(metaclass=PoolMeta):
     __name__ = 'gnuhealth.imaging.test.result'
@@ -53,9 +45,8 @@ class ImagingTestResult(metaclass=PoolMeta):
             ('overall', 'Overall'),
             ('left', 'Left'),
             ('right', 'Right'),
-            ],'Assessment', readonly=True)
+            ], 'Assessment', readonly=True)
     clinical_recall = fields.Char('Clinical Recall', readonly=True)
-    #comment = fields.Text('Comment', readonly=True)
 
     @classmethod
     def get_quality_selection(cls):
