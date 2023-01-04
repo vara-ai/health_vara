@@ -5,8 +5,17 @@ contains the full copyright notices and license terms. -->
     <field name="patient"/>
     <field name="order"/>
     <field name="number"/>
-    <field name="request_date" widget="date"/>
+    <field name="request_date" string="Requ. Date" widget="date"/>
     <field name="requested_test"/>
-    <field name="date" string="Acquisition Date" widget="date"/>
+    <field name="image_acquisition_date" string="Acqu. Date" widget="date"/>
+    <field name="assessment"/>
+    <field name="assessment_date"  string="Ass. Date" widget="date"/>
+    <field name="prior_study_considered"/>
+    <field name="technical_quality_rcc" string="RCC" />
+    <field name="technical_quality_rmlo" string="RMLO" />
+    <field name="technical_quality_lcc" string="LCC" />
+    <field name="technical_quality_lmlo" string="LMLO" />
+    <field name="density"/>
+    <field name="report_link" widget="url"/>
     <field name="clinical_recall"/>
 </tree>
