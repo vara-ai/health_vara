@@ -11,8 +11,10 @@ contains the full copyright notices and license terms. -->
         <field name="dob" width="80"/>
         <label name="puid"/>
         <field name="puid"/>
-        <label name="doctor_referrals"/>
-        <field name="doctor_referrals" string="" colspan="3"/>
+    </group>
+    <separator string="Doctor's Referrals" id="sep_doctor_referral" colspan="4"/>
+    <group id="doctor_referral">
+        <field name="doctor_referrals" string="" colspan="4"/>
     </group>
     <separator string="Anamnesis" id="sep_patient_anamnesis" colspan="4"/>
     <group id="patient_anamnesis">
