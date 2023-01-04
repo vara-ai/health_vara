@@ -40,12 +40,16 @@ class ImagingTestResult(metaclass=PoolMeta):
             ], 'Density', readonly=True)
     findings = fields.One2Many('gnuhealth.imaging.finding', 'imaging_result',
         'Findings')
+    image_acquisition_date = fields.DateTime('Image Acquisition Date',
+        readonly=True)
     assessment = fields.Selection([
             (None, ''),
             ('overall', 'Overall'),
             ('left', 'Left'),
             ('right', 'Right'),
             ], 'Assessment', readonly=True)
+    assessment_date = fields.DateTime('Assessment Date',
+        readonly=True)
     clinical_recall = fields.Char('Clinical Recall', readonly=True)
 
     @classmethod

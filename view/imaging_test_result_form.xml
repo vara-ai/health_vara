@@ -4,6 +4,9 @@ contains the full copyright notices and license terms. -->
 <data>
     <xpath expr="/form/notebook/page[@id='orthanc_studies_page']" position="before">
         <page string="Vara Results" id="vara_results_page">
+            <label name="image_acquisition_date"/>
+            <field name="image_acquisition_date"/>
+            <newline/>
             <label name="result_report_cache"/>
             <field name="result_report_cache"/>
             <label name="report_link"/>
@@ -21,8 +24,11 @@ contains the full copyright notices and license terms. -->
             <field name="technical_quality_lmlo"/>
             <label name="density"/>
             <field name="density"/>
+            <newline/>
             <label name="assessment"/>
             <field name="assessment"/>
+            <label name="assessment_date"/>
+            <field name="assessment_date"/>
             <label name="clinical_recall"/>
             <field name="clinical_recall"/>
             <field name="findings" colspan="4"/>
