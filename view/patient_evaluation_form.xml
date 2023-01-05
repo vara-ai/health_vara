@@ -29,6 +29,5 @@ contains the full copyright notices and license terms. -->
         <field name="directions" colspan="4"/>
     </group>
 
-    <separator string="Procedures" id="sep_evaluation_procedures"/>
     <field name="actions" colspan="4"/>
 </form>
