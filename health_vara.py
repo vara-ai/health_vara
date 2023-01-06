@@ -33,6 +33,12 @@ class MammographyPatient(metaclass=PoolMeta):
             ('patient', '=', Eval('id')),
             ], depends=['id'])
 
+    @classmethod
+    def __setup__(cls):
+        super().__setup__()
+        # Enable the editing of parties from the patient relate
+        cls.name.states['readonly'] = False
+
     @staticmethod
     def default_post_treatment_surveillance():
         return False
