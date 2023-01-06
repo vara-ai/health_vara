@@ -10,9 +10,6 @@ class MammographyPatient(metaclass=PoolMeta):
 
     doctor_referrals = fields.One2Many('ir.attachment',
         'resource', "Doctor's Referrals")
-    image_acquisition_date = fields.DateTime("Image Acquisition Date",
-        readonly=True)
-    assessment_date = fields.DateTime("Assessment Date", readonly=True)
     # Post-Treatment Surveillance: add here but possibly better located or
     # calculated from patient data/evaluations
     #  Main condition (e.g. D05.9 : Carcinoma in situ of breast, unspecified) and/or
