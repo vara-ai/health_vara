@@ -56,7 +56,7 @@ for dep in info.get('depends', []):
         if not re.match(r'(ir|res)(\W|$)', dep):
             prefix = MODULE2PREFIX.get(dep, 'trytond')
             requires.append(get_require_version('%s_%s' % (prefix, dep)))
-requires.append(get_require_version('m9s-trytond'))
+requires.append(get_require_version('trytond'))
 
 tests_require = []
 dependency_links = []
