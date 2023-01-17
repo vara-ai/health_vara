@@ -10,7 +10,7 @@ contains the full copyright notices and license terms. -->
     <field name="image_acquisition_date" string="Acqu. Date" widget="date"/>
     <field name="assessment"/>
     <field name="assessment_date"  string="Ass. Date" widget="date"/>
-    <field name="prior_study_considered"/>
+    <field name="prior_study_considered" string="Pr. study csd."/>
     <field name="technical_quality_rcc" string="RCC" />
     <field name="technical_quality_rmlo" string="RMLO" />
     <field name="technical_quality_lcc" string="LCC" />
