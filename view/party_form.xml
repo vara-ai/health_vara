@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository
+contains the full copyright notices and license terms. -->
+<form>
+    <group col="6" colspan="4" id="header" yalign="0">
+        <label name="name"/>
+        <field name="name" xexpand="1"/>
+        <label name="lastname"/>
+        <field name="lastname"/>
+        <label name="ref"/>
+        <field name="ref"/>
+    </group>
+    <label name="dob" string="Date of Birth"/>
+    <field name="dob" xexpand="1"/>
+    <notebook colspan="4">
+        <page string="General" id="general">
+            <field name="addresses" mode="form,tree" colspan="4"
+                view_ids="party.address_view_form,party.address_view_tree_sequence"/>
+            <field name="contact_mechanisms" colspan="2"
+                view_ids="party.contact_mechanism_view_tree_sequence"/>
+        </page>
+        <page name="identifiers">
+            <field name="identifiers" colspan="4" pre_validate="1"
+                view_ids="party.identifier_list_sequence"/>
+        </page>
+    </notebook>
+    <field name="is_person" invisible="1"/>
+</form>

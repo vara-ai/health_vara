@@ -6,7 +6,8 @@ contains the full copyright notices and license terms. -->
     <separator string="Patient Summary" id="sep_patient_summary" colspan="4"/>
     <group id="patient_summary">
         <label name="name"/>
-        <field name="name" colspan="3"/>
+        <field name="name" colspan="3"
+            view_ids="health_vara.mammography_party_tree,health_vara.mammography_party_form"/>
         <label name="dob" string="Date of Birth"/>
         <field name="dob" width="80"/>
         <label name="puid"/>

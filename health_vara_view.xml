@@ -3,7 +3,19 @@
 contains the full copyright notices and license terms. -->
 <tryton>
     <data>
-        <!-- Mammography Patient Views-->
+        <!-- Mammography Party Views -->
+        <record model="ir.ui.view" id="mammography_party_tree">
+            <field name="model">party.party</field>
+            <field name="type">tree</field>
+            <field name="name">party_tree</field>
+        </record>
+        <record model="ir.ui.view" id="mammography_party_form">
+            <field name="model">party.party</field>
+            <field name="type">form</field>
+            <field name="name">party_form</field>
+        </record>
+
+        <!-- Mammography Patient Views -->
         <record model="ir.ui.view" id="mammography_patient_tree">
             <field name="model">gnuhealth.patient</field>
             <field name="type">tree</field>
