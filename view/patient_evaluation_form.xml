@@ -20,14 +20,4 @@ contains the full copyright notices and license terms. -->
         <label name="breast_cancer_history_family"/>
         <field name="breast_cancer_history_family"/>
     </group>
-    <separator string="Diagnosis" colspan="4" id="sep_evaluation_diagnosis"/>
-    <field name="diagnosis" colspan="4"/>
-
-    <separator string="Information on Diagnosis" colspan="4" id="sep_evaluation_info_diagnosis"/>
-    <field name="info_diagnosis" colspan="4"/>
-    <group string="Treatment Plan" colspan="4" id="group_treatment_plan">
-        <field name="directions" colspan="4"/>
-    </group>
-
-    <field name="actions" colspan="4"/>
 </form>
