@@ -60,5 +60,3 @@ class PatientEvaluation(metaclass=PoolMeta):
         "Personal Breast Cancer History")
     breast_cancer_history_family = fields.Text(
         "Family Breast Cancer History")
-    breast_cancer_history_family = fields.Text(
-        "Family Breast Cancer History")
