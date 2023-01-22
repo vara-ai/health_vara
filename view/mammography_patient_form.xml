@@ -25,10 +25,6 @@ contains the full copyright notices and license terms. -->
     <separator string="Other important information" id="sep_patient_other_info" colspan="4"/>
     <group id="patient_other_info">
         <field name="general_info" colspan="4"/>
-        <label name="post_treatment_surveillance"/>
-        <field name="post_treatment_surveillance"/>
-        <label name="post_treatment_surveillance_comment"/>
-        <field name="post_treatment_surveillance_comment" colspan="3"/>
     </group>
     <separator string="Mammography Reports" id="sep_mammography_report" colspan="4"/>
     <group id="patient_mammography_report">

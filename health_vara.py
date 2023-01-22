@@ -10,18 +10,6 @@ class MammographyPatient(metaclass=PoolMeta):
 
     doctor_referrals = fields.One2Many('ir.attachment',
         'resource', "Doctor's Referrals")
-    # Post-Treatment Surveillance: add here but possibly better located or
-    # calculated from patient data/evaluations
-    #  Main condition (e.g. D05.9 : Carcinoma in situ of breast, unspecified) and/or
-    #  Treatment Plan and/or
-    #  Procedures (e.g. 3-193 : RADIOGRAPHY OF MAMMARY GLAND)
-    post_treatment_surveillance = fields.Boolean(
-        "Is the patient currently undergoing post-treatment surveillance?")
-    post_treatment_surveillance_comment = fields.Text(
-        "Post Treatment Surveillance",
-        states={
-            'invisible': ~Eval('post_treatment_surveillance'),
-            }, depends=['post_treatment_surveillance'])
     evaluations = fields.One2Many('gnuhealth.patient.evaluation', 'patient',
         "Evaluations",
         domain=[
