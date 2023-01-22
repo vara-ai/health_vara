@@ -103,6 +103,14 @@ class PatientEvaluation(metaclass=PoolMeta):
             if item not in cls.visit_type.selection:
                 cls.visit_type.selection.append(item)
 
+    @classmethod
+    def view_attributes(cls):
+        return super().view_attributes() + [
+            ('//separator[@id="separator_post_treat"]', "states", {
+                    'invisible': ~(
+                        Eval('visit_type') == 'diagnostic_post_treat'),
+                    })]
+
     @staticmethod
     def default_breast_cancer_history_person():
         return False

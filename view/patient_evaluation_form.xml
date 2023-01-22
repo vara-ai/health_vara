@@ -10,8 +10,7 @@ contains the full copyright notices and license terms. -->
         <label name="code"/>
         <field name="code"/>
     </group>
-    <label name="post_treatment_surveillance"/>
-    <newline/>
+    <separator string="Post Treatment Surveillance" colspan="4" id="separator_post_treat"/>
     <field name="post_treatment_surveillance" colspan="4" height="80"/>
     <separator string="Chief Complaint" colspan="4" id="separator_chief_complaint"/>
     <field name="chief_complaint" colspan="4"/>
