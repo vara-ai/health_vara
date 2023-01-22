@@ -5,6 +5,16 @@ from trytond.pool import PoolMeta
 from trytond.pyson import Eval
 
 
+class Party(metaclass=PoolMeta):
+    __name__ = 'party.party'
+
+    @classmethod
+    def __setup__(cls):
+        super().__setup__()
+        # Gender shouldn't be required
+        cls.gender.states['required'] = False
+
+
 class MammographyPatient(metaclass=PoolMeta):
     __name__ = 'gnuhealth.patient'
 

@@ -10,6 +10,7 @@ __all__ = ['register']
 
 def register():
     Pool.register(
+        health_vara.Party,
         health_vara.MammographyPatient,
         health_vara.PatientEvaluation,
         health_imaging.ImagingTestResult,
