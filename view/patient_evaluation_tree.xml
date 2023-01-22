@@ -4,6 +4,6 @@ contains the full copyright notices and license terms. -->
 <tree>
     <field name="patient"/>
     <field name="code"/>
-    <field name="visit_type"/>
+    <field name="visit_type" expand="1"/>
     <field name="chief_complaint" expand="1"/>
 </tree>
