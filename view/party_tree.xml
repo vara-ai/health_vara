@@ -3,7 +3,7 @@
 contains the full copyright notices and license terms. -->
 <tree>
     <field name="rec_name" expand="1"/>
-    <field name="dob" expand="1"/>
+    <field name="dob" string="Date of Birth" expand="1"/>
     <field name="ref"/>
     <field name="is_person" tree_invisible="1"/>
 </tree>
