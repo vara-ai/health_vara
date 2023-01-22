@@ -14,6 +14,13 @@ class Party(metaclass=PoolMeta):
         # Gender shouldn't be required
         cls.gender.states['required'] = False
 
+    @classmethod
+    def view_attributes(cls):
+        return super().view_attributes() + [
+            ('//page[@id="party_gnuhealth_extended"]', "states", {
+                    'invisible': True,
+                    })]
+
 
 class MammographyPatient(metaclass=PoolMeta):
     __name__ = 'gnuhealth.patient'
