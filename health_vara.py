@@ -1,7 +1,7 @@
 # The COPYRIGHT file at the top level of this repository
 # contains the full copyright notices and license terms.
 from trytond.model import fields
-from trytond.pool import PoolMeta
+from trytond.pool import PoolMeta, Pool
 from trytond.pyson import Eval
 
 
@@ -107,11 +107,35 @@ class PatientEvaluation(metaclass=PoolMeta):
         states={
             'invisible': ~Eval('breast_cancer_history_family'),
             }, depends=['breast_cancer_history_family'])
-    genetic_risks = fields.One2Many('gnuhealth.patient.genetic.risk',
-        'patient', "Genetic Information",
-        states={
-            'invisible': ~Eval('known_brca_mutation'),
-            }, depends=['known_brca_mutation'])
+    genetic_risks = fields.Function(
+        fields.One2Many('gnuhealth.patient.genetic.risk',
+        None, "Genetic Information",
+            domain=[('patient', '=', Eval('patient'))],
+            states={
+                'invisible': ~Eval('known_brca_mutation'),
+                }, depends=['known_brca_mutation', 'patient']),
+        'get_genetic_risks', setter='set_genetic_risks')
+
+    def get_genetic_risks(self, name):
+        return [r.id for r in self.patient.genetic_risks]
+
+    @classmethod
+    def set_genetic_risks(cls, evaluations, name, values):
+        Risk = Pool().get('gnuhealth.patient.genetic.risk')
+        for value in values:
+            action = value[0]
+            if action == 'create':
+                Risk.create(value[1])
+            elif action == 'write':
+                value.pop(0)
+                items = {value[i][0]: value[i + 1]
+                    for i in range(0, len(value), 2)}
+                for item in items:
+                    risk = Risk.browse([item])
+                    Risk.write(risk, items[item])
+            elif action == 'delete':
+                risks = Risk.browse(value[1])
+                Risk.delete(risks)
 
     @classmethod
     def __setup__(cls):
