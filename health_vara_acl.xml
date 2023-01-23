@@ -132,5 +132,39 @@ contains the full copyright notices and license terms. -->
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
+        <!-- Genetic information on anamnesis -->
+        <record model="ir.model.access" id="access_health_genetics_disease_gene_medical_assistant">
+            <field name="model" search="[('model', '=', 'gnuhealth.disease.gene')]"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_health_genetics_patient_family_diseases_medical_assistant">
+            <field name="model" search="[('model', '=', 'gnuhealth.patient.family.diseases')]"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_health_genetics_patient_genetic_risk_medical_assistant">
+            <field name="model" search="[('model', '=', 'gnuhealth.patient.genetic.risk')]"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <!-- Page of life needed for saving genetics -->
+        <record model="ir.model.access" id="access_health_pol_medical_assistant">
+            <field name="model" search="[('model', '=', 'gnuhealth.pol')]"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
     </data>
 </tryton>
