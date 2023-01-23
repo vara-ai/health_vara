@@ -70,7 +70,7 @@ class PatientEvaluation(metaclass=PoolMeta):
     # Clinical complaints -> present_illness/notes_complaint
     # https://savannah.gnu.org/bugs/index.php?63535
     post_treatment_surveillance = fields.Text(
-        "Post Treatment Surveillance",
+        "Post Treatment Surveillance Comment",
         states={
             'invisible': ~(Eval('visit_type') == 'diagnostic_post_treat'),
             }, depends=['visit_type'])
