@@ -143,6 +143,7 @@ class PatientEvaluation(metaclass=PoolMeta):
         for item in vara_types:
             if item not in cls.visit_type.selection:
                 cls.visit_type.selection.append(item)
+        cls.visit_type.states['required'] = True
 
     @classmethod
     def view_attributes(cls):
