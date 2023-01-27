@@ -19,11 +19,16 @@ class ImagingTestResult(metaclass=PoolMeta):
         file_id=file_id, store_prefix=store_prefix)
     result_report_cache_id = fields.Char('Result Report ID', readonly=True)
     result_report_format = fields.Char('Result Report Format', readonly=True)
+
     report_link = fields.Char("Report Download URL",
         help="Link to download the Vara report",
         readonly=True)
+
     prior_study_considered = fields.Boolean('Prior study considered',
             readonly=True)
+
+    image_acquisition_date = fields.DateTime(
+        'Image Acquisition Date', readonly=True)
     technical_quality_rcc = fields.Selection('get_quality_selection',
         'Technical Quality RCC', readonly=True)
     technical_quality_rmlo = fields.Selection('get_quality_selection',
@@ -32,25 +37,29 @@ class ImagingTestResult(metaclass=PoolMeta):
         'Technical Quality LCC', readonly=True)
     technical_quality_lmlo = fields.Selection('get_quality_selection',
         'Technical Quality LMLO', readonly=True)
-    density = fields.Selection([
-            (None, ''),
-            ('1', '1'),
-            ('2', '2'),
-            ('3', '3'),
-            ], 'Density', readonly=True)
-    findings = fields.One2Many('gnuhealth.imaging.finding', 'imaging_result',
-        'Findings')
-    image_acquisition_date = fields.DateTime('Image Acquisition Date',
-        readonly=True)
-    assessment = fields.Selection([
-            (None, ''),
-            ('overall', 'Overall'),
-            ('left', 'Left'),
-            ('right', 'Right'),
-            ], 'Assessment', readonly=True)
-    assessment_date = fields.DateTime('Assessment Date',
-        readonly=True)
+
+    assessment_date = fields.DateTime('Assessment Date', readonly=True)
     clinical_recall = fields.Char('Clinical Recall', readonly=True)
+
+    findings = fields.One2Many(
+        'gnuhealth.imaging.finding', 'imaging_result', 'Findings')
+    density = fields.Selection([(None, ''),
+                                ('A', 'A'),
+                                ('B', 'B'),
+                                ('C', 'C'),
+                                ('D', 'D')],
+                               'Density',
+                               readonly=True)
+    assessment = fields.Selection([('0', '0'),
+                                   ('1', '1'),
+                                   ('2', '2'),
+                                   ('3', '3'),
+                                   ('4a', '4a'),
+                                   ('4b', '4b'),
+                                   ('4c', '4c'),
+                                   ('5', '5'),
+                                   ('6', '6')],
+                                  'Assessment', readonly=True)
 
     @classmethod
     def get_quality_selection(cls):
