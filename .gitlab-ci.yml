@@ -4,7 +4,7 @@ stages:
 
 .test_base: &test_base
   stage: test
-  image: python:latest
+  image: python:3.10
 
   # Pip's cache doesn't store the python packages
   # https://pip.pypa.io/en/stable/reference/pip_install/#caching

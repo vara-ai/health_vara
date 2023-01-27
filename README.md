@@ -17,11 +17,6 @@ Installing
 
 See INSTALL
 
-Note
-----
-
-This module is developed and tested over a patched Tryton server and
-core modules. Maybe some of these patches are required for the module to work.
 
 Support
 -------

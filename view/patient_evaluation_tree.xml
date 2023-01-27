@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository
+contains the full copyright notices and license terms. -->
+<tree>
+    <field name="patient"/>
+    <field name="code"/>
+    <field name="visit_type" expand="1"/>
+    <field name="chief_complaint" expand="1"/>
+</tree>

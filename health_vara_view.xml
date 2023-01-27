@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository
+contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- Mammography Party Views -->
+        <record model="ir.ui.view" id="mammography_party_tree">
+            <field name="model">party.party</field>
+            <field name="type">tree</field>
+            <field name="name">party_tree</field>
+        </record>
+        <record model="ir.ui.view" id="mammography_party_form">
+            <field name="model">party.party</field>
+            <field name="type">form</field>
+            <field name="name">party_form</field>
+        </record>
+
+        <!-- Mammography Patient Views -->
+        <record model="ir.ui.view" id="mammography_patient_tree">
+            <field name="model">gnuhealth.patient</field>
+            <field name="type">tree</field>
+            <field name="name">mammography_patient_tree</field>
+        </record>
+        <record model="ir.ui.view" id="mammography_patient_form">
+            <field name="model">gnuhealth.patient</field>
+            <field name="type">form</field>
+            <field name="name">mammography_patient_form</field>
+        </record>
+
+        <!-- Mammography Menu -->
+        <menuitem name="Mammography" sequence="0" id="mammography_menu" parent="health_imaging.menu_imaging" icon="gnuhealth.imaging"/>
+
+        <record model="ir.action.act_window" id="act_mammography_patient_view">
+            <field name="name">Mammography Patients</field>
+            <field name="res_model">gnuhealth.patient</field>
+        </record>
+        <menuitem parent="mammography_menu" action="act_mammography_patient_view" id="mammography_menu_patient_view" icon="gnuhealth-patient" sequence="20"/>
+        
+        <record model="ir.action.act_window.view" id="act_mammography_patient_view1">
+            <field name="view" ref="mammography_patient_tree"/>
+            <field name="act_window" ref="act_mammography_patient_view"/>
+            <field name="sequence" eval="10"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_mammography_patient_view2">
+            <field name="view" ref="mammography_patient_form"/>
+            <field name="act_window" ref="act_mammography_patient_view"/>
+            <field name="sequence" eval="20"/>
+        </record>
+
+        <!-- Mammography Result Views -->
+        <record model="ir.ui.view" id="imaging_test_result_form">
+            <field name="model">gnuhealth.imaging.test.result</field>
+            <field name="inherit" ref="health_imaging.view_imaging_test_result_form"/>
+            <field name="name">imaging_test_result_form</field>
+        </record>
+        <record model="ir.ui.view" id="imaging_test_result_tree">
+            <field name="model">gnuhealth.imaging.test.result</field>
+            <field name="type">tree</field>
+            <field name="name">imaging_test_result_tree</field>
+        </record>
+
+        <!-- Finding Views -->
+        <record model="ir.ui.view" id="imaging_test_result_finding_form">
+            <field name="model">gnuhealth.imaging.finding</field>
+            <field name="type">form</field>
+            <field name="name">imaging_test_result_finding_form</field>
+        </record>
+        <record model="ir.ui.view" id="imaging_test_result_finding_tree">
+            <field name="model">gnuhealth.imaging.finding</field>
+            <field name="type">tree</field>
+            <field name="name">imaging_test_result_finding_tree</field>
+        </record>
+        
+        <!-- Evaluation Views -->
+        <record model="ir.ui.view" id="patient_evaluation_form">
+            <field name="model">gnuhealth.patient.evaluation</field>
+            <field name="type">form</field>
+            <field name="name">patient_evaluation_form</field>
+        </record>
+        <record model="ir.ui.view" id="patient_evaluation_tree">
+            <field name="model">gnuhealth.patient.evaluation</field>
+            <field name="type">tree</field>
+            <field name="name">patient_evaluation_tree</field>
+        </record>
+    </data>
+</tryton>

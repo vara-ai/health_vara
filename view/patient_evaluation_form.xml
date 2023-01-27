@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository
+contains the full copyright notices and license terms. -->
+<form>
+    <group colspan="4" col="8" id="evaluation_header">
+        <label name="patient"/>
+        <field name="patient" colspan="3"/>
+        <label name="visit_type"/>
+        <field name="visit_type"/>
+        <label name="code"/>
+        <field name="code"/>
+    </group>
+    <separator string="Post Treatment Surveillance" colspan="4" id="separator_post_treat"/>
+    <field name="post_treatment_surveillance" colspan="4" height="80"/>
+    <separator string="Chief Complaint" colspan="4" id="separator_chief_complaint"/>
+    <field name="chief_complaint" colspan="4"/>
+    <separator string="Present Illness" colspan="4" id="separator_present_illness"/>
+    <field name="present_illness" colspan="4"/>
+    <group colspan="4" col="4" id="evaluation_cancer_history">
+        <separator colspan="4" id="separator_history_person"/>
+        <label name="breast_cancer_history_person"/>
+        <field name="breast_cancer_history_person"/>
+        <newline/>
+        <label name="sequence_number"/>
+        <field name="sequence_number"/>
+        <newline/>
+        <label name="diagnosis_date"/>
+        <field name="diagnosis_date"/>
+        <label name="surgery_date"/>
+        <field name="surgery_date"/>
+        <field name="breast_cancer_history_person_text" colspan="4"/>
+        <separator colspan="4" id="separator_history_family"/>
+        <label name="breast_cancer_history_family"/>
+        <field name="breast_cancer_history_family"/>
+        <newline/>
+        <field name="breast_cancer_history_family_text" colspan="4"/>
+        <label name="known_brca_mutation"/>
+        <field name="known_brca_mutation"/>
+        <newline/>
+        <field name="genetic_risks" colspan="2"/>
+    </group>
+</form>

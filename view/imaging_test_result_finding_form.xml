@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository
+contains the full copyright notices and license terms. -->
+<form>
+    <label name="imaging_result"/>
+    <field name="imaging_result"/>
+    <label name="number"/>
+    <field name="number"/>
+    <label name="laterality"/>
+    <field name="laterality"/>
+    <label name="localisation"/>
+    <field name="localisation"/>
+    <label name="type"/>
+    <field name="type"/>
+    <label name="size"/>
+    <field name="size"/>
+    <label name="bi_rads"/>
+    <field name="bi_rads"/>
+</form>

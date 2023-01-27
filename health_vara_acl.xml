@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository
+contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="res.group" id="group_health_medical_assistant">
+            <field name="name">Health Medical Assistant</field>
+        </record>
+
+        <!-- Access to Menus -->
+        <record model="ir.ui.menu-res.group" id="menu_access_mammography_admin">
+            <field name="menu" ref="mammography_menu"/>
+            <field name="group" ref="health.group_health_admin"/>
+        </record>
+        <record model="ir.ui.menu-res.group" id="menu_access_mammography_doctor">
+            <field name="menu" ref="mammography_menu"/>
+            <field name="group" ref="health.group_health_doctor"/>
+        </record>
+        <record model="ir.ui.menu-res.group" id="menu_access_mammography_medical_assistant">
+            <field name="menu" ref="mammography_menu"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+        </record>
+
+        <record model="ir.ui.menu-res.group" id="menu_access_mammography_patient_view_admin">
+            <field name="menu" ref="mammography_menu_patient_view"/>
+            <field name="group" ref="health.group_health_admin"/>
+        </record>
+        <record model="ir.ui.menu-res.group" id="menu_access_mammography_patient_view_doctor">
+            <field name="menu" ref="mammography_menu_patient_view"/>
+            <field name="group" ref="health.group_health_doctor"/>
+        </record>
+        <record model="ir.ui.menu-res.group" id="menu_access_mammography_patient_view_medical_assistant">
+            <field name="menu" ref="mammography_menu_patient_view"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+        </record>
+
+        <record model="ir.ui.menu-res.group" id="menu_access_health_medical_assistant">
+            <field name="menu" ref="health.gnuhealth_menu"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+        </record>
+
+
+        <!-- Default access rights for models -->
+        <record model="ir.model.access" id="access_health_imaging_finding">
+            <field name="model" search="[('model', '=', 'gnuhealth.imaging.finding')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <!-- Access rights to models for the health admin group -->
+        <record model="ir.model.access" id="access_health_imaging_finding_admin">
+            <field name="model" search="[('model', '=', 'gnuhealth.imaging.finding')]"/>
+            <field name="group" ref="health.group_health_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <!-- Access rights to models for the health medical assistant group -->
+        <record model="ir.model.access" id="access_health_imaging_finding_medical_assistant">
+            <field name="model" search="[('model', '=', 'gnuhealth.imaging.finding')]"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_health_patient_medical_assistant">
+            <field name="model" search="[('model', '=', 'gnuhealth.patient')]"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_health_patient_evaluation_medical_assistant">
+            <field name="model" search="[('model', '=', 'gnuhealth.patient.evaluation')]"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_health_procedure_medical_assistant">
+            <field name="model" search="[('model', '=', 'gnuhealth.procedure')]"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_health_directions_medical_assistant">
+            <field name="model" search="[('model', '=', 'gnuhealth.directions')]"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <!-- record model="ir.model.access" id="access_health_appointment_medical_assistant">
+            <field name="model" search="[('model', '=', 'gnuhealth.appointment')]"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record -->
+        <record model="ir.model.access" id="access_health_family_medical_assistant">
+            <field name="model" search="[('model', '=', 'gnuhealth.family')]"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_health_family_member_medical_assistant">
+            <field name="model" search="[('model', '=', 'gnuhealth.family_member')]"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_health_insurance_medical_assistant">
+            <field name="model" search="[('model', '=', 'gnuhealth.insurance')]"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <!-- Genetic information on anamnesis -->
+        <record model="ir.model.access" id="access_health_genetics_disease_gene_medical_assistant">
+            <field name="model" search="[('model', '=', 'gnuhealth.disease.gene')]"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_health_genetics_patient_family_diseases_medical_assistant">
+            <field name="model" search="[('model', '=', 'gnuhealth.patient.family.diseases')]"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_health_genetics_patient_genetic_risk_medical_assistant">
+            <field name="model" search="[('model', '=', 'gnuhealth.patient.genetic.risk')]"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <!-- Page of life needed for saving genetics -->
+        <record model="ir.model.access" id="access_health_pol_medical_assistant">
+            <field name="model" search="[('model', '=', 'gnuhealth.pol')]"/>
+            <field name="group" ref="group_health_medical_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+    </data>
+</tryton>

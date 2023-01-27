@@ -1,0 +1,9 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: health_vara
+Upstream-Contact: Mathias Behrle <mbehrle@m9s.biz>
+Source: https://gitlab.com/m9s/health_vara.git
+
+Files: *
+Copyright: 2022 Mathias Behrle <mbehrle@m9s.biz>
+           2022 MBSolutions <info@m9s.biz>
+License: GPL-3.0-or-later 
