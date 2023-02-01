@@ -3,7 +3,6 @@
 contains the full copyright notices and license terms. -->
 <tree>
     <field name="imaging_result"/>
-    <field name="number"/>
     <field name="type"/>
     <field name="laterality"/>
     <field name="localisation"/>
