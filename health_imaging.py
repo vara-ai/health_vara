@@ -50,7 +50,8 @@ class ImagingTestResult(metaclass=PoolMeta):
                                 ('D', 'D')],
                                'Density',
                                readonly=True)
-    assessment = fields.Selection([('0', '0'),
+    assessment = fields.Selection([(None, ''),
+                                   ('0', '0'),
                                    ('1', '1'),
                                    ('2', '2'),
                                    ('3', '3'),
