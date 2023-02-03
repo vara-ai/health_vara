@@ -46,10 +46,6 @@ contains the full copyright notices and license terms. -->
                 <group col="8" id="person_demographics" string="Demographics">
                     <label name="dob"/>
                     <field name="dob"/>
-                    <label name="est_dob"/>
-                    <field name="est_dob"/>
-                    <label name="est_years"/>
-                    <field name="est_years"/>
                     <label name="age"/>
                     <field name="age"/>
                     <newline/>
