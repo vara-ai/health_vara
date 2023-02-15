@@ -106,6 +106,8 @@ class PatientEvaluation(metaclass=PoolMeta):
                 | ~Eval('breast_operational_intervention')),
             }, depends=['breast_operational_intervention',
             'breast_operational_intervention_type'])
+    woman_pregnant = fields.Boolean("Is the woman pregnant?")
+    woman_lactating = fields.Boolean("Is the woman lactating / breast feeding?")
     breast_cancer_history_person = fields.Boolean(
         "Personal Breast Cancer History")
     breast_cancer_history_person_text = fields.Text(

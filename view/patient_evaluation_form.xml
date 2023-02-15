@@ -34,6 +34,13 @@ contains the full copyright notices and license terms. -->
         <label name="breast_operational_intervention_comment"/>
         <field name="breast_operational_intervention_comment"/>
     </group>
+    <group colspan="4" col="4" id="evaluation_pregnancy_postnatal">
+        <separator colspan="4" id="separator_pregnancy_postnatal"/>
+        <label name="woman_pregnant"/>
+        <field name="woman_pregnant"/>
+        <label name="woman_lactating"/>
+        <field name="woman_lactating"/>
+    </group>
     <group colspan="4" col="4" id="evaluation_cancer_history">
         <separator colspan="4" id="separator_history_person"/>
         <label name="breast_cancer_history_person"/>
