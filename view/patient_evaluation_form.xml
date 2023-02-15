@@ -12,7 +12,7 @@ contains the full copyright notices and license terms. -->
     </group>
     <separator string="Post Treatment Surveillance" colspan="4" id="separator_post_treat"/>
     <field name="post_treatment_surveillance" colspan="4" height="80"/>
-    <separator string="Chief Complaint" colspan="4" id="separator_chief_complaint"/>
+    <separator string="Chief Complaint / Symptoms" colspan="4" id="separator_chief_complaint"/>
     <field name="chief_complaint" colspan="4"/>
     <separator string="Present Illness" colspan="4" id="separator_present_illness"/>
     <field name="present_illness" colspan="4"/>
