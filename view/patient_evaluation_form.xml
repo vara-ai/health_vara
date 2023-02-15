@@ -12,6 +12,14 @@ contains the full copyright notices and license terms. -->
     </group>
     <separator string="Post Treatment Surveillance" colspan="4" id="separator_post_treat"/>
     <field name="post_treatment_surveillance" colspan="4" height="80"/>
+    <label name="breast_lump"/>
+    <field name="breast_lump"/>
+    <label name="breast_swelling"/>
+    <field name="breast_swelling"/>
+    <label name="breast_skin_irritation"/>
+    <field name="breast_skin_irritation"/>
+    <label name="breast_nipple_changes"/>
+    <field name="breast_nipple_changes"/>
     <separator string="Chief Complaint / Symptoms" colspan="4" id="separator_chief_complaint"/>
     <field name="chief_complaint" colspan="4"/>
     <separator string="Present Illness" colspan="4" id="separator_present_illness"/>

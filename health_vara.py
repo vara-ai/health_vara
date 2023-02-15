@@ -74,7 +74,18 @@ class PatientEvaluation(metaclass=PoolMeta):
         states={
             'invisible': ~(Eval('visit_type') == 'diagnostic_post_treat'),
             }, depends=['visit_type'])
-
+    breast_lump = fields.Selection('get_location_selection',
+        'New lump in breast or axilla (i.e. armpit)',
+        sort=False)
+    breast_swelling = fields.Selection('get_location_selection',
+        'Thickening or swelling of part of the breast',
+        sort=False)
+    breast_skin_irritation = fields.Selection('get_location_selection',
+        'Irritation or dimpling of breast skin',
+        sort=False)
+    breast_nipple_changes = fields.Selection('get_location_selection',
+        'Nipple changes (e.g. redness, flaky skin, inversion, discharge)',
+        sort=False)
     breast_cancer_history_person = fields.Boolean(
         "Personal Breast Cancer History")
     breast_cancer_history_person_text = fields.Text(
@@ -164,3 +175,12 @@ class PatientEvaluation(metaclass=PoolMeta):
     @staticmethod
     def default_known_brca_mutation():
         return False
+
+    @classmethod
+    def get_location_selection(cls):
+        return [
+            (None, ''),
+            ('left_breast', 'Left Breast'),
+            ('right_breast', 'Right Breast'),
+            ('both', 'Both'),
+            ]
