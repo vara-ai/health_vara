@@ -86,6 +86,26 @@ class PatientEvaluation(metaclass=PoolMeta):
     breast_nipple_changes = fields.Selection('get_location_selection',
         'Nipple changes (e.g. redness, flaky skin, inversion, discharge)',
         sort=False)
+    breast_operational_intervention = fields.Boolean(
+        "Was there any operational intervention in the breast?")
+    breast_operational_intervention_type = fields.Selection([
+            ('mastectomy', 'Mastectomy'),
+            ('conservative', 'Conservative Breast Surgery'),
+            ('benign_lumpectomy', 'Benign Lumpectomy'),
+            ('augmentation', 'Breast Augmentation Surgery'),
+            ('reduction', 'Breast Reduction Surgery'),
+            ('other', 'Other'),
+            ], 'Type of Breast Surgery',
+        states={
+            'invisible': ~Eval('breast_operational_intervention'),
+            }, depends=['breast_operational_intervention'])
+    breast_operational_intervention_comment = fields.Char('Other Surgery Type',
+        states={
+            'invisible': (
+                (Eval('breast_operational_intervention_type') != 'other')
+                | ~Eval('breast_operational_intervention')),
+            }, depends=['breast_operational_intervention',
+            'breast_operational_intervention_type'])
     breast_cancer_history_person = fields.Boolean(
         "Personal Breast Cancer History")
     breast_cancer_history_person_text = fields.Text(

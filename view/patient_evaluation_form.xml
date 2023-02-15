@@ -24,6 +24,16 @@ contains the full copyright notices and license terms. -->
     <field name="chief_complaint" colspan="4"/>
     <separator string="Present Illness" colspan="4" id="separator_present_illness"/>
     <field name="present_illness" colspan="4"/>
+    <group colspan="4" col="4" id="evaluation_operational_intervention">
+        <separator colspan="4" id="separator_operational_intervention"/>
+        <label name="breast_operational_intervention"/>
+        <field name="breast_operational_intervention"/>
+        <newline/>
+        <label name="breast_operational_intervention_type"/>
+        <field name="breast_operational_intervention_type"/>
+        <label name="breast_operational_intervention_comment"/>
+        <field name="breast_operational_intervention_comment"/>
+    </group>
     <group colspan="4" col="4" id="evaluation_cancer_history">
         <separator colspan="4" id="separator_history_person"/>
         <label name="breast_cancer_history_person"/>
