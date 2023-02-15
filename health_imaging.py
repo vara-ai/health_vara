@@ -43,24 +43,25 @@ class ImagingTestResult(metaclass=PoolMeta):
 
     findings = fields.One2Many(
         'gnuhealth.imaging.finding', 'imaging_result', 'Findings')
-    density = fields.Selection([(None, ''),
-                                ('A', 'A'),
-                                ('B', 'B'),
-                                ('C', 'C'),
-                                ('D', 'D')],
-                               'Density',
-                               readonly=True)
-    assessment = fields.Selection([(None, ''),
-                                   ('0', '0'),
-                                   ('1', '1'),
-                                   ('2', '2'),
-                                   ('3', '3'),
-                                   ('4a', '4a'),
-                                   ('4b', '4b'),
-                                   ('4c', '4c'),
-                                   ('5', '5'),
-                                   ('6', '6')],
-                                  'Assessment', readonly=True)
+    density = fields.Selection([
+            (None, ''),
+            ('A', 'A'),
+            ('B', 'B'),
+            ('C', 'C'),
+            ('D', 'D')],
+        'Density', readonly=True)
+    assessment = fields.Selection([
+            (None, ''),
+            ('0', '0'),
+            ('1', '1'),
+            ('2', '2'),
+            ('3', '3'),
+            ('4a', '4a'),
+            ('4b', '4b'),
+            ('4c', '4c'),
+            ('5', '5'),
+            ('6', '6')],
+        'Assessment', readonly=True)
 
     @classmethod
     def get_quality_selection(cls):
