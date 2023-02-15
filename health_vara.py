@@ -49,7 +49,7 @@ screening_types = [
     (None, ''),
     ('screening_first_time',
         'Screening: First-time Routine Screening Visit'),
-    ('screening_return', 'Screening: Return / Follow-up Visit'),
+    ('screening_return', 'Screening: Routine Annual Screening'),
     ('screening_second_opinion', 'Screening: Get Second Opinion'),
     ]
 diagnostic_types = [
