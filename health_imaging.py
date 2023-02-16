@@ -85,7 +85,7 @@ class ImagingFinding(ModelSQL, ModelView):
     type = fields.Selection([
             ('ultrasound', 'Ultrasound'),
             ('radiology', 'Radiology'),
-            ], 'Type')
+            ], 'Type', required=True)
     laterality = fields.Selection([
             ('left_breast', 'Left Breast'),
             ('right_breast', 'Right Breast'),
