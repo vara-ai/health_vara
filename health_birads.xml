@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository
+contains the full copyright notices and license terms. -->
+<tryton>
+    <data grouped="1">
+        <record model="gnuhealth.imaging.birads" id="gnuhealth-birads-0">
+            <field name="code">0</field>
+            <field name="classification">incomplete</field>
+            <field name="probability_of_malignancy"></field>
+            <field name="comment">need additional imaging evaluation (additional mammographic views or ultrasound) 
+and/or for mammography, obtaining previous images not available at the time of reading</field>
+        </record>
+        <record model="gnuhealth.imaging.birads" id="gnuhealth-birads-1">
+            <field name="code">1</field>
+            <field name="classification">negative</field>
+            <field name="probability_of_malignancy"></field>
+            <field name="comment">symmetrical and no masses, architectural distortion, or suspicious calcifications</field>
+        </record>
+        <record model="gnuhealth.imaging.birads" id="gnuhealth-birads-2">
+            <field name="code">2</field>
+            <field name="classification">benign</field>
+            <field name="probability_of_malignancy">0%</field>
+            <field name="comment"></field>
+        </record>
+        <record model="gnuhealth.imaging.birads" id="gnuhealth-birads-3">
+            <field name="code">3</field>
+            <field name="classification">probably benign</field>
+            <field name="probability_of_malignancy">&lt;2%</field>
+            <field name="comment">short interval follow-up suggested</field>
+        </record>
+        <record model="gnuhealth.imaging.birads" id="gnuhealth-birads-4A">
+            <field name="code">4A</field>
+            <field name="classification">suspicious for malignancy</field>
+            <field name="probability_of_malignancy">2-9%</field>
+            <field name="comment">biopsy should be considered</field>
+        </record>
+        <record model="gnuhealth.imaging.birads" id="gnuhealth-birads-4B">
+            <field name="code">4B</field>
+            <field name="classification">suspicious for malignancy</field>
+            <field name="probability_of_malignancy">10-49%</field>
+            <field name="comment">biopsy should be considered</field>
+        </record>
+        <record model="gnuhealth.imaging.birads" id="gnuhealth-birads-4C">
+            <field name="code">4C</field>
+            <field name="classification">suspicious for malignancy</field>
+            <field name="probability_of_malignancy">50-94%</field>
+            <field name="comment">biopsy should be considered</field>
+        </record>
+        <record model="gnuhealth.imaging.birads" id="gnuhealth-birads-5">
+            <field name="code">5</field>
+            <field name="classification">highly suggestive of malignancy</field>
+            <field name="probability_of_malignancy">&gt;95%</field>
+            <field name="comment">appropriate action should be taken</field>
+        </record>
+        <record model="gnuhealth.imaging.birads" id="gnuhealth-birads-6">
+            <field name="code">6</field>
+            <field name="classification">known biopsy-proven malignancy </field>
+            <field name="probability_of_malignancy">100%</field>
+            <field name="comment"></field>
+        </record>
+    </data>
+</tryton>

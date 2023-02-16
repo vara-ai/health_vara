@@ -15,6 +15,7 @@ def register():
         health_vara.PatientEvaluation,
         health_imaging.ImagingTestResult,
         health_imaging.ImagingFinding,
+        health_imaging.BIRADS,
         module='health_vara', type_='model')
     Pool.register(
         module='health_vara', type_='wizard')

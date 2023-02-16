@@ -77,12 +77,34 @@ class ImagingFinding(ModelSQL, ModelView):
     'Imaging Test Result Finding'
     __name__ = 'gnuhealth.imaging.finding'
 
+    patient = fields.Many2One('gnuhealth.patient', 'Patient',
+        required=True)
     imaging_result = fields.Many2One(
-        'gnuhealth.imaging.test.result', 'Imaging Test Result', required=True,
-        readonly=True)
-    number = fields.Integer('Number', readonly=True)
-    laterality = fields.Char('Laterality', readonly=True)
-    localisation = fields.Char('Localisation', readonly=True)
-    type = fields.Char('Type', readonly=True)
-    size = fields.Char('Size', readonly=True)
-    bi_rads = fields.Char('BI-RADS', readonly=True)
+        'gnuhealth.imaging.test.result', 'Imaging Test Result')
+    number = fields.Integer('Number')
+    type = fields.Selection([
+            ('ultrasound', 'Ultrasound'),
+            ('radiology', 'Radiology'),
+            ], 'Type')
+    laterality = fields.Selection([
+            ('left_breast', 'Left Breast'),
+            ('right_breast', 'Right Breast'),
+            ], 'Laterality')
+    localisation = fields.Char('Localisation')
+    vara_type = fields.Char('Vara Type')
+    size = fields.Integer('Size',
+        help='Size in mm')
+    bi_rads = fields.Many2One(
+        'gnuhealth.imaging.birads', 'BI-RADS')
+
+
+class BIRADS(ModelSQL, ModelView):
+    'BI-RADS Classification'
+    __name__ = 'gnuhealth.imaging.birads'
+
+    code = fields.Char('Code')
+    classification = fields.Char('Classification')
+    probability_of_malignancy = fields.Char('Probability of Malignancy',
+        help='Probability in percent')
+    comment = fields.Text('Comment')
+
