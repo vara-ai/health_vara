@@ -70,7 +70,19 @@ contains the full copyright notices and license terms. -->
             <field name="type">tree</field>
             <field name="name">imaging_test_result_finding_tree</field>
         </record>
-        
+
+        <!-- BI-RADS Views -->
+        <record model="ir.ui.view" id="imaging_birads_form">
+            <field name="model">gnuhealth.imaging.birads</field>
+            <field name="type">form</field>
+            <field name="name">imaging_birads_form</field>
+        </record>
+        <record model="ir.ui.view" id="imaging_birads_tree">
+            <field name="model">gnuhealth.imaging.birads</field>
+            <field name="type">tree</field>
+            <field name="name">imaging_birads_tree</field>
+        </record>
+         
         <!-- Evaluation Views -->
         <record model="ir.ui.view" id="patient_evaluation_form">
             <field name="model">gnuhealth.patient.evaluation</field>
