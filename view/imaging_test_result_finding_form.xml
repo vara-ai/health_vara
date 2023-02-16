@@ -6,12 +6,14 @@ contains the full copyright notices and license terms. -->
     <field name="imaging_result"/>
     <label name="number"/>
     <field name="number"/>
+    <label name="method"/>
+    <field name="method"/>
     <label name="laterality"/>
     <field name="laterality"/>
     <label name="localisation"/>
     <field name="localisation"/>
-    <label name="type"/>
-    <field name="type"/>
+    <label name="vara_type"/>
+    <field name="vara_type"/>
     <label name="size"/>
     <field name="size"/>
     <label name="bi_rads"/>

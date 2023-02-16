@@ -82,10 +82,11 @@ class ImagingFinding(ModelSQL, ModelView):
     imaging_result = fields.Many2One(
         'gnuhealth.imaging.test.result', 'Imaging Test Result')
     number = fields.Integer('Number')
-    type = fields.Selection([
+    method = fields.Selection([
             ('ultrasound', 'Ultrasound'),
             ('radiology', 'Radiology'),
-            ], 'Type', required=True)
+            ('mri', 'MRI (Magnetic Resonance Imaging)'),
+            ], 'Method', required=True)
     laterality = fields.Selection([
             ('left_breast', 'Left Breast'),
             ('right_breast', 'Right Breast'),
