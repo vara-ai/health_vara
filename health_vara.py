@@ -110,6 +110,8 @@ class PatientEvaluation(metaclass=PoolMeta):
             'invisible': (
                 (Eval('breast_operational_intervention_type') != 'other')
                 | ~Eval('breast_operational_intervention')),
+            'required': (
+                (Eval('breast_operational_intervention_type') == 'other')),
             }, depends=['breast_operational_intervention',
             'breast_operational_intervention_type'])
     woman_pregnant = fields.Boolean("Is the woman pregnant?")
