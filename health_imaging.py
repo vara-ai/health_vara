@@ -103,6 +103,7 @@ class ImagingFinding(ModelSQL, ModelView):
         help='Size in mm')
     bi_rads = fields.Many2One(
         'gnuhealth.imaging.birads', 'BI-RADS')
+    biopsy_recommended = fields.Boolean('Biopsy recommended')
 
     # Ultrasound
     ultrasound_tissue_composition = fields.Selection([
