@@ -37,6 +37,11 @@ class MammographyPatient(metaclass=PoolMeta):
         domain=[
             ('patient', '=', Eval('id')),
             ], depends=['id'])
+    findings = fields.One2Many('gnuhealth.imaging.finding', 'patient',
+        'Findings',
+        domain=[
+            ('patient', '=', Eval('id')),
+            ], depends=['id'])
 
     @classmethod
     def __setup__(cls):
