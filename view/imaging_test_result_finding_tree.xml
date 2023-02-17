@@ -2,10 +2,10 @@
 <!-- The COPYRIGHT file at the top level of this repository
 contains the full copyright notices and license terms. -->
 <tree>
-    <field name="imaging_result"/>
     <field name="method"/>
-    <field name="vara_type"/>
     <field name="laterality"/>
     <field name="localisation"/>
     <field name="bi_rads"/>
+    <field name="vara_type"/>
+    <field name="imaging_result"/>
 </tree>
