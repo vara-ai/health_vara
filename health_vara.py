@@ -1,5 +1,6 @@
 # The COPYRIGHT file at the top level of this repository
 # contains the full copyright notices and license terms.
+from trytond.i18n import gettext
 from trytond.model import fields
 from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Bool, Eval
@@ -83,15 +84,21 @@ class PatientEvaluation(metaclass=PoolMeta):
     breast_lump = fields.Selection('get_location_selection',
         'New lump in breast or axilla (i.e. armpit)',
         sort=False)
+    breast_lump_string = breast_lump.translated('breast_lump')
     breast_swelling = fields.Selection('get_location_selection',
         'Thickening or swelling of part of the breast',
         sort=False)
+    breast_swelling_string = breast_swelling.translated('breast_swelling')
     breast_skin_irritation = fields.Selection('get_location_selection',
         'Irritation or dimpling of breast skin',
         sort=False)
+    breast_skin_irritation_string = breast_skin_irritation.translated(
+        'breast_skin_irritation')
     breast_nipple_changes = fields.Selection('get_location_selection',
         'Nipple changes (e.g. redness, flaky skin, inversion, discharge)',
         sort=False)
+    breast_nipple_changes_string = breast_nipple_changes.translated(
+        'breast_nipple_changes')
     breast_operational_intervention = fields.Boolean(
         "Was there any operational intervention in the breast?")
     breast_operational_intervention_type = fields.Selection([
@@ -214,5 +221,43 @@ class PatientEvaluation(metaclass=PoolMeta):
             (None, ''),
             ('left_breast', 'Left Breast'),
             ('right_breast', 'Right Breast'),
-            ('both', 'Both'),
+            ('both', 'Both Breasts'),
             ]
+
+    @fields.depends(methods=['set_symptom_fields'])
+    def on_change_breast_lump(self):
+        self.set_symptom_fields()
+
+    @fields.depends(methods=['set_symptom_fields'])
+    def on_change_breast_swelling(self):
+        self.set_symptom_fields()
+
+    @fields.depends(methods=['set_symptom_fields'])
+    def on_change_breast_skin_irritation(self):
+        self.set_symptom_fields()
+
+    @fields.depends(methods=['set_symptom_fields'])
+    def on_change_breast_nipple_changes(self):
+        self.set_symptom_fields()
+
+    @fields.depends('breast_lump', 'breast_swelling',
+            'breast_skin_irritation', 'breast_nipple_changes')
+    def set_symptom_fields(self):
+        chief_complaint = ''
+        present_illness = ''
+        i = 0
+        for field in ['breast_lump', 'breast_swelling',
+                'breast_skin_irritation', 'breast_nipple_changes']:
+            value = getattr(self, field)
+            if value:
+                option = getattr(self, field + '_string')
+                if i > 0:
+                    chief_complaint += ' & '
+                    present_illness += '\n'
+                msg = gettext('health_vara.msg_selection_' + field)
+                msg += ' in ' + option
+                chief_complaint += msg
+                present_illness += msg
+                i += 1
+        self.chief_complaint = chief_complaint
+        self.present_illness = present_illness
