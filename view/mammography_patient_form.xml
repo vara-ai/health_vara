@@ -22,7 +22,7 @@ contains the full copyright notices and license terms. -->
         <field name="evaluations" string="" colspan="4"
             view_ids="health_vara.patient_evaluation_tree,health_vara.patient_evaluation_form"/>
     </group>
-    <separator string="Findings" id="sep_patient_findings" colspan="4"/>
+    <separator string="Imaging Findings" id="sep_patient_findings" colspan="4"/>
     <group id="patient_findings">
         <field name="findings" string="" colspan="4"/>
     </group>
