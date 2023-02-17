@@ -109,3 +109,5 @@ class BIRADS(ModelSQL, ModelView):
         help='Probability in percent')
     comment = fields.Text('Comment')
 
+    def get_rec_name(self, name):
+        return '%s: %s' % (self.code, self.classification)
