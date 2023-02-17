@@ -96,7 +96,7 @@ class ImagingFinding(ModelSQL, ModelView):
     laterality = fields.Selection([
             ('left_breast', 'Left Breast'),
             ('right_breast', 'Right Breast'),
-            ], 'Laterality')
+            ], 'Laterality', required=True)
     localisation = fields.Char('Localisation')
     vara_type = fields.Char('Vara Type')
     size = fields.Integer('Size',
