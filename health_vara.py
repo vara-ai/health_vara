@@ -42,6 +42,7 @@ class MammographyPatient(metaclass=PoolMeta):
         domain=[
             ('patient', '=', Eval('id')),
             ], depends=['id'])
+    biopsies = fields.Text('Biopsies')
 
     @classmethod
     def __setup__(cls):

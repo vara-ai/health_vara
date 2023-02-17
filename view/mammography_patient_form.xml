@@ -26,6 +26,10 @@ contains the full copyright notices and license terms. -->
     <group id="patient_findings">
         <field name="findings" string="" colspan="4"/>
     </group>
+    <separator string="Biopsies" id="sep_patient_biopsies" colspan="4"/>
+    <group id="patient_biopsies">
+        <field name="biopsies" string="" colspan="4"/>
+    </group>
     <separator string="Other important information" id="sep_patient_other_info" colspan="4"/>
     <group id="patient_other_info">
         <field name="general_info" colspan="4"/>
