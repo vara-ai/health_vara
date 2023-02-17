@@ -18,4 +18,205 @@ contains the full copyright notices and license terms. -->
     <field name="size"/>
     <label name="bi_rads"/>
     <field name="bi_rads"/>
+
+    <group colspan="4" col="4" id="finding_ultrasound">
+        <separator string="Ultrasound" colspan="4" id="separator_finding_ultrasound"/>
+        <separator string="Tissue composition" colspan="4" id="separator_finding_ultrasound_tissue_composition"/>
+        <label name="ultrasound_tissue_composition"/>
+        <field name="ultrasound_tissue_composition"/>
+        <separator string="Masses" colspan="4" id="separator_finding_ultrasound_masses"/>
+        <label name="ultrasound_masses_shape"/>
+        <field name="ultrasound_masses_shape"/>
+        <label name="ultrasound_masses_orientation"/>
+        <field name="ultrasound_masses_orientation"/>
+        <label name="ultrasound_masses_margin"/>
+        <field name="ultrasound_masses_margin"/>
+        <label name="ultrasound_masses_echo_pattern"/>
+        <field name="ultrasound_masses_echo_pattern"/>
+        <label name="ultrasound_masses_posterior_features"/>
+        <field name="ultrasound_masses_posterior_features"/>
+        <separator string="Calcifications" colspan="4" id="separator_finding_ultrasound_calcifications"/>
+        <label name="ultrasound_calcifications_in_mass"/>
+        <field name="ultrasound_calcifications_in_mass"/>
+        <label name="ultrasound_calcifications_outside_mass"/>
+        <field name="ultrasound_calcifications_outside_mass"/>
+        <label name="ultrasound_calcifications_intraductal"/>
+        <field name="ultrasound_calcifications_intraductal"/>
+        <separator string="Associated features" colspan="4" id="separator_finding_ultrasound_associated"/>
+        <label name="ultrasound_associated_architectural_distortion"/>
+        <field name="ultrasound_associated_architectural_distortion"/>
+        <label name="ultrasound_associated_duct_changes"/>
+        <field name="ultrasound_associated_duct_changes"/>
+        <label name="ultrasound_associated_skin_changes"/>
+        <field name="ultrasound_associated_skin_changes"/>
+        <label name="ultrasound_associated_edema"/>
+        <field name="ultrasound_associated_edema"/>
+        <label name="ultrasound_associated_vascularity"/>
+        <field name="ultrasound_associated_vascularity"/>
+        <label name="ultrasound_associated_elasticity"/>
+        <field name="ultrasound_associated_elasticity"/>
+        <separator string="Special cases" colspan="4" id="separator_finding_ultrasound_special"/>
+        <label name="ultrasound_special_simple_cyst"/>
+        <field name="ultrasound_special_simple_cyst"/>
+        <label name="ultrasound_special_clustered_microcysts"/>
+        <field name="ultrasound_special_clustered_microcysts"/>
+        <label name="ultrasound_special_complicated_cyst"/>
+        <field name="ultrasound_special_complicated_cyst"/>
+        <label name="ultrasound_special_mass_in_or_on_skin"/>
+        <field name="ultrasound_special_mass_in_or_on_skin"/>
+        <label name="ultrasound_special_foreign_body"/>
+        <field name="ultrasound_special_foreign_body"/>
+        <label name="ultrasound_special_intramammary_lymph_nodes"/>
+        <field name="ultrasound_special_intramammary_lymph_nodes"/>
+        <label name="ultrasound_special_axillary_lymph_nodes"/>
+        <field name="ultrasound_special_axillary_lymph_nodes"/>
+        <label name="ultrasound_special_vascular"/>
+        <field name="ultrasound_special_vascular"/>
+        <label name="ultrasound_special_postsurgical_fluid"/>
+        <field name="ultrasound_special_postsurgical_fluid"/>
+        <label name="ultrasound_special_fat_necrosis"/>
+        <field name="ultrasound_special_fat_necrosis"/>
+    </group>
+
+    <group colspan="4" col="4" id="finding_mammography">
+        <separator string="Mammography" colspan="4" id="separator_finding_mammography"/>
+        <separator string="Breast composition" colspan="4" id="separator_finding_mammography_breast_composition"/>
+        <label name="mammo_composition"/>
+        <field name="mammo_composition"/>
+        <separator string="Masses" colspan="4" id="separator_finding_mammography_masses"/>
+        <label name="mammo_masses_shape"/>
+        <field name="mammo_masses_shape"/>
+        <label name="mammo_masses_margin"/>
+        <field name="mammo_masses_margin"/>
+        <label name="mammo_density"/>
+        <field name="mammo_density"/>
+        <separator string="Calcifications" colspan="4" id="separator_finding_mammography_calcifications"/>
+        <label name="mammo_calcifications_benign"/>
+        <field name="mammo_calcifications_benign"/>
+        <label name="mammo_calcifications_suspicious"/>
+        <field name="mammo_calcifications_suspicious"/>
+        <label name="mammo_calcifications_distribution"/>
+        <field name="mammo_calcifications_distribution"/>
+        <separator string="Other findings" colspan="4" id="separator_finding_mammography_other"/>
+        <label name="mammo_other_architectural_distortion"/>
+        <field name="mammo_other_architectural_distortion"/>
+        <label name="mammo_other_asymmetries"/>
+        <field name="mammo_other_asymmetries"/>
+        <label name="mammo_other_intramammary_lymph_node"/>
+        <field name="mammo_other_intramammary_lymph_node"/>
+        <label name="mammo_other_skin_lesion"/>
+        <field name="mammo_other_skin_lesion"/>
+        <label name="mammo_other_solitary_duct"/>
+        <field name="mammo_other_solitary_duct"/>
+        <separator string="Associated features" colspan="4" id="separator_finding_mammography_associated"/>
+        <label name="mammo_associated_skin_retraction"/>
+        <field name="mammo_associated_skin_retraction"/>
+        <label name="mammo_associated_nipple_retraction"/>
+        <field name="mammo_associated_nipple_retraction"/>
+        <label name="mammo_associated_skin_thickening"/>
+        <field name="mammo_associated_skin_thickening"/>
+        <label name="mammo_associated_trabecular_thickening"/>
+        <field name="mammo_associated_trabecular_thickening"/>
+        <label name="mammo_associated_axillary_adenopathy"/>
+        <field name="mammo_associated_axillary_adenopathy"/>
+        <label name="mammo_associated_architectural_distortion"/>
+        <field name="mammo_associated_architectural_distortion"/>
+        <label name="mammo_associated_calcifications"/>
+        <field name="mammo_associated_calcifications"/>
+    </group>
+
+    <group colspan="4" col="4" id="finding_mri">
+        <separator string="MRI (Magnetic Resonance Imaging)" colspan="4" id="separator_finding_mri"/>
+        <separator string="Amount of fibroglandular tissue" colspan="4" id="separator_finding_mri_amount_tissue"/>
+        <label name="mri_tissue"/>
+        <field name="mri_tissue"/>
+        <separator string="Background parenchymal enhancement" colspan="4" id="separator_finding_mri_background"/>
+        <label name="mri_background_level"/>
+        <field name="mri_background_level"/>
+        <label name="mri_background_symmetrie"/>
+        <field name="mri_background_symmetrie"/>
+        <separator string="Masses" colspan="4" id="separator_finding_mri_masses"/>
+        <label name="mri_masses_shape"/>
+        <field name="mri_masses_shape"/>
+        <label name="mri_masses_margin"/>
+        <field name="mri_masses_margin"/>
+        <label name="mri_masses_internal_enhancement"/>
+        <field name="mri_masses_internal_enhancement"/>
+        <separator string="Non-mass enhancement" colspan="4" id="separator_finding_mri_non_mass"/>
+        <label name="mri_non_mass_distribution"/>
+        <field name="mri_non_mass_distribution"/>
+        <label name="mri_non_mass_enhancement_patterns"/>
+        <field name="mri_non_mass_enhancement_patterns"/>
+        <separator string="Other findings" colspan="4" id="separator_finding_mri_other"/>
+        <label name="mri_other_focus"/>
+        <field name="mri_other_focus"/>
+        <label name="mri_other_intramammary_lymph_node"/>
+        <field name="mri_other_intramammary_lymph_node"/>
+        <label name="mri_other_skin_lesion"/>
+        <field name="mri_other_skin_lesion"/>
+        <label name="mri_other_ductal_precontrast"/>
+        <field name="mri_other_ductal_precontrast"/>
+        <label name="mri_other_cyst"/>
+        <field name="mri_other_cyst"/>
+        <label name="mri_other_postoperative_collections"/>
+        <field name="mri_other_postoperative_collections"/>
+        <label name="mri_other_post_therapy_thickening"/>
+        <field name="mri_other_post_therapy_thickening"/>
+        <label name="mri_other_non_enhancing_mass"/>
+        <field name="mri_other_non_enhancing_mass"/>
+        <label name="mri_other_architectural_distortion"/>
+        <field name="mri_other_architectural_distortion"/>
+        <label name="mri_other_signal_void"/>
+        <field name="mri_other_signal_void"/>
+        <separator string="Associated features" colspan="4" id="separator_finding_mri_associated"/>
+        <label name="mri_associated_nipple_retraction"/>
+        <field name="mri_associated_nipple_retraction"/>
+        <label name="mri_associated_nipple_invasion"/>
+        <field name="mri_associated_nipple_invasion"/>
+        <label name="mri_associated_skin_retraction"/>
+        <field name="mri_associated_skin_retraction"/>
+        <label name="mri_associated_skin_thickening"/>
+        <field name="mri_associated_skin_thickening"/>
+        <label name="mri_associated_skin_invasion"/>
+        <field name="mri_associated_skin_invasion"/>
+        <label name="mri_associated_axillary_adenopathy"/>
+        <field name="mri_associated_axillary_adenopathy"/>
+        <label name="mri_associated_pectoralis_invasion"/>
+        <field name="mri_associated_pectoralis_invasion"/>
+        <label name="mri_associated_chest_invasion"/>
+        <field name="mri_associated_chest_invasion"/>
+        <label name="mri_associated_architectural_distortion"/>
+        <field name="mri_associated_architectural_distortion"/>
+        <separator string="Fat-containing lesions" colspan="4" id="separator_finding_mri_fat_lesions"/>
+        <label name="mri_fat_containing_lesions_lymph_nodes"/>
+        <field name="mri_fat_containing_lesions_lymph_nodes"/>
+        <label name="mri_fat_containing_lesions_fat_necrosis"/>
+        <field name="mri_fat_containing_lesions_fat_necrosis"/>
+        <label name="mri_fat_containing_lesions_hamartoma"/>
+        <field name="mri_fat_containing_lesions_hamartoma"/>
+        <label name="mri_fat_containing_lesions_postoperative_seroma_hematoma"/>
+        <field name="mri_fat_containing_lesions_postoperative_seroma_hematoma"/>
+        <separator string="Kinetic curve assessment/signal intensity/time curve description" colspan="4" id="separator_finding_mri_kinetic_curve"/>
+        <label name="mri_kinetic_curve_initial_phase"/>
+        <field name="mri_kinetic_curve_initial_phase"/>
+        <label name="mri_kinetic_curve_delayed_phase"/>
+        <field name="mri_kinetic_curve_delayed_phase"/>
+        <separator string="Implants" colspan="4" id="separator_finding_mri_implants"/>
+        <label name="mri_implants_implant_material"/>
+        <field name="mri_implants_implant_material"/>
+        <label name="mri_implants_lumen_type"/>
+        <field name="mri_implants_lumen_type"/>
+        <label name="mri_implants_implant_location"/>
+        <field name="mri_implants_implant_location"/>
+        <label name="mri_implants_abnormal_implant_contour"/>
+        <field name="mri_implants_abnormal_implant_contour"/>
+        <label name="mri_implants_intracapsular"/>
+        <field name="mri_implants_intracapsular"/>
+        <label name="mri_implants_extracapsular"/>
+        <field name="mri_implants_extracapsular"/>
+        <label name="mri_implants_water_droplets"/>
+        <field name="mri_implants_water_droplets"/>
+        <label name="mri_implants_peri_implant_fluid"/>
+        <field name="mri_implants_peri_implant_fluid"/>
+    </group>
 </form>
