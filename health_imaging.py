@@ -20,14 +20,11 @@ class ImagingTestResult(metaclass=PoolMeta):
         file_id=file_id, store_prefix=store_prefix)
     result_report_cache_id = fields.Char('Result Report ID', readonly=True)
     result_report_format = fields.Char('Result Report Format', readonly=True)
-
     report_link = fields.Char("Report Download URL",
         help="Link to download the Vara report",
         readonly=True)
-
     prior_study_considered = fields.Boolean('Prior study considered',
             readonly=True)
-
     image_acquisition_date = fields.DateTime(
         'Image Acquisition Date', readonly=True)
     technical_quality_rcc = fields.Selection('get_quality_selection',
@@ -38,10 +35,8 @@ class ImagingTestResult(metaclass=PoolMeta):
         'Technical Quality LCC', readonly=True)
     technical_quality_lmlo = fields.Selection('get_quality_selection',
         'Technical Quality LMLO', readonly=True)
-
     assessment_date = fields.DateTime('Assessment Date', readonly=True)
     clinical_recall = fields.Char('Clinical Recall', readonly=True)
-
     findings = fields.One2Many('gnuhealth.imaging.finding', 'imaging_result',
         'Findings', readonly=True)
     density = fields.Selection([
