@@ -37,7 +37,7 @@ class ImagingTestResult(metaclass=PoolMeta):
         'Technical Quality LMLO', readonly=True)
     assessment_date = fields.DateTime('Assessment Date', readonly=True)
     clinical_recall = fields.Char('Clinical Recall', readonly=True)
-    findings = fields.One2Many('gnuhealth.imaging.finding', 'imaging_result',
+    findings = fields.One2Many('gnuhealth.imaging.finding', 'patient',
         'Findings', readonly=True)
     density = fields.Selection([
             (None, ''),
