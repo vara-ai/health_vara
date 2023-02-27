@@ -16,10 +16,10 @@ contains the full copyright notices and license terms. -->
     <field name="lesion_type"/>
     <label name="size"/>
     <field name="size"/>
+    <newline/>
     <label name="bi_rads"/>
     <field name="bi_rads"/>
-    <label name="biopsy_recommended"/>
-    <field name="biopsy_recommended"/>
+    <field name="bi_rads_comment"/>
 
     <group colspan="4" col="4" id="finding_ultrasound">
         <separator string="Ultrasound" colspan="4" id="separator_finding_ultrasound"/>

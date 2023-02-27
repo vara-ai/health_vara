@@ -93,7 +93,8 @@ class ImagingFinding(ModelSQL, ModelView):
         help='Size in mm')
     bi_rads = fields.Many2One(
         'gnuhealth.imaging.birads', 'BI-RADS')
-    biopsy_recommended = fields.Boolean('Biopsy recommended')
+    bi_rads_comment = fields.Function(fields.Char('Comment'),
+        'on_change_with_bi_rads_comment')
 
     # Ultrasound
     ultrasound_tissue_composition = fields.Selection([
@@ -540,6 +541,11 @@ class ImagingFinding(ModelSQL, ModelView):
             ('//group[@id="finding_mri"]', "states", {
                     'invisible': (Eval('method') != 'mri'),
                     })]
+
+    @fields.depends('bi_rads')
+    def on_change_with_bi_rads_comment(self, name=None):
+        if self.bi_rads:
+            return self.bi_rads.comment
 
 
 class BIRADS(ModelSQL, ModelView):
