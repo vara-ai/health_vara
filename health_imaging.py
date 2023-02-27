@@ -77,6 +77,7 @@ class ImagingFinding(ModelSQL, ModelView):
         required=True)
     imaging_result = fields.Many2One(
         'gnuhealth.imaging.test.result', 'Imaging Test Result')
+    finding_date = fields.DateTime('Date', required=True)
     number = fields.Integer('Number')
     method = fields.Selection([
             ('ultrasound', 'Ultrasound'),
@@ -528,6 +529,14 @@ class ImagingFinding(ModelSQL, ModelView):
         states=_mri_states, depends=['method'])
 
     del _ultrasound_states, _mammo_states, _mri_states
+
+    @classmethod
+    def __setup__(cls):
+        super().__setup__()
+        cls._order = [
+            ('finding_date', 'DESC'),
+            ('id', 'DESC'),
+            ]
 
     @classmethod
     def view_attributes(cls):
