@@ -36,6 +36,8 @@ class ImagingTestResult(metaclass=PoolMeta):
     technical_quality_lmlo = fields.Selection('get_quality_selection',
         'Technical Quality LMLO', readonly=True)
     assessment_date = fields.DateTime('Assessment Date', readonly=True)
+    assessment = fields.Many2One('gnuhealth.imaging.birads', 'Assessment',
+        readonly=True)
     clinical_recall = fields.Char('Clinical Recall', readonly=True)
     findings = fields.One2Many('gnuhealth.imaging.finding', 'patient',
         'Findings', readonly=True)
@@ -46,18 +48,6 @@ class ImagingTestResult(metaclass=PoolMeta):
             ('C', 'C'),
             ('D', 'D')],
         'Density', readonly=True)
-    assessment = fields.Selection([
-            (None, ''),
-            ('0', '0'),
-            ('1', '1'),
-            ('2', '2'),
-            ('3', '3'),
-            ('4a', '4a'),
-            ('4b', '4b'),
-            ('4c', '4c'),
-            ('5', '5'),
-            ('6', '6')],
-        'Assessment', readonly=True)
 
     @classmethod
     def get_quality_selection(cls):
