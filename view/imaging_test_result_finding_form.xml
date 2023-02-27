@@ -12,8 +12,8 @@ contains the full copyright notices and license terms. -->
     <field name="laterality"/>
     <label name="localisation"/>
     <field name="localisation"/>
-    <label name="type"/>
-    <field name="type"/>
+    <label name="lesion_type"/>
+    <field name="lesion_type"/>
     <label name="size"/>
     <field name="size"/>
     <label name="bi_rads"/>

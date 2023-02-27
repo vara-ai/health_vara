@@ -98,7 +98,7 @@ class ImagingFinding(ModelSQL, ModelView):
             ('right_breast', 'Right Breast'),
             ], 'Laterality', required=True)
     localisation = fields.Char('Localisation')
-    type = fields.Char('Type')
+    lesion_type = fields.Char('Lesion Type')
     size = fields.Integer('Size',
         help='Size in mm')
     bi_rads = fields.Many2One(

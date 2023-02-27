@@ -6,6 +6,6 @@ contains the full copyright notices and license terms. -->
     <field name="laterality"/>
     <field name="localisation"/>
     <field name="bi_rads"/>
-    <field name="type"/>
+    <field name="lesion_type"/>
     <field name="imaging_result"/>
 </tree>
