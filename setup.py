@@ -11,7 +11,9 @@ from setuptools import find_packages, setup
 
 MODULE2PREFIX = {}
 
-TRYTON2GH = {'6.0.0': '4.0.0'}
+TRYTON2GH = {'6.0.0': '4.0.0',
+             '6.0.2': '4.2.0'}
+
 
 def read(fname):
     content = io.open(
