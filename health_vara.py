@@ -14,6 +14,12 @@ class Party(metaclass=PoolMeta):
         super().__setup__()
         # Gender shouldn't be required
         cls.gender.states['required'] = False
+        states_required = {
+            'required': Bool(Eval('is_person'))
+            }
+        cls.name.states.update(states_required)
+        cls.lastname.states.update(states_required)
+        cls.dob.states.update(states_required)
 
     @classmethod
     def view_attributes(cls):
