@@ -538,6 +538,10 @@ class ImagingFinding(ModelSQL, ModelView):
             ('id', 'DESC'),
             ]
 
+    @staticmethod
+    def default_method():
+        return 'ultrasound'
+
     @classmethod
     def view_attributes(cls):
         return super().view_attributes() + [
