@@ -16,13 +16,6 @@ else:
 class ImagingTestResult(metaclass=PoolMeta):
     __name__ = 'gnuhealth.imaging.test.result'
 
-    result_report_cache = fields.Binary('Imaging Result Report', readonly=True,
-        file_id=file_id, store_prefix=store_prefix)
-    result_report_cache_id = fields.Char('Result Report ID', readonly=True)
-    result_report_format = fields.Char('Result Report Format', readonly=True)
-    report_link = fields.Char("Report Download URL",
-        help="Link to download the Vara report",
-        readonly=True)
     prior_study_considered = fields.Boolean('Prior study considered',
             readonly=True)
     image_acquisition_date = fields.DateTime(
