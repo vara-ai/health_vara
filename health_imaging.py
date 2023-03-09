@@ -97,6 +97,7 @@ class ImagingFinding(ModelSQL, ModelView):
         'gnuhealth.imaging.birads', 'BI-RADS')
     bi_rads_comment = fields.Function(fields.Char('Comment'),
         'on_change_with_bi_rads_comment')
+    comment = fields.Text('Comment')
 
     # Ultrasound
     ultrasound_tissue_composition = fields.Selection([

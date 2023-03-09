@@ -22,6 +22,9 @@ contains the full copyright notices and license terms. -->
     <label name="bi_rads"/>
     <field name="bi_rads"/>
     <field name="bi_rads_comment"/>
+    <newline/>
+    <label name="comment"/>
+    <field name="comment" colspan="3"/>
 
     <group colspan="4" col="4" id="finding_ultrasound">
         <separator string="Ultrasound" colspan="4" id="separator_finding_ultrasound"/>
