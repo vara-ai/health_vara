@@ -2,6 +2,7 @@
 # contains the full copyright notices and license terms.
 from trytond.config import config
 from trytond.model import ModelSQL, ModelView, fields
+from trytond.modules.health.core import compute_age_from_dates
 from trytond.pool import PoolMeta
 from trytond.pyson import Eval
 
@@ -15,6 +16,13 @@ else:
 
 class ImagingTestResult(metaclass=PoolMeta):
     __name__ = 'gnuhealth.imaging.test.result'
+
+    # Remove once https://savannah.gnu.org/bugs/?63842 is solved
+    def patient_age_at_evaluation(self, name):
+        if (self.patient and self.patient.name.dob and self.date):
+            return compute_age_from_dates(
+                self.patient.name.dob, None, None, None, 'age',
+                self.date.date())
 
     prior_study_considered = fields.Boolean('Prior study considered',
             readonly=True)
