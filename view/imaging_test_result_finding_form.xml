@@ -6,6 +6,8 @@ contains the full copyright notices and license terms. -->
     <field name="imaging_result"/>
     <label name="number"/>
     <field name="number"/>
+    <label name="evaluated_by"/>
+    <field name="evaluated_by"/>
     <label name="finding_date"/>
     <field name="finding_date"/>
     <label name="method"/>

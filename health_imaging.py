@@ -2,7 +2,8 @@
 # contains the full copyright notices and license terms.
 from trytond.config import config
 from trytond.model import ModelSQL, ModelView, fields
-from trytond.modules.health.core import compute_age_from_dates
+from trytond.modules.health.core import (
+    compute_age_from_dates, get_health_professional)
 from trytond.pool import PoolMeta
 from trytond.pyson import Eval
 
@@ -98,6 +99,8 @@ class ImagingFinding(ModelSQL, ModelView):
     bi_rads_comment = fields.Function(fields.Char('Comment'),
         'on_change_with_bi_rads_comment')
     comment = fields.Text('Comment')
+    evaluated_by = fields.Many2One(
+        'gnuhealth.healthprofessional', 'Evaluated by', required=True)
 
     # Ultrasound
     ultrasound_tissue_composition = fields.Selection([
@@ -543,6 +546,10 @@ class ImagingFinding(ModelSQL, ModelView):
     @staticmethod
     def default_method():
         return 'ultrasound'
+
+    @staticmethod
+    def default_evaluated_by():
+        return get_health_professional(required=False)
 
     @classmethod
     def view_attributes(cls):
