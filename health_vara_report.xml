@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository
+contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- Reports -->
+        <record model="ir.action.report" id="report_patient_vara_findings">
+            <field name="name">Vara Report</field>
+            <field name="model">gnuhealth.patient</field>
+            <field name="report_name">patient.vara.findings</field>
+            <field name="report">health_vara/report/patient_vara_findings.fodt</field>
+            <field name="extension">pdf</field>
+        </record>
+        <record model="ir.action.keyword" id="report_patient_vara_findings_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">gnuhealth.patient,-1</field>
+            <field name="action" ref="report_patient_vara_findings"/>
+        </record>
+    </data>
+</tryton>

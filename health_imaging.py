@@ -86,10 +86,12 @@ class ImagingFinding(ModelSQL, ModelView):
             ('mammography', 'Mammography'),
             ('mri', 'MRI (Magnetic Resonance Imaging)'),
             ], 'Method', sort=False, required=True)
+    method_string = method.translated('method')
     laterality = fields.Selection([
             ('left_breast', 'Left Breast'),
             ('right_breast', 'Right Breast'),
             ], 'Laterality', required=True)
+    laterality_string = laterality.translated('laterality')
     localisation = fields.Char('Localisation')
     lesion_type = fields.Char('Lesion Type')
     size = fields.Integer('Size',
@@ -111,6 +113,9 @@ class ImagingFinding(ModelSQL, ModelView):
             ('heterogeneous', 'heterogeneous background echotexture'),
             ], 'Tissue Composition', sort=False,
         states=_ultrasound_states, depends=['method'])
+    ultrasound_tissue_composition_string = (
+        ultrasound_tissue_composition.translated(
+            'ultrasound_tissue_composition'))
     ultrasound_masses_shape = fields.Selection([
             (None, ''),
             ('oval', 'oval'),
@@ -173,6 +178,9 @@ class ImagingFinding(ModelSQL, ModelView):
             ('retractions', 'Skin retractions'),
             ], 'Skin changes', sort=False,
         states=_ultrasound_states, depends=['method'])
+    ultrasound_associated_skin_changes_string = (
+        ultrasound_associated_skin_changes.translated(
+            'ultrasound_associated_skin_changes'))
     ultrasound_associated_edema = fields.Boolean(
         'Edema',
         states=_ultrasound_states, depends=['method'])

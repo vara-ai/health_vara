@@ -4,6 +4,7 @@ from trytond.pool import Pool
 
 from . import health_vara
 from . import health_imaging
+from . import health_vara_report
 
 __all__ = ['register']
 
@@ -20,4 +21,5 @@ def register():
     Pool.register(
         module='health_vara', type_='wizard')
     Pool.register(
+        health_vara_report.VaraFindingsReport,
         module='health_vara', type_='report')
