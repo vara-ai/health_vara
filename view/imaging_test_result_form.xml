@@ -7,10 +7,6 @@ contains the full copyright notices and license terms. -->
             <label name="image_acquisition_date"/>
             <field name="image_acquisition_date"/>
             <newline/>
-            <label name="result_report_cache"/>
-            <field name="result_report_cache"/>
-            <label name="report_link"/>
-            <field name="report_link" widget="url"/>
             <label name="prior_study_considered"/>
             <field name="prior_study_considered"/>
             <newline/>

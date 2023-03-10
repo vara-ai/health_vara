@@ -16,6 +16,5 @@ contains the full copyright notices and license terms. -->
     <field name="technical_quality_lcc" string="LCC" />
     <field name="technical_quality_lmlo" string="LMLO" />
     <field name="density"/>
-    <field name="report_link" widget="url"/>
     <field name="clinical_recall"/>
 </tree>
