@@ -1,37 +1,11 @@
-# SPDX-FileCopyrightText: 2008-2023 Luis Falcón <falcon@gnuhealth.org>
-# SPDX-FileCopyrightText: 2011-2023 GNU Solidario <health@gnusolidario.org>
-#
-# SPDX-License-Identifier: GPL-3.0-or-later
+# The COPYRIGHT file at the top level of this repository
+# contains the full copyright notices and license terms.
 
-#########################################################################
-#   Hospital Management Information System (HMIS) component of the      #
-#                       GNU Health project                              #
-#                   https://www.gnuhealth.org                           #
-#########################################################################
-#                           HEALTH package                              #
-#   health_report.py: Disease, Medication and Vaccination reports       #
-#########################################################################
-import pytz
-from datetime import datetime
 from trytond.pool import Pool
 from trytond.transaction import Transaction
 from trytond.report import Report
 
 __all__ = ['VaraFindingsReport']
-
-
-def get_print_date():
-    Company = Pool().get('company.company')
-
-    timezone = None
-    company_id = Transaction().context.get('company')
-    if company_id:
-        company = Company(company_id)
-        if company.timezone:
-            timezone = pytz.timezone(company.timezone)
-
-    dt = datetime.now()
-    return datetime.astimezone(dt.replace(tzinfo=pytz.utc), timezone)
 
 
 class VaraFindingsReport(Report):
@@ -67,8 +41,6 @@ class VaraFindingsReport(Report):
         context['company'] = company
         context['report_address'] = report_address
         context['today'] = Date.today()
-        context['print_date'] = get_print_date()
-        context['print_time'] = context['print_date'].time()
-        #print(context)
+        context['finding_details'] = finding_details
 
         return context
