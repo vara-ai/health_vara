@@ -108,6 +108,7 @@ class PatientEvaluation(metaclass=PoolMeta):
     breast_operational_intervention = fields.Boolean(
         "Was there any operational intervention in the breast?")
     breast_operational_intervention_type = fields.Selection([
+            (None, ''),
             ('mastectomy', 'Mastectomy'),
             ('conservative', 'Conservative Breast Surgery'),
             ('benign_lumpectomy', 'Benign Lumpectomy'),
