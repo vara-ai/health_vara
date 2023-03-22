@@ -32,8 +32,7 @@ class VaraFindingsReport(Report):
         report_address = ''
         if company_id:
             company = Company(company_id)
-            address = company.party.addresses[0].full_address
-            report_address = address.replace('\n', ', ')
+            report_address = company.party.addresses[0].full_address
 
         def format_label(label):
             # Format the label for printout and put a separator for parsing
