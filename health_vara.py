@@ -1,7 +1,7 @@
 # The COPYRIGHT file at the top level of this repository
 # contains the full copyright notices and license terms.
 from trytond.i18n import gettext
-from trytond.model import fields
+from trytond.model import fields, DeactivableMixin
 from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Bool, Eval
 
@@ -79,7 +79,7 @@ diagnostic_types = [
 vara_types = screening_types + diagnostic_types
 
 
-class PatientEvaluation(metaclass=PoolMeta):
+class PatientEvaluation(DeactivableMixin, metaclass=PoolMeta):
     __name__ = 'gnuhealth.patient.evaluation'
 
     # Clinical complaints -> present_illness/notes_complaint

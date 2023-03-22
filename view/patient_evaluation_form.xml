@@ -2,13 +2,15 @@
 <!-- The COPYRIGHT file at the top level of this repository
 contains the full copyright notices and license terms. -->
 <form>
-    <group colspan="4" col="8" id="evaluation_header">
+    <group colspan="4" col="10" id="evaluation_header">
         <label name="patient"/>
         <field name="patient" colspan="3"/>
         <label name="visit_type"/>
         <field name="visit_type"/>
         <label name="code"/>
         <field name="code"/>
+        <label name="active"/>
+        <field name="active"/>
     </group>
     <separator string="Post Treatment Surveillance" colspan="4" id="separator_post_treat"/>
     <field name="post_treatment_surveillance" colspan="4" height="80"/>
