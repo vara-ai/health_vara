@@ -12,8 +12,6 @@ class Party(metaclass=PoolMeta):
     @classmethod
     def __setup__(cls):
         super().__setup__()
-        # Gender shouldn't be required
-        cls.gender.states['required'] = False
         states_required = {
             'required': Bool(Eval('is_person'))
             }
@@ -27,6 +25,10 @@ class Party(metaclass=PoolMeta):
             ('//page[@id="party_gnuhealth_extended"]', "states", {
                     'invisible': True,
                     })]
+
+    @staticmethod
+    def default_gender():
+        return 'f'
 
 
 class MammographyPatient(metaclass=PoolMeta):
