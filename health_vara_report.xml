@@ -16,5 +16,19 @@ contains the full copyright notices and license terms. -->
             <field name="model">gnuhealth.patient,-1</field>
             <field name="action" ref="report_patient_vara_findings"/>
         </record>
+
+        <record model="ir.action.report" id="health_imaging.imaging_result_report">
+            <field name="active" eval="False"/>
+        </record>
+        <record model="ir.action.report" id="imaging_result_report">
+            <field name="name">Medical Imaging Study</field>
+            <field name="model">gnuhealth.imaging.test.result</field>
+            <field name="report_name">patient.imaging_report_results</field>
+            <field name="report">health_vara/report/imaging_study_report.fodt</field>
+            <field name="extension">pdf</field>
+        </record>
+        <record model="ir.action.keyword" id="health_imaging.report_imaging_results">
+            <field name="action" ref="imaging_result_report"/>
+        </record>
     </data>
 </tryton>
