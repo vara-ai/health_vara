@@ -103,7 +103,7 @@ class ImagingFinding(ModelSQL, ModelView):
     biopsy_recommendation = fields.Selection([
             (None, ''),
             ('suspicious', 'Suspicious, should be biopsied'),
-            ('not_syspicious', 'Not suspicious (FP)'),
+            ('not_suspicious', 'Not suspicious (FP)'),
             ],
         'Biopsy Recommendation')
     biopsy_recommendation_string = biopsy_recommendation.translated(
