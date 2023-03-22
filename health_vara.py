@@ -197,9 +197,10 @@ class PatientEvaluation(metaclass=PoolMeta):
     @classmethod
     def __setup__(cls):
         super().__setup__()
-        for item in vara_types:
-            if item not in cls.visit_type.selection:
-                cls.visit_type.selection.append(item)
+        #for item in vara_types:
+        #    if item not in cls.visit_type.selection:
+        #        cls.visit_type.selection.append(item)
+        cls.visit_type.selection = vara_types
         cls.visit_type.states['required'] = True
 
     @classmethod
