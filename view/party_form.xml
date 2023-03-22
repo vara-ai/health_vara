@@ -12,6 +12,8 @@ contains the full copyright notices and license terms. -->
     </group>
     <label name="dob" string="Date of Birth"/>
     <field name="dob" xexpand="1"/>
+    <label name="gender"/>
+    <field name="gender"/>
     <notebook colspan="4">
         <page string="General" id="general">
             <field name="addresses" mode="form,tree" colspan="4"
