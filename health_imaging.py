@@ -100,6 +100,14 @@ class ImagingFinding(ModelSQL, ModelView):
         'gnuhealth.imaging.birads', 'BI-RADS')
     bi_rads_comment = fields.Function(fields.Char('Comment'),
         'on_change_with_bi_rads_comment')
+    biopsy_recommendation = fields.Selection([
+            (None, ''),
+            ('suspicious', 'Suspicious, should be biopsied'),
+            ('not_syspicious', 'Not suspicious (FP)'),
+            ],
+        'Biopsy Recommendation')
+    biopsy_recommendation_string = biopsy_recommendation.translated(
+        'biopsy_recommendation')
     comment = fields.Text('Comment')
     evaluated_by = fields.Many2One(
         'gnuhealth.healthprofessional', 'Evaluated by', required=True)

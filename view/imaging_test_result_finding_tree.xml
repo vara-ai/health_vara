@@ -9,6 +9,7 @@ contains the full copyright notices and license terms. -->
     <field name="localisation"/>
     <field name="bi_rads"/>
     <field name="bi_rads_comment" expand="1"/>
+    <field name="biopsy_recommendation"/>
     <field name="lesion_type"/>
     <field name="imaging_result"/>
 </tree>
