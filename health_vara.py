@@ -233,3 +233,10 @@ class PatientEvaluation(DeactivableMixin, metaclass=PoolMeta):
             ('right_breast', 'Right Breast'),
             ('both', 'Both Breasts'),
             ]
+
+    # Remove when Upstream Bug is solved (#4932)
+    # https://savannah.gnu.org/bugs/index.php?63959
+    @fields.depends('patient')
+    def on_change_patient(self):
+        if self.patient.id > 0:
+            super().on_change_patient()
