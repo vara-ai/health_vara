@@ -78,7 +78,10 @@ class ImagingFinding(ModelSQL, ModelView):
     patient = fields.Many2One('gnuhealth.patient', 'Patient',
         required=True)
     imaging_result = fields.Many2One(
-        'gnuhealth.imaging.test.result', 'Imaging Test Result')
+        'gnuhealth.imaging.test.result', 'Imaging Test Result',
+        domain=[
+            ('patient', '=', Eval('patient')),
+            ], depends=['patient'])
     finding_date = fields.DateTime('Date', required=True)
     number = fields.Integer('Number')
     method = fields.Selection([
