@@ -41,7 +41,7 @@ class ImagingTestResult(metaclass=PoolMeta):
     assessment = fields.Many2One('gnuhealth.imaging.birads', 'Assessment',
         readonly=True)
     clinical_recall = fields.Char('Clinical Recall', readonly=True)
-    findings = fields.One2Many('gnuhealth.imaging.finding', 'patient',
+    findings = fields.One2Many('gnuhealth.imaging.finding', 'imaging_result',
         'Findings', readonly=True)
     density = fields.Selection([
             (None, ''),
