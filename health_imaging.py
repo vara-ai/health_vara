@@ -41,7 +41,7 @@ class ImagingTestResult(metaclass=PoolMeta):
     assessment = fields.Many2One('gnuhealth.imaging.birads', 'Assessment',
         readonly=True)
     clinical_recall = fields.Char('Clinical Recall', readonly=True)
-    findings = fields.One2Many('gnuhealth.imaging.finding', 'patient',
+    findings = fields.One2Many('gnuhealth.imaging.finding', 'imaging_result',
         'Findings', readonly=True)
     density = fields.Selection([
             (None, ''),
@@ -78,7 +78,10 @@ class ImagingFinding(ModelSQL, ModelView):
     patient = fields.Many2One('gnuhealth.patient', 'Patient',
         required=True)
     imaging_result = fields.Many2One(
-        'gnuhealth.imaging.test.result', 'Imaging Test Result')
+        'gnuhealth.imaging.test.result', 'Imaging Test Result',
+        domain=[
+            ('patient', '=', Eval('patient')),
+            ], depends=['patient'])
     finding_date = fields.DateTime('Date', required=True)
     number = fields.Integer('Number')
     method = fields.Selection([
