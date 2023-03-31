@@ -65,5 +65,9 @@ contains the full copyright notices and license terms. -->
         <field name="known_brca_mutation"/>
         <newline/>
         <field name="genetic_risks" colspan="2"/>
+        <newline/>
+        <label name="cancer_history_person"/>
+        <field name="cancer_history_person"/>
+        <field name="cancer_history_person_text" colspan="4"/>
     </group>
 </form>
