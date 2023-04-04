@@ -1394,7 +1394,7 @@
       <text:p text:style-name="P141"><text:span text:style-name="T53">Study</text:span><text:span text:style-name="T52">: </text:span><text:span text:style-name="T54"><text:placeholder text:placeholder-type="text">&lt;interpretation.requested_test.rec_name if interpretation.requested_test else &apos;&apos;&gt;</text:placeholder></text:span></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla1.C2" table:number-columns-spanned="2" office:value-type="string">
-      <text:p text:style-name="P195">Context: <text:span text:style-name="T29"><text:placeholder text:placeholder-type="text">&lt;interpretation.request.context.rec_name if interpretation.request.context else &apos;&apos;&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P195">Context: <text:span text:style-name="T29"><text:placeholder text:placeholder-type="text">&lt;interpretation.request.context.rec_name if interpretation.request and interpretation.request.context else &apos;&apos;&gt;</text:placeholder></text:span></text:p>
      </table:table-cell>
      <table:covered-table-cell/>
     </table:table-row>
