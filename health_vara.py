@@ -141,6 +141,13 @@ class PatientEvaluation(DeactivableMixin, metaclass=PoolMeta):
         states={
             'invisible': ~Eval('breast_cancer_history_person'),
             }, depends=['breast_cancer_history_person'])
+    cancer_history_person = fields.Boolean(
+        "Did the woman have any other cancer in the past?")
+    cancer_history_person_text = fields.Text(
+        "Personal Cancer History Text",
+        states={
+            'invisible': ~Eval('cancer_history_person'),
+            }, depends=['cancer_history_person'])
     sequence_number = fields.Char("Sequence Number",
         states={
             'invisible': ~Eval('breast_cancer_history_person'),
