@@ -11,7 +11,9 @@ from setuptools import find_packages, setup
 
 MODULE2PREFIX = {}
 
-TRYTON2GH = {'6.0.0': '4.0.0'}
+TRYTON2GH = {
+    '6.0': '4.2.0',
+    }
 
 def read(fname):
     content = io.open(
@@ -45,13 +47,16 @@ minor_version = int(minor_version)
 name = 'm9s_health_vara'
 download_url = 'https://gitlab.com/m9s/health_vara.git'
 requires = []
+
+tryton_base = f'{major_version}.{minor_version}'
+health_base = TRYTON2GH[tryton_base]
 for dep in info.get('depends', []):
     if (dep == 'health'):
-        requires.append('gnuhealth >= %s' % (TRYTON2GH[info.get('version')]))
+        requires.append('gnuhealth >= %s' % (health_base))
     elif dep.startswith('health_'):
         health_package = dep.split('_', 1)[1]
         requires.append('gnuhealth_%s >= %s' %
-                        (health_package, TRYTON2GH[info.get('version')]))
+                        (health_package, health_base))
     else:
         if not re.match(r'(ir|res)(\W|$)', dep):
             prefix = MODULE2PREFIX.get(dep, 'trytond')
