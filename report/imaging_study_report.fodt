@@ -1419,7 +1419,7 @@
     <table:table-column table:style-name="Tabla2.B"/>
     <table:table-row table:style-name="Tabla2.1">
      <table:table-cell table:style-name="Tabla2.A1" office:value-type="string">
-      <text:p text:style-name="P129"><draw:frame draw:style-name="fr1" draw:name="image: (image.data, &apos;image/png&apos;,&apos;5cm&apos;,&apos;5cm&apos;)" text:anchor-type="as-char" svg:width="0.6791in" svg:height="0.178in" draw:z-index="0">
+      <text:p text:style-name="P129"><draw:frame draw:style-name="fr1" draw:name="image: (image.data, &apos;image/png&apos;,&apos;5cm&apos;,&apos;5cm&apos;)" text:anchor-type="as-char" svg:width="100%" svg:height="auto" draw:z-index="0">
         <draw:text-box>
          <text:p text:style-name="Frame_20_contents"/>
         </draw:text-box>
