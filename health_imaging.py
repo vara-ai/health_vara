@@ -7,12 +7,24 @@ from trytond.modules.health.core import (
 from trytond.pool import PoolMeta
 from trytond.pyson import Eval
 
+from pydicom.uid import generate_uid
+
 if config.getboolean('health_vara', 'filestore', default=True):
     file_id = 'result_report_cache_id'
     store_prefix = config.get('health_vara', 'store_prefix', default=None)
 else:
     file_id = None
     store_prefix = None
+
+
+class ImagingTestRequest(metaclass=PoolMeta):
+    __name__ = 'gnuhealth.imaging.test.request'
+
+    study_instance_uid = fields.Char('Study Instance UID')
+
+    @staticmethod
+    def default_study_instance_uid():
+        return generate_uid(prefix=None)
 
 
 class ImagingTestResult(metaclass=PoolMeta):
