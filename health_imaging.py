@@ -21,6 +21,11 @@ class ImagingTestRequest(metaclass=PoolMeta):
     __name__ = 'gnuhealth.imaging.test.request'
 
     study_instance_uid = fields.Char('Study Instance UID')
+    accession_number = fields.Function(fields.Char(
+        'Accession Number'), 'get_accession_number')
+
+    def get_accession_number(self, _name):
+        return "MXH-" + str(self.id)
 
     @staticmethod
     def default_study_instance_uid():
