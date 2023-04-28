@@ -28,6 +28,14 @@ class ImagingTestRequest(metaclass=PoolMeta):
     def get_accession_number(self, _name):
         return "MXH-" + str(self.id)
 
+    ACCESSION_NUMBER_PREFIX = config.get(
+        'health_vara', 'accession_number_prefix', default='MXH-')
+    accession_number = fields.Function(fields.Char(
+        'Accession Number'), 'get_accession_number')
+
+    def get_accession_number(self, _name):
+        return self.ACCESSION_NUMBER_PREFIX + str(self.id)
+
     @staticmethod
     def default_study_instance_uid():
         return generate_uid(prefix=None)
