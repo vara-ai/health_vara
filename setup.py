@@ -47,7 +47,7 @@ major_version = int(major_version)
 minor_version = int(minor_version)
 name = 'm9s_health_vara'
 download_url = 'https://gitlab.com/m9s/health_vara.git'
-requires = []
+requires = ['pydicom >= 2.3.1, < 3.0']
 
 tryton_base = f'{major_version}.{minor_version}'
 health_base = TRYTON2GH[tryton_base]
