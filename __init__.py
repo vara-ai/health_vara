@@ -14,6 +14,7 @@ def register():
         health_vara.Party,
         health_vara.MammographyPatient,
         health_vara.PatientEvaluation,
+        health_imaging.ImagingTestRequest,
         health_imaging.ImagingTestResult,
         health_imaging.ImagingFinding,
         health_imaging.BIRADS,
