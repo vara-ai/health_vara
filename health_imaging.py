@@ -28,13 +28,6 @@ class ImagingTestRequest(metaclass=PoolMeta):
     accession_number = fields.Function(fields.Char(
         'Accession Number'), 'get_accession_number')
 
-    def get_accession_number(self, name):
-        return '%s%s' % (_accession_number_prefix + str(self.id))
-
-    @staticmethod
-    def default_study_instance_uid():
-        return generate_uid(prefix=None)
-
     @classmethod
     def __setup__(cls):
         super().__setup__()
@@ -45,6 +38,13 @@ class ImagingTestRequest(metaclass=PoolMeta):
                     'invisible': True,
                     },
                 })
+
+    @staticmethod
+    def default_study_instance_uid():
+        return generate_uid(prefix=None)
+
+    def get_accession_number(self, name):
+        return '%s%s' % (_accession_number_prefix + str(self.id))
 
 
 class ImagingTestResult(metaclass=PoolMeta):
