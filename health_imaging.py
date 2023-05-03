@@ -16,6 +16,9 @@ else:
     file_id = None
     store_prefix = None
 
+_accession_number_prefix = config.get(
+    'health_vara', 'accession_number_prefix', default='MXH-')
+
 
 class ImagingTestRequest(metaclass=PoolMeta):
     __name__ = 'gnuhealth.imaging.test.request'
@@ -25,11 +28,8 @@ class ImagingTestRequest(metaclass=PoolMeta):
     accession_number = fields.Function(fields.Char(
         'Accession Number'), 'get_accession_number')
 
-    ACCESSION_NUMBER_PREFIX = config.get(
-        'health_vara', 'accession_number_prefix', default='MXH-')
-
-    def get_accession_number(self, _name):
-        return self.ACCESSION_NUMBER_PREFIX + str(self.id)
+    def get_accession_number(self, name):
+        return '%s%s' % (_accession_number_prefix + str(self.id))
 
     @staticmethod
     def default_study_instance_uid():
