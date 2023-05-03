@@ -40,6 +40,17 @@ class ImagingTestRequest(metaclass=PoolMeta):
     def default_study_instance_uid():
         return generate_uid(prefix=None)
 
+    @classmethod
+    def __setup__(cls):
+        super().__setup__()
+        cls._buttons.update({
+                # Hard overwrite vor Vara: Do not display button
+                # 'Generate Results' to avoid confusion
+                'generate_results': {
+                    'invisible': True,
+                    },
+                })
+
 
 class ImagingTestResult(metaclass=PoolMeta):
     __name__ = 'gnuhealth.imaging.test.result'
