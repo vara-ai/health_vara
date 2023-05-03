@@ -1,13 +1,13 @@
 # The COPYRIGHT file at the top level of this repository
 # contains the full copyright notices and license terms.
+from pydicom.uid import generate_uid
+
 from trytond.config import config
 from trytond.model import ModelSQL, ModelView, fields
 from trytond.modules.health.core import (
     compute_age_from_dates, get_health_professional)
 from trytond.pool import PoolMeta
 from trytond.pyson import Eval
-
-from pydicom.uid import generate_uid
 
 if config.getboolean('health_vara', 'filestore', default=True):
     file_id = 'result_report_cache_id'
