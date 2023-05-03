@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:css3t="http://www.w3.org/TR/css3-text/" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:rpt="http://openoffice.org/2005/report" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" office:version="1.3" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:generator>LibreOffice/7.4.5.1$Linux_X86_64 LibreOffice_project/40$Build-1</meta:generator><meta:creation-date>2008-06-07T15:28:22</meta:creation-date><dc:date>2009-01-10T16:03:33</dc:date><meta:editing-cycles>1</meta:editing-cycles><meta:editing-duration>P0D</meta:editing-duration><meta:document-statistic meta:table-count="1" meta:image-count="1" meta:object-count="0" meta:page-count="6" meta:paragraph-count="111" meta:word-count="751" meta:character-count="5817" meta:non-whitespace-character-count="5171"/><meta:user-defined meta:name="Info 1"/><meta:user-defined meta:name="Info 2"/><meta:user-defined meta:name="Info 3"/><meta:user-defined meta:name="Info 4"/></office:meta>
+ <office:meta><meta:generator>LibreOffice/7.4.5.1$Linux_X86_64 LibreOffice_project/40$Build-1</meta:generator><meta:creation-date>2008-06-07T15:28:22</meta:creation-date><dc:date>2009-01-10T16:03:33</dc:date><meta:editing-cycles>1</meta:editing-cycles><meta:editing-duration>P0D</meta:editing-duration><meta:document-statistic meta:table-count="1" meta:image-count="1" meta:object-count="0" meta:page-count="7" meta:paragraph-count="116" meta:word-count="766" meta:character-count="5937" meta:non-whitespace-character-count="5281"/><meta:user-defined meta:name="Info 1"/><meta:user-defined meta:name="Info 2"/><meta:user-defined meta:name="Info 3"/><meta:user-defined meta:name="Info 4"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="long">71543</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="long">2752</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="long">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="long">38366</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="long">40986</config:config-item>
    <config:config-item config:name="ViewAreaHeight" config:type="long">24370</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="long">19995</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="long">83458</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="long">16699</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="long">8140</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="long">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="long">71543</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="long">38365</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="long">95911</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="long">2752</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="long">40984</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="long">27120</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -91,7 +91,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="PrinterSetup" config:type="base64Binary"/>
    <config:config-item config:name="AddParaTableSpacingAtStart" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">2849578</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">2968421</config:config-item>
    <config:config-item config:name="EmbeddedDatabaseName" config:type="string"/>
    <config:config-item config:name="FieldAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
@@ -168,7 +168,7 @@
   <draw:hatch draw:name="hatch" draw:style="single" draw:color="#3465a4" draw:distance="0.02cm" draw:rotation="0"/>
   <style:default-style style:family="graphic">
    <style:graphic-properties svg:stroke-color="#000000" draw:fill-color="#99ccff" fo:wrap-option="no-wrap" draw:shadow-offset-x="0.3cm" draw:shadow-offset-y="0.3cm" draw:start-line-spacing-horizontal="0.283cm" draw:start-line-spacing-vertical="0.283cm" draw:end-line-spacing-horizontal="0.283cm" draw:end-line-spacing-vertical="0.283cm" style:flow-with-text="false"/>
-   <style:paragraph-properties style:text-autospace="ideograph-alpha" style:line-break="strict" style:writing-mode="lr-tb" style:font-independent-line-spacing="false">
+   <style:paragraph-properties style:text-autospace="ideograph-alpha" style:line-break="strict" style:font-independent-line-spacing="false">
     <style:tab-stops/>
    </style:paragraph-properties>
    <style:text-properties style:use-window-font-color="true" loext:opacity="0%" loext:color-lum-mod="100%" loext:color-lum-off="0%" style:font-name="Thorndale AMT" fo:font-size="12pt" fo:language="en" fo:country="US" style:letter-kerning="true" style:font-name-asian="Andale Sans UI" style:font-size-asian="10.5pt" style:language-asian="zxx" style:country-asian="none" style:font-name-complex="Andale Sans UI" style:font-size-complex="12pt" style:language-complex="zxx" style:country-complex="none"/>
@@ -691,46 +691,56 @@
    <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial1" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="0029fe83" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
   </style:style>
   <style:style style:name="P72" style:family="paragraph" style:parent-style-name="Standard">
+   <loext:graphic-properties draw:fill="none" draw:fill-hatch-name="hatch"/>
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial1" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="0029fe83" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
+  </style:style>
+  <style:style style:name="P73" style:family="paragraph" style:parent-style-name="Standard">
    <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial1" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="00232940" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
   </style:style>
-  <style:style style:name="P73" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P74" style:family="paragraph" style:parent-style-name="Text_20_body">
    <loext:graphic-properties draw:fill="none" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
    <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial1" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00231ad9" officeooo:paragraph-rsid="00231ad9" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
   </style:style>
-  <style:style style:name="P74" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P75" style:family="paragraph" style:parent-style-name="Standard">
+   <loext:graphic-properties draw:fill="none" draw:fill-hatch-name="hatch"/>
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial1" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="0029fe83" officeooo:paragraph-rsid="0029fe83" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
+  </style:style>
+  <style:style style:name="P76" style:family="paragraph" style:parent-style-name="Text_20_body">
    <loext:graphic-properties draw:fill="none" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
    <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial1" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="00231ad9" officeooo:paragraph-rsid="00231ad9" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-weight-asian="bold" style:font-size-complex="11pt" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P75" style:family="paragraph" style:parent-style-name="Preformatted_20_Text">
+  <style:style style:name="P77" style:family="paragraph" style:parent-style-name="Preformatted_20_Text">
    <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
    <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial1" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="001b5069" officeooo:paragraph-rsid="00232940" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-weight-asian="bold" style:font-size-complex="11pt" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P76" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
-   <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="001cb179" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
-  </style:style>
-  <style:style style:name="P77" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
-   <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="001ea66e" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
-  </style:style>
   <style:style style:name="P78" style:family="paragraph" style:parent-style-name="Text_20_body">
    <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="0021def5" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="001cb179" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
   </style:style>
   <style:style style:name="P79" style:family="paragraph" style:parent-style-name="Text_20_body">
    <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="001ea66e" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
+  </style:style>
+  <style:style style:name="P80" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
+   <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="0021def5" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
+  </style:style>
+  <style:style style:name="P81" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
+   <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="0029fe83" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
   </style:style>
-  <style:style style:name="P80" style:family="paragraph" style:parent-style-name="Text_20_body" style:master-page-name="">
+  <style:style style:name="P82" style:family="paragraph" style:parent-style-name="Text_20_body" style:master-page-name="">
    <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false" style:page-number="auto" fo:background-color="transparent">
     <style:tab-stops>
@@ -739,7 +749,7 @@
    </style:paragraph-properties>
    <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="001cb179" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
   </style:style>
-  <style:style style:name="P81" style:family="paragraph" style:parent-style-name="Text_20_body" style:master-page-name="">
+  <style:style style:name="P83" style:family="paragraph" style:parent-style-name="Text_20_body" style:master-page-name="">
    <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false" style:page-number="auto" fo:background-color="transparent">
     <style:tab-stops>
@@ -748,7 +758,7 @@
    </style:paragraph-properties>
    <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="0021def5" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
   </style:style>
-  <style:style style:name="P82" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="">
+  <style:style style:name="P84" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="">
    <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false" style:page-number="auto" fo:background-color="transparent">
     <style:tab-stops>
@@ -757,117 +767,122 @@
    </style:paragraph-properties>
    <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="0029fe83" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
   </style:style>
-  <style:style style:name="P83" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P85" style:family="paragraph" style:parent-style-name="Text_20_body">
    <loext:graphic-properties draw:fill="none"/>
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
    <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:paragraph-rsid="001cb179" style:text-blinking="false" fo:background-color="transparent"/>
   </style:style>
-  <style:style style:name="P84" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P86" style:family="paragraph" style:parent-style-name="Standard">
    <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
    <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="0029fe83" style:text-blinking="false" fo:background-color="transparent"/>
   </style:style>
-  <style:style style:name="P85" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P87" style:family="paragraph" style:parent-style-name="Standard">
+   <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:break-before="page" fo:background-color="transparent"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="0029fe83" style:text-blinking="false" fo:background-color="transparent"/>
+  </style:style>
+  <style:style style:name="P88" style:family="paragraph" style:parent-style-name="Text_20_body">
    <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
    <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="0021def5" style:text-blinking="false" fo:background-color="transparent"/>
   </style:style>
-  <style:style style:name="P86" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P89" style:family="paragraph" style:parent-style-name="Text_20_body">
    <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
    <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="0029fe83" style:text-blinking="false" fo:background-color="transparent"/>
   </style:style>
-  <style:style style:name="P87" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P90" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
   </style:style>
-  <style:style style:name="P88" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P91" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
    <style:text-properties officeooo:paragraph-rsid="0008048e"/>
   </style:style>
-  <style:style style:name="P89" style:family="paragraph" style:parent-style-name="Table_20_Heading">
+  <style:style style:name="P92" style:family="paragraph" style:parent-style-name="Table_20_Heading">
    <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
   </style:style>
-  <style:style style:name="P90" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P93" style:family="paragraph" style:parent-style-name="Text_20_body">
    <loext:graphic-properties draw:fill="none"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
-   <style:text-properties officeooo:paragraph-rsid="001ea66e"/>
-  </style:style>
-  <style:style style:name="P91" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
-   <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
-   <style:text-properties officeooo:paragraph-rsid="001ea66e"/>
-  </style:style>
-  <style:style style:name="P92" style:family="paragraph" style:parent-style-name="Standard">
-   <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
-   <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
-   <style:text-properties officeooo:paragraph-rsid="001ea66e"/>
-  </style:style>
-  <style:style style:name="P93" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
-   <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties officeooo:paragraph-rsid="001ea66e"/>
   </style:style>
   <style:style style:name="P94" style:family="paragraph" style:parent-style-name="Text_20_body">
    <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
+   <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
+   <style:text-properties officeooo:paragraph-rsid="001ea66e"/>
+  </style:style>
+  <style:style style:name="P95" style:family="paragraph" style:parent-style-name="Standard">
+   <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
+   <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
+   <style:text-properties officeooo:paragraph-rsid="001ea66e"/>
+  </style:style>
+  <style:style style:name="P96" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
+   <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties officeooo:paragraph-rsid="001ea66e"/>
+  </style:style>
+  <style:style style:name="P97" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
    <style:text-properties officeooo:paragraph-rsid="001ea66e"/>
   </style:style>
-  <style:style style:name="P95" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P98" style:family="paragraph" style:parent-style-name="Text_20_body">
    <loext:graphic-properties draw:fill="none"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
    <style:text-properties officeooo:paragraph-rsid="001cb179"/>
   </style:style>
-  <style:style style:name="P96" style:family="paragraph" style:parent-style-name="Text_20_body" style:master-page-name="">
+  <style:style style:name="P99" style:family="paragraph" style:parent-style-name="Text_20_body" style:master-page-name="">
    <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" style:page-number="auto" fo:background-color="transparent"/>
    <style:text-properties officeooo:paragraph-rsid="001cb179"/>
   </style:style>
-  <style:style style:name="P97" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P100" style:family="paragraph" style:parent-style-name="Text_20_body">
    <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties officeooo:paragraph-rsid="001cb179"/>
   </style:style>
-  <style:style style:name="P98" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P101" style:family="paragraph" style:parent-style-name="Standard">
    <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
    <style:text-properties officeooo:paragraph-rsid="0021def5"/>
   </style:style>
-  <style:style style:name="P99" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P102" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
   </style:style>
-  <style:style style:name="P100" style:family="paragraph" style:parent-style-name="Heading_20_2">
+  <style:style style:name="P103" style:family="paragraph" style:parent-style-name="Heading_20_2">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
   </style:style>
-  <style:style style:name="P101" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P104" style:family="paragraph" style:parent-style-name="Standard">
    <loext:graphic-properties draw:fill="none" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
    <style:text-properties officeooo:paragraph-rsid="0029fe83"/>
   </style:style>
-  <style:style style:name="P102" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P105" style:family="paragraph" style:parent-style-name="Text_20_body">
    <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties officeooo:paragraph-rsid="0029fe83"/>
   </style:style>
-  <style:style style:name="P103" style:family="paragraph" style:parent-style-name="Text_20_body" style:master-page-name="">
+  <style:style style:name="P106" style:family="paragraph" style:parent-style-name="Text_20_body" style:master-page-name="">
    <loext:graphic-properties draw:fill="none"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" style:page-number="auto" fo:background-color="transparent"/>
    <style:text-properties style:text-underline-style="none" officeooo:paragraph-rsid="001cb179"/>
   </style:style>
-  <style:style style:name="P104" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P107" style:family="paragraph" style:parent-style-name="Text_20_body">
    <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties style:text-underline-style="none" officeooo:paragraph-rsid="001cb179"/>
   </style:style>
-  <style:style style:name="P105" style:family="paragraph" style:parent-style-name="Text_20_body" style:master-page-name="">
+  <style:style style:name="P108" style:family="paragraph" style:parent-style-name="Text_20_body" style:master-page-name="">
    <loext:graphic-properties draw:fill="none"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" style:page-number="auto" fo:background-color="transparent"/>
    <style:text-properties style:text-underline-style="none" officeooo:paragraph-rsid="001ea66e"/>
   </style:style>
-  <style:style style:name="P106" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P109" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties style:text-underline-style="none"/>
   </style:style>
-  <style:style style:name="P107" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P110" style:family="paragraph" style:parent-style-name="Text_20_body">
    <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:line-height="138%" fo:text-indent="0cm" style:auto-text-indent="false" style:writing-mode="lr-tb">
     <style:tab-stops>
@@ -876,7 +891,7 @@
    </style:paragraph-properties>
    <style:text-properties officeooo:paragraph-rsid="001ea66e"/>
   </style:style>
-  <style:style style:name="P108" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P111" style:family="paragraph" style:parent-style-name="Text_20_body">
    <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:line-height="138%" fo:text-indent="0cm" style:auto-text-indent="false" style:writing-mode="lr-tb">
     <style:tab-stops>
@@ -885,7 +900,7 @@
    </style:paragraph-properties>
    <style:text-properties officeooo:paragraph-rsid="001f7e27"/>
   </style:style>
-  <style:style style:name="P109" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P112" style:family="paragraph" style:parent-style-name="Text_20_body">
    <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:line-height="138%" fo:text-indent="0cm" style:auto-text-indent="false" style:writing-mode="lr-tb">
     <style:tab-stops>
@@ -894,7 +909,7 @@
    </style:paragraph-properties>
    <style:text-properties officeooo:paragraph-rsid="0021def5"/>
   </style:style>
-  <style:style style:name="P110" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P113" style:family="paragraph" style:parent-style-name="Standard">
    <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-top="0.3cm" fo:margin-bottom="0.199cm" style:contextual-spacing="false">
     <style:tab-stops>
@@ -903,103 +918,105 @@
    </style:paragraph-properties>
    <style:text-properties fo:font-weight="bold" officeooo:paragraph-rsid="001cb179" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P111" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="">
+  <style:style style:name="P114" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="">
    <style:paragraph-properties style:page-number="auto" fo:break-before="auto" fo:break-after="auto"/>
   </style:style>
-  <style:style style:name="P112" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="">
+  <style:style style:name="P115" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="">
    <loext:graphic-properties draw:fill="none"/>
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false" style:page-number="auto" fo:background-color="transparent"/>
    <style:text-properties officeooo:paragraph-rsid="001b5069"/>
   </style:style>
-  <style:style style:name="P113" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="">
+  <style:style style:name="P116" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false" style:page-number="auto" fo:break-before="page"/>
    <style:text-properties fo:font-size="6pt" officeooo:paragraph-rsid="0011a01d" style:font-size-asian="5.25pt" style:font-size-complex="6pt"/>
   </style:style>
-  <style:style style:name="P114" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P117" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties style:font-name="Liberation Serif"/>
   </style:style>
-  <style:style style:name="P115" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P118" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties style:font-name="Liberation Serif"/>
   </style:style>
-  <style:style style:name="P116" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P119" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties style:font-name="Liberation Serif" officeooo:paragraph-rsid="0014b27d"/>
   </style:style>
-  <style:style style:name="P117" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P120" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:text-properties officeooo:rsid="0007edf0" officeooo:paragraph-rsid="0007edf0"/>
   </style:style>
-  <style:style style:name="P118" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P121" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:margin-left="11.28cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
   </style:style>
-  <style:style style:name="P119" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P122" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:margin-left="11.28cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties officeooo:paragraph-rsid="0011a01d"/>
   </style:style>
-  <style:style style:name="P120" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="">
+  <style:style style:name="P123" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="">
    <style:paragraph-properties fo:margin-left="11.28cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false" style:page-number="auto" fo:break-before="page"/>
    <style:text-properties officeooo:paragraph-rsid="0011a01d"/>
   </style:style>
-  <style:style style:name="P121" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="">
+  <style:style style:name="P124" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="">
    <style:paragraph-properties fo:margin-left="11.28cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false" style:page-number="auto" fo:break-before="page"/>
    <style:text-properties officeooo:paragraph-rsid="000ce218"/>
   </style:style>
-  <style:style style:name="P122" style:family="paragraph" style:parent-style-name="Heading_20_1">
+  <style:style style:name="P125" style:family="paragraph" style:parent-style-name="Heading_20_1">
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
    <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color"/>
   </style:style>
-  <style:style style:name="P123" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P126" style:family="paragraph" style:parent-style-name="Text_20_body">
    <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
    <style:text-properties officeooo:rsid="001b5069" officeooo:paragraph-rsid="0029fe83"/>
   </style:style>
-  <style:style style:name="P124" style:family="paragraph" style:parent-style-name="Standard">
-   <loext:graphic-properties draw:fill="none" draw:fill-hatch-name="hatch"/>
-   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
-   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial1" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="0029fe83" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
-  </style:style>
-  <style:style style:name="P125" style:family="paragraph" style:parent-style-name="Standard">
-   <loext:graphic-properties draw:fill="none" draw:fill-hatch-name="hatch"/>
-   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
-   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial1" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="0029fe83" officeooo:paragraph-rsid="0029fe83" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
-  </style:style>
-  <style:style style:name="P126" style:family="paragraph" style:parent-style-name="Standard">
-   <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
-   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
-   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="0029fe83" style:text-blinking="false" fo:background-color="transparent"/>
-  </style:style>
   <style:style style:name="P127" style:family="paragraph" style:parent-style-name="Standard">
    <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
-   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:break-before="page" fo:background-color="transparent"/>
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
    <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="0029fe83" style:text-blinking="false" fo:background-color="transparent"/>
   </style:style>
-  <style:style style:name="P128" style:family="paragraph" style:parent-style-name="Standard">
-   <style:text-properties style:font-name="Arial1" fo:font-size="11pt" officeooo:paragraph-rsid="001cb179" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
-  </style:style>
-  <style:style style:name="P129" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
-   <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="0029fe83" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
-  </style:style>
-  <style:style style:name="P130" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
-   <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="0021def5" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
-  </style:style>
-  <style:style style:name="P131" style:family="paragraph" style:parent-style-name="Text_20_body" style:master-page-name="">
-   <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
-   <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false" style:page-number="auto" fo:background-color="transparent">
-    <style:tab-stops>
-     <style:tab-stop style:position="6.006cm"/>
-    </style:tab-stops>
-   </style:paragraph-properties>
-   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="0021def5" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
-  </style:style>
-  <style:style style:name="P132" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P128" style:family="paragraph" style:parent-style-name="Text_20_body">
    <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
    <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="0029fe83" style:text-blinking="false" fo:background-color="transparent"/>
+  </style:style>
+  <style:style style:name="P129" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <loext:graphic-properties draw:fill="none"/>
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial1" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="002d4b65" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
+  </style:style>
+  <style:style style:name="P130" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial1" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="002d4b65" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
+  </style:style>
+  <style:style style:name="P131" style:family="paragraph" style:parent-style-name="Text_20_body" style:master-page-name="">
+   <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" style:page-number="auto" fo:background-color="transparent"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial1" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="002d4b65" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
+  </style:style>
+  <style:style style:name="P132" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <loext:graphic-properties draw:fill="none"/>
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial1" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="002d4b65" officeooo:paragraph-rsid="002d4b65" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
+  </style:style>
+  <style:style style:name="P133" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <loext:graphic-properties draw:fill="none" draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial1" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="002d4b65" officeooo:paragraph-rsid="002d4b65" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
+  </style:style>
+  <style:style style:name="P134" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="002d4b65" style:text-blinking="false" fo:background-color="transparent" style:font-size-asian="11pt" style:font-size-complex="11pt"/>
+  </style:style>
+  <style:style style:name="P135" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <loext:graphic-properties draw:fill-gradient-name="gradient" draw:fill-hatch-name="hatch"/>
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" loext:opacity="100%" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Arial" fo:font-size="11pt" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="001b5069" officeooo:paragraph-rsid="002d4b65" style:text-blinking="false" fo:background-color="transparent"/>
+  </style:style>
+  <style:style style:name="P136" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties style:text-underline-style="none" officeooo:paragraph-rsid="002d4b65"/>
   </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties officeooo:rsid="00231ad9"/>
@@ -1162,7 +1179,7 @@
     <text:p text:style-name="P1"><text:placeholder text:placeholder-type="text">&lt;line&gt;</text:placeholder></text:p>
     <text:p text:style-name="P1"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
     <text:p text:style-name="P2"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
-    <text:p text:style-name="P3">BREAST CANCER SCREENING REPORT<draw:frame draw:style-name="fr1" draw:name="image1.png" text:anchor-type="char" svg:x="13.573cm" svg:y="-0.635cm" svg:width="4.242cm" svg:height="1.282cm" draw:z-index="5"><draw:image draw:mime-type="image/png">
+    <text:p text:style-name="P3">BREAST CANCER SCREENING REPORT<draw:frame draw:style-name="fr1" draw:name="image1.png" text:anchor-type="char" svg:x="13.573cm" svg:y="-0.635cm" svg:width="4.242cm" svg:height="1.282cm" draw:z-index="6"><draw:image draw:mime-type="image/png">
        <office:binary-data>iVBORw0KGgoAAAANSUhEUgAABTIAAAGQCAYAAACdy5+iAABvhUlEQVR4XuzdiVcVV9fn8f5r
         ez3JkyjOUaPGOc5R4xSnOMcBFXFAQBBFnEFERUQQQRBkUGYQSLX7Gvox+4Ay3Lr37KrvZ63f
         6tVv92s4t05B3V3nnP1/AgAAAAAAAADw3P/R/wMAAAAAAAAA8A2FTAAAAAAAAADeo5AJAAAA
@@ -1703,7 +1720,7 @@
     <text:p text:style-name="P2"><text:placeholder text:placeholder-type="text">&lt;line&gt;</text:placeholder></text:p>
     <text:p text:style-name="P2"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
     <text:p text:style-name="P2"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
-    <text:p text:style-name="P4"><text:span text:style-name="T1">Page </text:span><text:page-number text:select-page="current">6</text:page-number><text:s/><text:span text:style-name="T1">of </text:span><text:page-count>6</text:page-count></text:p>
+    <text:p text:style-name="P4"><text:span text:style-name="T1">Page </text:span><text:page-number text:select-page="current">7</text:page-number><text:s/><text:span text:style-name="T1">of </text:span><text:page-count>7</text:page-count></text:p>
    </style:footer>
   </style:master-page>
  </office:master-styles>
@@ -1720,84 +1737,90 @@
    <text:p text:style-name="P32"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;patient in records&quot;&gt;</text:placeholder></text:p>
    <text:p text:style-name="P33"><text:placeholder text:placeholder-type="text">&lt;replace text:p=&quot;set_lang(patient.name.lang)&quot;&gt;</text:placeholder></text:p>
    <text:p text:style-name="P33"><text:placeholder text:placeholder-type="text">&lt;replace text:p=&quot;patient.set_lang(patient.name.lang)&quot;&gt;</text:placeholder></text:p>
-   <text:p text:style-name="P28"><text:span text:style-name="T39">Client Name:<text:tab/></text:span><text:span text:style-name="T6"><text:placeholder text:placeholder-type="text">&lt;patient.rec_name&gt;</text:placeholder></text:span><text:span text:style-name="T4"><text:line-break/></text:span><text:span text:style-name="T6">Client’s Date of Birth:<text:tab/></text:span><text:span text:style-name="T6"><text:placeholder text:placeholder-type="text">&lt;format_date(patient.dob, patient.name.lang)&gt;</text:placeholder></text:span><text:span text:style-name="T6"><text:line-break/>Date:<text:tab/></text:span><text:span text:style-name="T6"><text:placeholder text:placeholder-type="text">&lt;format_date(today, patient.name.lang)&gt;</text:placeholder></text:span><text:span text:style-name="T6"><text:line-break/>Location:<text:tab/></text:span><text:span text:style-name="T6"><text:placeholder text:placeholder-type="text">&lt;company.rec_name if company else &apos;&apos;&gt;</text:placeholder></text:span></text:p>
+   <text:p text:style-name="P28"><text:span text:style-name="T39">Client Name:<text:tab/></text:span><text:span text:style-name="T6"><text:placeholder text:placeholder-type="text">&lt;patient.rec_name&gt;</text:placeholder></text:span><text:span text:style-name="T4"><text:line-break/></text:span><text:span text:style-name="T6">Client’s Date of Birth:<text:tab/></text:span><text:span text:style-name="T6"><text:placeholder text:placeholder-type="text">&lt;patient.dob and format_date(patient.dob, patient.name.lang)&gt;</text:placeholder></text:span><text:span text:style-name="T6"><text:line-break/>Date:<text:tab/></text:span><text:span text:style-name="T6"><text:placeholder text:placeholder-type="text">&lt;format_date(today, patient.name.lang)&gt;</text:placeholder></text:span><text:span text:style-name="T6"><text:line-break/>Location:<text:tab/></text:span><text:span text:style-name="T6"><text:placeholder text:placeholder-type="text">&lt;company.rec_name if company else &apos;&apos;&gt;</text:placeholder></text:span></text:p>
    <text:p text:style-name="P28"><text:span text:style-name="T6"><text:tab/></text:span><text:span text:style-name="T6"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in report_address.splitlines()&quot;&gt;</text:placeholder></text:span></text:p>
    <text:p text:style-name="P28"><text:span text:style-name="T6"><text:tab/></text:span><text:span text:style-name="T6"><text:placeholder text:placeholder-type="text">&lt;line&gt;</text:placeholder></text:span></text:p>
    <text:p text:style-name="P28"><text:span text:style-name="T6"><text:tab/></text:span><text:span text:style-name="T6"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:span></text:p>
-   <text:p text:style-name="P86"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;last_finding&quot;&gt;</text:placeholder></text:p>
-   <text:p text:style-name="P101"><text:bookmark text:name="docs-internal-guid-adf52119-7fff-d6b3-1b76-21ed5eca3e60 Kopie 1"/><text:span text:style-name="T28">Responsible </text:span><text:span text:style-name="T31">Radiologist</text:span><text:span text:style-name="T28">:<text:tab/></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;last_finding.evaluated_by.rec_name if last_finding.evaluated_by else &apos;&apos;&gt;</text:placeholder></text:span></text:p>
+   <text:p text:style-name="P129"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P89"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;last_finding&quot;&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P104"><text:bookmark text:name="docs-internal-guid-adf52119-7fff-d6b3-1b76-21ed5eca3e60 Kopie 1"/><text:span text:style-name="T28">Responsible </text:span><text:span text:style-name="T31">Radiologist</text:span><text:span text:style-name="T28">:<text:tab/></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;last_finding.evaluated_by.rec_name if last_finding.evaluated_by else &apos;&apos;&gt;</text:placeholder></text:span></text:p>
    <text:p text:style-name="P11"><text:bookmark text:name="docs-internal-guid-36ad517f-7fff-c20e-59dd-e56bf9771450 Kopie 1"/><text:span text:style-name="T25">Date of Assessment:<text:tab/><text:tab/></text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;format_date(last_finding.finding_date, patient.name.lang)&gt;</text:placeholder></text:span></text:p>
    <text:p text:style-name="P11"><text:span text:style-name="T26">Final BIRADS Score</text:span><text:span text:style-name="T25">:<text:tab/><text:tab/></text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;last_finding.bi_rads.code&gt;</text:placeholder></text:span></text:p>
-   <text:p text:style-name="P124"/>
-   <text:p text:style-name="P125">Explanation:</text:p>
-   <text:p text:style-name="P125"/>
+   <text:p text:style-name="P72"/>
+   <text:p text:style-name="P75">Explanation:</text:p>
+   <text:p text:style-name="P75"/>
    <text:p text:style-name="P69"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:p>
    <text:p text:style-name="P70"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;last_finding.bi_rads.code == &apos;0&apos;&quot;&gt;</text:placeholder></text:p>
    <text:p text:style-name="P48"><text:span text:style-name="T35">The overall assessment yielded a Birads score of </text:span><text:span text:style-name="T37">0</text:span><text:span text:style-name="T35">, which means the report is classified as </text:span><text:span text:style-name="T37">incomplete.</text:span><text:span text:style-name="T35"> A follow-up assessment may be necessary to create a more accurate report.</text:span></text:p>
-   <text:p text:style-name="P79"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
    <text:p text:style-name="P70"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;last_finding.bi_rads.code == &apos;1&apos;&quot;&gt;</text:placeholder></text:p>
    <text:p text:style-name="P48"><text:span text:style-name="T35">The overall assessment yielded a Birads score of </text:span><text:span text:style-name="T37">1</text:span><text:span text:style-name="T35">, which means the report is classified as </text:span><text:span text:style-name="T37">negative.</text:span><text:span text:style-name="T35"> The examiner is certain that the mammography images contain no suspicious lesions or any malignancies.</text:span></text:p>
-   <text:p text:style-name="P79"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
    <text:p text:style-name="P70"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;last_finding.bi_rads.code == &apos;2&apos;&quot;&gt;</text:placeholder></text:p>
    <text:p text:style-name="P48"><text:span text:style-name="T35">The overall assessment yielded a Birads score of </text:span><text:span text:style-name="T37">2</text:span><text:span text:style-name="T35">, which means the report is classified as </text:span><text:span text:style-name="T37">benign.</text:span><text:span text:style-name="T35"> The probability of a malignancy is </text:span><text:span text:style-name="T37">0%</text:span><text:span text:style-name="T35">.</text:span></text:p>
-   <text:p text:style-name="P79"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
    <text:p text:style-name="P70"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;last_finding.bi_rads.code == &apos;3&apos;&quot;&gt;</text:placeholder></text:p>
-   <text:p text:style-name="P48"><text:span text:style-name="T35">The overall assessment yielded a Birads score of </text:span><text:span text:style-name="T37">3</text:span><text:span text:style-name="T35">, which means the report is classified as </text:span><text:span text:style-name="T37">probably benign.</text:span><text:span text:style-name="T35"> The probability of a malignancy is </text:span><text:span text:style-name="T37">less than 2%</text:span><text:span text:style-name="T35">, however a follow-up assessment may be necessary to create a more accurate report.</text:span></text:p>
-   <text:p text:style-name="P79"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
-   <text:p text:style-name="P70"><text:soft-page-break/><text:placeholder text:placeholder-type="text">&lt;when test=&quot;last_finding.bi_rads.code == &apos;4A&apos;&quot;&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P48"><text:span text:style-name="T35">The overall assessment yielded a Birads score of </text:span><text:span text:style-name="T37">3</text:span><text:span text:style-name="T35">, which means the report is classified as </text:span><text:span text:style-name="T37">probably benign.</text:span><text:span text:style-name="T35"> The probability of a malignancy is </text:span><text:span text:style-name="T37">less than 2%</text:span><text:span text:style-name="T35">, however a follow-up </text:span><text:soft-page-break/><text:span text:style-name="T35">assessment may be necessary to create a more accurate report.</text:span></text:p>
+   <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P70"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;last_finding.bi_rads.code == &apos;4A&apos;&quot;&gt;</text:placeholder></text:p>
    <text:p text:style-name="P48"><text:span text:style-name="T35">The overall assessment yielded a Birads score of </text:span><text:span text:style-name="T37">4a</text:span><text:span text:style-name="T35">, which means the report is classified as </text:span><text:span text:style-name="T37">suspicious for malignancy.</text:span><text:span text:style-name="T35"> The probability of a malignancy is </text:span><text:span text:style-name="T37">2-9%</text:span><text:span text:style-name="T35">. A follow-up assessment is necessary to create an accurate report on the potential malignancy.</text:span></text:p>
-   <text:p text:style-name="P79"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
    <text:p text:style-name="P70"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;last_finding.bi_rads.code == &apos;4B&apos;&quot;&gt;</text:placeholder></text:p>
    <text:p text:style-name="P48"><text:span text:style-name="T35">The overall assessment yielded a final Birads score of </text:span><text:span text:style-name="T37">4b</text:span><text:span text:style-name="T35">, which means the report is classified as </text:span><text:span text:style-name="T37">suspicious for malignancy.</text:span><text:span text:style-name="T35"> The probability of a malignancy is </text:span><text:span text:style-name="T37">10-49%</text:span><text:span text:style-name="T35">. A follow-up assessment is necessary to create an accurate report on the potential malignancy.</text:span></text:p>
-   <text:p text:style-name="P79"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
    <text:p text:style-name="P70"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;last_finding.bi_rads.code == &apos;4C&apos;&quot;&gt;</text:placeholder></text:p>
    <text:p text:style-name="P48"><text:span text:style-name="T35">The overall assessment yielded a Birads score of </text:span><text:span text:style-name="T37">4c</text:span><text:span text:style-name="T35">, which means the report is classified as </text:span><text:span text:style-name="T37">suspicious for malignancy.</text:span><text:span text:style-name="T35"> The probability of a malignancy is </text:span><text:span text:style-name="T37">50-94%</text:span><text:span text:style-name="T35">. A follow-up assessment is necessary to create an accurate report on the potential malignancy.</text:span></text:p>
-   <text:p text:style-name="P79"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
    <text:p text:style-name="P70"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;last_finding.bi_rads.code == &apos;5&apos;&quot;&gt;</text:placeholder></text:p>
-   <text:p text:style-name="P82">The overall assessment yielded a Birads score of <text:span text:style-name="T42">5</text:span>, which means the report is classified as <text:span text:style-name="T42">highly suggestive of malignancy.</text:span> The probability of a malignancy is <text:span text:style-name="T42">above 95%</text:span>. A follow-up assessment is necessary to create an accurate report on the potential malignancy.</text:p>
-   <text:p text:style-name="P79"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P84">The overall assessment yielded a Birads score of <text:span text:style-name="T42">5</text:span>, which means the report is classified as <text:span text:style-name="T42">highly suggestive of malignancy.</text:span> The probability of a malignancy is <text:span text:style-name="T42">above 95%</text:span>. A follow-up assessment is necessary to create an accurate report on the potential malignancy.</text:p>
+   <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
    <text:p text:style-name="P71"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:p>
-   <text:p text:style-name="P86"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
-   <text:p text:style-name="P84"/>
-   <text:p text:style-name="P84"><text:bookmark text:name="docs-internal-guid-ae3c786f-7fff-5c6d-ebf6-f2d70ee93c25"/>The individual assessment results are on the following pages.</text:p>
-   <text:p text:style-name="P84"/>
-   <text:p text:style-name="P127"/>
-   <text:p text:style-name="P86"/>
+   <text:p text:style-name="P135"/>
+   <text:p text:style-name="P86"><text:bookmark text:name="docs-internal-guid-ae3c786f-7fff-5c6d-ebf6-f2d70ee93c25"/>The individual assessment results are on the following pages.</text:p>
+   <text:p text:style-name="P134"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P131"><text:placeholder text:placeholder-type="text">&lt;otherwise test=&quot;&quot;&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P130"/>
+   <text:p text:style-name="P130"/>
+   <text:p text:style-name="P133">No assessments with BIRADS scores available for this patient.</text:p>
+   <text:p text:style-name="P136"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P132"><text:soft-page-break/><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P87"/>
+   <text:p text:style-name="P89"/>
    <text:p text:style-name="P22"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;finding in patient.findings&quot;&gt;</text:placeholder></text:p>
    <table:table table:name="Tabelle1" table:style-name="Tabelle1">
     <table:table-column table:style-name="Tabelle1.A"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabelle1.A1" office:value-type="string">
-      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;finding.bi_rads&quot;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P88"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;finding.bi_rads&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P16"><text:placeholder text:placeholder-type="text">&lt;finding.method_string&gt;</text:placeholder><text:s/><text:span text:style-name="T41">Result</text:span></text:p>
       <text:p text:style-name="P47"><text:span text:style-name="T13">T</text:span><text:span text:style-name="T14">he </text:span><text:span text:style-name="T15">client has received a </text:span><text:span text:style-name="T13"><text:placeholder text:placeholder-type="text">&lt;finding.method_string.lower()&gt;</text:placeholder></text:span><text:span text:style-name="T13"><text:s/></text:span><text:bookmark text:name="docs-internal-guid-55c84948-7fff-27af-04a9-15204f25360e"/><text:span text:style-name="T14">r</text:span><text:span text:style-name="T28">eport </text:span><text:span text:style-name="T31">with</text:span><text:span text:style-name="T28"> the following outcome:</text:span></text:p>
-      <text:p text:style-name="P98"><text:bookmark text:name="docs-internal-guid-adf52119-7fff-d6b3-1b76-21ed5eca3e60"/><text:span text:style-name="T28">Responsible </text:span><text:span text:style-name="T30">Examiner</text:span><text:span text:style-name="T28">:<text:tab/></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;finding.evaluated_by.rec_name if finding.evaluated_by else &apos;&apos;&gt;</text:placeholder></text:span></text:p>
-      <text:p text:style-name="P98"><text:bookmark text:name="docs-internal-guid-36ad517f-7fff-c20e-59dd-e56bf9771450"/><text:span text:style-name="T35">Date of Assessment:</text:span><text:span text:style-name="T28"><text:tab/><text:tab/></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;format_date(finding.finding_date, patient.name.lang)&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P101"><text:bookmark text:name="docs-internal-guid-adf52119-7fff-d6b3-1b76-21ed5eca3e60"/><text:span text:style-name="T28">Responsible </text:span><text:span text:style-name="T30">Examiner</text:span><text:span text:style-name="T28">:<text:tab/></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;finding.evaluated_by.rec_name if finding.evaluated_by else &apos;&apos;&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P101"><text:bookmark text:name="docs-internal-guid-36ad517f-7fff-c20e-59dd-e56bf9771450"/><text:span text:style-name="T35">Date of Assessment:</text:span><text:span text:style-name="T28"><text:tab/><text:tab/></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;format_date(finding.finding_date, patient.name.lang)&gt;</text:placeholder></text:span></text:p>
       <text:p text:style-name="P58"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P61"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;finding.bi_rads.code == &apos;0&apos;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P46"><text:span text:style-name="T35">This specific assessment yielded a Birads score of </text:span><text:span text:style-name="T37">0</text:span><text:span text:style-name="T35">, which means the report is classified as </text:span><text:span text:style-name="T37">incomplete.</text:span></text:p>
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P80"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
       <text:p text:style-name="P61"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;finding.bi_rads.code == &apos;1&apos;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P46"><text:span text:style-name="T35">This specific assessment yielded a Birads score of </text:span><text:span text:style-name="T37">1</text:span><text:span text:style-name="T35">, which means the report is classified as </text:span><text:span text:style-name="T37">negative.</text:span></text:p>
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P80"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
       <text:p text:style-name="P61"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;finding.bi_rads.code == &apos;2&apos;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P46"><text:span text:style-name="T35">This specific assessment yielded a Birads score of </text:span><text:span text:style-name="T37">2</text:span><text:span text:style-name="T35">, which means the report is classified as </text:span><text:span text:style-name="T37">benign.</text:span></text:p>
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P80"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
       <text:p text:style-name="P61"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;finding.bi_rads.code == &apos;3&apos;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P46"><text:span text:style-name="T35">This specific assessment yielded a Birads score of </text:span><text:span text:style-name="T37">3</text:span><text:span text:style-name="T35">, which means the report is classified as </text:span><text:span text:style-name="T37">probably benign.</text:span></text:p>
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P80"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
       <text:p text:style-name="P61"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;finding.bi_rads.code == &apos;4A&apos;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P46"><text:span text:style-name="T35">This specific assessment yielded a Birads score of </text:span><text:span text:style-name="T37">4a</text:span><text:span text:style-name="T35">, which means the report is classified as </text:span><text:span text:style-name="T37">suspicious for malignancy</text:span><text:span text:style-name="T35">. The probability of a malignancy is </text:span><text:span text:style-name="T37">2-9%</text:span><text:span text:style-name="T35">.</text:span></text:p>
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P80"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
       <text:p text:style-name="P61"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;finding.bi_rads.code == &apos;4B&apos;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P46"><text:span text:style-name="T35">This specific assessment yielded a Birads score of </text:span><text:span text:style-name="T37">4b</text:span><text:span text:style-name="T35">, which means the report is classified as </text:span><text:span text:style-name="T37">suspicious for malignancy</text:span><text:span text:style-name="T35">. The probability of a malignancy is </text:span><text:span text:style-name="T37">10-49%</text:span><text:span text:style-name="T35">.</text:span></text:p>
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P80"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
       <text:p text:style-name="P61"><text:soft-page-break/><text:placeholder text:placeholder-type="text">&lt;when test=&quot;finding.bi_rads.code == &apos;4C&apos;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P46"><text:span text:style-name="T35">This specific assessment yielded a Birads score of </text:span><text:span text:style-name="T37">4c</text:span><text:span text:style-name="T35">, which means the report is classified as </text:span><text:span text:style-name="T37">suspicious for malignancy</text:span><text:span text:style-name="T35">. The probability of a malignancy is </text:span><text:span text:style-name="T37">50-94%</text:span><text:span text:style-name="T35">.</text:span></text:p>
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P80"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
       <text:p text:style-name="P61"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;finding.bi_rads.code == &apos;5&apos;&quot;&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P81">This specific assessment yielded a Birads score of <text:span text:style-name="T43">5</text:span>, which means the report is classified as <text:span text:style-name="T43">highly suggestive of malignancy</text:span><text:span text:style-name="T45">.</text:span>The probability of a malignancy is above <text:span text:style-name="T43">95%</text:span>.</text:p>
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P83">This specific assessment yielded a Birads score of <text:span text:style-name="T43">5</text:span>, which means the report is classified as <text:span text:style-name="T43">highly suggestive of malignancy</text:span><text:span text:style-name="T45">.</text:span>The probability of a malignancy is above <text:span text:style-name="T43">95%</text:span>.</text:p>
+      <text:p text:style-name="P80"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
       <text:p text:style-name="P60"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:p>
       <text:p text:style-name="P13"/>
       <text:p text:style-name="P68"><text:bookmark text:name="docs-internal-guid-1b1adb20-7fff-6ea7-e1ef-590046412b8d"/><text:placeholder text:placeholder-type="text">&lt;if test=&quot;finding.id in finding_details.keys()&quot;&gt;</text:placeholder></text:p>
@@ -1810,10 +1833,10 @@
       <text:p text:style-name="P63"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;finding.comment or finding.biopsy_recommendation&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P23"><text:bookmark text:name="docs-internal-guid-93ce830e-7fff-2e77-63f5-4a3baa6ce787"/>The examiner has made the following additional comments:</text:p>
       <text:p text:style-name="P23"/>
-      <text:p text:style-name="P73"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;finding.biopsy_recommendation&quot;&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P72"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P74"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;finding.biopsy_recommendation&quot;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P73"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P66"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;finding.biopsy_recommendation == &apos;suspicious&apos;&quot;&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P75"><text:bookmark text:name="msg43389"/>The case is suspicious and a biopsy is recommended.</text:p>
+      <text:p text:style-name="P77"><text:bookmark text:name="msg43389"/>The case is suspicious and a biopsy is recommended.</text:p>
       <text:p text:style-name="P64"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
       <text:p text:style-name="P66"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;finding.biopsy_recommendation == &apos;not_suspicious&apos;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P38"><text:bookmark text:name="msg43389 Kopie 2"/><text:span text:style-name="T24">The case is not suspicious, no further assessments </text:span>are required.</text:p>
