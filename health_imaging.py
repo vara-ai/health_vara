@@ -44,7 +44,7 @@ class ImagingTestRequest(metaclass=PoolMeta):
         return generate_uid(prefix=None)
 
     def get_accession_number(self, name):
-        return '%s%s' % (_accession_number_prefix + str(self.id))
+        return '%s%s' % (_accession_number_prefix, str(self.id))
 
 
 class ImagingTestResult(metaclass=PoolMeta):
