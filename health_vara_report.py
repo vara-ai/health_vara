@@ -52,8 +52,11 @@ class VaraFindingsReport(Report):
         # field labels and values
         finding_details = defaultdict(int)
         lang = IrLang.get()
+        last_finding = None
         for patient in records:
-            for finding in patient.findings:
+            for finding in [f for f in patient.findings if f.bi_rads]:
+                if not last_finding:
+                    last_finding = finding
                 fields_with_content = [field for field in finding._fields
                     if getattr(finding, field, None)
                     and field in detail_fields]
@@ -81,5 +84,6 @@ class VaraFindingsReport(Report):
         context['report_address'] = report_address
         context['today'] = Date.today()
         context['finding_details'] = finding_details
+        context['last_finding'] = last_finding
 
         return context
