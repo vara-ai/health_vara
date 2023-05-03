@@ -119,6 +119,7 @@ class ImagingFinding(ModelSQL, ModelView):
     laterality = fields.Selection([
             ('left_breast', 'Left Breast'),
             ('right_breast', 'Right Breast'),
+            ('both_breasts', 'Both Breasts'),
             ], 'Laterality', required=True)
     laterality_string = laterality.translated('laterality')
     localisation = fields.Char('Localisation')
