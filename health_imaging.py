@@ -39,9 +39,12 @@ class ImagingTestRequest(metaclass=PoolMeta):
                     },
                 })
 
-    @staticmethod
-    def default_study_instance_uid():
-        return generate_uid(prefix=None)
+    @classmethod
+    def create(cls, vlist):
+        vlist = [x.copy() for x in vlist]
+        for values in vlist:
+            values['study_instance_uid'] = generate_uid(prefix=None)
+        return super(ImagingTestRequest, cls).create(vlist)
 
     def get_accession_number(self, name):
         return '%s%s' % (_accession_number_prefix, str(self.id))
