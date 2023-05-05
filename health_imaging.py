@@ -1,5 +1,7 @@
 # The COPYRIGHT file at the top level of this repository
 # contains the full copyright notices and license terms.
+from pydicom.uid import generate_uid
+
 from trytond.config import config
 from trytond.model import ModelSQL, ModelView, fields
 from trytond.modules.health.core import (
@@ -7,14 +9,15 @@ from trytond.modules.health.core import (
 from trytond.pool import PoolMeta
 from trytond.pyson import Eval
 
-from pydicom.uid import generate_uid
-
 if config.getboolean('health_vara', 'filestore', default=True):
     file_id = 'result_report_cache_id'
     store_prefix = config.get('health_vara', 'store_prefix', default=None)
 else:
     file_id = None
     store_prefix = None
+
+_accession_number_prefix = config.get(
+    'health_vara', 'accession_number_prefix', default='MXH-')
 
 
 class ImagingTestRequest(metaclass=PoolMeta):
@@ -25,20 +28,23 @@ class ImagingTestRequest(metaclass=PoolMeta):
     accession_number = fields.Function(fields.Char(
         'Accession Number'), 'get_accession_number')
 
-    def get_accession_number(self, _name):
-        return "MXH-" + str(self.id)
-
-    ACCESSION_NUMBER_PREFIX = config.get(
-        'health_vara', 'accession_number_prefix', default='MXH-')
-    accession_number = fields.Function(fields.Char(
-        'Accession Number'), 'get_accession_number')
-
-    def get_accession_number(self, _name):
-        return self.ACCESSION_NUMBER_PREFIX + str(self.id)
+    @classmethod
+    def __setup__(cls):
+        super().__setup__()
+        cls._buttons.update({
+                # Hard overwrite vor Vara: Do not display button
+                # 'Generate Results' to avoid confusion
+                'generate_results': {
+                    'invisible': True,
+                    },
+                })
 
     @staticmethod
     def default_study_instance_uid():
         return generate_uid(prefix=None)
+
+    def get_accession_number(self, name):
+        return '%s%s' % (_accession_number_prefix, str(self.id))
 
 
 class ImagingTestResult(metaclass=PoolMeta):
@@ -119,6 +125,7 @@ class ImagingFinding(ModelSQL, ModelView):
     laterality = fields.Selection([
             ('left_breast', 'Left Breast'),
             ('right_breast', 'Right Breast'),
+            ('both_breasts', 'Both Breasts'),
             ], 'Laterality', required=True)
     laterality_string = laterality.translated('laterality')
     localisation = fields.Char('Localisation')
