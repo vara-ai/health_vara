@@ -2,7 +2,7 @@
 <!-- The COPYRIGHT file at the top level of this repository
 contains the full copyright notices and license terms. -->
 <data>
-    <xpath expr="/form/notebook/page[@id='orthanc_studies_page']" position="before">
+    <xpath expr="/form/notebook/page[1]" position="before">
         <page string="Vara Results" id="vara_results_page">
             <label name="image_acquisition_date"/>
             <field name="image_acquisition_date"/>
