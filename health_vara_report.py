@@ -23,16 +23,25 @@ class VaraFindingsReport(Report):
         Date = pool.get('ir.date')
         context = super().get_context(records, header, data)
 
-        imaging_result = records[0].imaging_test_results[0]
-        findings = imaging_result.findings
-        mammography_findings = [
-            f for f in findings if f.method == 'mammography']
-        ultrasound_findings = [
-            f for f in findings if f.method == 'ultrasound']
+        # Note: `records` should always be a singleton list.
+        assert (len(records) == 1)
+        patient = records[0]
 
-        context['imaging_result'] = imaging_result
-        context['has_mammography_findings'] = len(mammography_findings) != 0
-        context['has_ultrasound_findings'] = len(ultrasound_findings) != 0
+        # Sort imaging test results for each patient ID in reverse chronological
+        # order. We need the most recent imaging results recorded for a patient.
+        imaging_results = sorted(patient.imaging_test_results,
+                                key=lambda r: r.create_date,
+                                reverse=True)
         context['today'] = Date.today()
+        if len(imaging_results) != 0:
+            findings = imaging_results[0].findings
+            mammography_findings = [
+                f for f in findings if f.method == 'mammography']
+            ultrasound_findings = [
+                f for f in findings if f.method == 'ultrasound']
+            context['imaging_result'] = imaging_results[0]
+            context['has_mammography_findings'] = len(
+                mammography_findings) != 0
+            context['has_ultrasound_findings'] = len(ultrasound_findings) != 0
 
         return context
