@@ -29,6 +29,10 @@ class Party(metaclass=PoolMeta):
     def default_gender():
         return 'f'
 
+    @staticmethod
+    def default_name_representation():
+        return 'gf'
+
 
 class MammographyPatient(metaclass=PoolMeta):
     __name__ = 'gnuhealth.patient'
@@ -51,6 +55,8 @@ class MammographyPatient(metaclass=PoolMeta):
             ('patient', '=', Eval('id')),
             ], depends=['id'])
     biopsies = fields.Text('Biopsies')
+    opinion = fields.Text('Opinion')
+    recommendation = fields.Text('Recommendation')
 
     @classmethod
     def __setup__(cls):
@@ -205,7 +211,7 @@ class PatientEvaluation(DeactivableMixin, metaclass=PoolMeta):
     @classmethod
     def __setup__(cls):
         super().__setup__()
-        #for item in vara_types:
+        # for item in vara_types:
         #    if item not in cls.visit_type.selection:
         #        cls.visit_type.selection.append(item)
         cls.visit_type.selection = vara_types
