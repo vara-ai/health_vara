@@ -288,7 +288,7 @@ class ImagingFinding(ModelSQL, ModelView):
             ('heterogeneous', 'heterogeneously dense: '
                 'the breasts are heterogeneously dense, which may '
                 'obscure small masses'),
-            ('extreme:', 'extremely dense: '
+            ('extreme', 'extremely dense: '
                 'the breasts are extremely dense, which lowers '
                 'the sensitivity of mammography'),
             ], 'Breast Composition', sort=False,
