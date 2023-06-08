@@ -7,6 +7,7 @@ contains the full copyright notices and license terms. -->
         <record model="ir.action.report" id="report_patient_vara_findings">
             <field name="name">Vara Report</field>
             <field name="model">gnuhealth.patient</field>
+            <field name="single">True</field>
             <field name="report_name">patient.vara.findings</field>
             <field name="report">health_vara/report/patient_vara_findings.fodt</field>
             <field name="extension">pdf</field>

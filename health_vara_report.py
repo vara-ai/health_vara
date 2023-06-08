@@ -9,6 +9,19 @@ from trytond.transaction import Transaction
 __all__ = ['VaraFindingsReport']
 
 
+_SORTED_BIRADS = ["0", "1", "2", "3", "4A", "4B", "4C", "5", "6"]
+
+
+def _finding_density(finding):
+    if finding.method == "mammography":
+        return {"fatty": "A", "scattered": "B", "heterogeneous": "C",
+                "extreme": "D"}.get(finding.mammo_composition, None)
+
+    if finding.method == "ultrasound":
+        return {"fat": "A", "fibroglandular": "B", "heterogeneous": "C"}.get(
+            finding.ultrasound_tissue_composition, None)
+
+
 class VaraFindingsReport(Report):
     __name__ = 'patient.vara.findings'
 
@@ -21,69 +34,64 @@ class VaraFindingsReport(Report):
     def get_context(cls, records, header, data):
         pool = Pool()
         Date = pool.get('ir.date')
-        Finding = pool.get('gnuhealth.imaging.finding')
-        Company = pool.get('company.company')
-        IrLang = pool.get('ir.lang')
-
         context = super().get_context(records, header, data)
 
-        #print(cls, records, header, data)
-        company_id = Transaction().context.get('company')
-        report_address = ''
-        if company_id:
-            company = Company(company_id)
-            report_address = company.party.addresses[0].full_address
+        # Note: `records` should always be a singleton list.
+        assert (len(records) == 1)
+        patient = records[0]
 
-        def format_label(label):
-            # Format the label for printout and put a separator for parsing
-            # inside the report
-            label += ':'
-            return label + ' |'
+        # Sort imaging test results for each patient ID in reverse chronological
+        # order. We need the most recent imaging results recorded for a patient.
+        imaging_results = sorted(patient.imaging_test_results,
+                                key=lambda r: r.create_date,
+                                reverse=True)
 
-        # Define the fields to be searched for details
-        detail_types = {'mammo_', 'ultrasound_', 'mri_'}
-        detail_fields = []
-        for field in Finding._fields:
-            for type in detail_types:
-                if field.startswith(type) and not field.endswith('_string'):
-                    detail_fields.append(field)
-
-        # Find detail fields with content and create a parsable dict of
-        # field labels and values
-        finding_details = defaultdict(int)
-        lang = IrLang.get()
-        last_finding = None
-        for patient in records:
-            for finding in [f for f in patient.findings if f.bi_rads]:
-                if not last_finding:
-                    last_finding = finding
-                fields_with_content = [field for field in finding._fields
-                    if getattr(finding, field, None)
-                    and field in detail_fields]
-                if fields_with_content:
-                    item = 0
-                    finding_details[finding.id] = ''
-                    for field in fields_with_content:
-                        field_def = finding._fields[field].definition(
-                            finding, lang.code)
-                        # TODO: translate values
-                        value = getattr(finding, field, None)
-                        if field_def['type'] == 'boolean':
-                            if value:
-                                value = 'Yes'
-                            else:
-                                value = 'No'
-                        if item > 0:
-                            finding_details[finding.id] += '\n'
-                        label = format_label(field_def['string'])
-                        finding_details[finding.id] += '%s%s' % (label,
-                            value.capitalize())
-                        item += 1
-
-        context['company'] = company
-        context['report_address'] = report_address
         context['today'] = Date.today()
-        context['finding_details'] = finding_details
-        context['last_finding'] = last_finding
+        context['has_ultrasound_findings'] = False
 
+        findings = []
+        imaging_result = None
+        assessment = None
+        density = None
+        last_finding = None
+
+        # Processing findings associated with the latest Imaging Result.
+        if len(imaging_results) != 0:
+            imaging_result = imaging_results[0]
+            findings = findings + list(imaging_result.findings)
+            density = imaging_result.density
+            assessment = imaging_result.assessment
+
+        # Processing findings outside the imaging results workflow.
+        imaging_finding_ids = set(map(lambda f: f.id, findings))
+        other_findings = list(filter(lambda f: f.id not in imaging_finding_ids,
+                                     patient.findings))
+        findings = findings + other_findings
+
+        if imaging_result and imaging_result.density:
+            density = imaging_result.density
+        elif other_findings:
+            last_finding = sorted(
+                other_findings, key=lambda f: f.create_date, reverse=True)[0]
+            density = _finding_density(last_finding)
+
+        if not assessment and findings:
+            findings_with_birads = filter(lambda f: f.bi_rads, findings)
+            assessment = max(
+                findings_with_birads, key=lambda f: _SORTED_BIRADS.index(f.bi_rads.code)).bi_rads
+
+        for finding in findings:
+            if finding.method == "ultrasound":
+                context["has_ultrasound_findings"] = True
+                break
+
+        context["findings"] = findings
+        context["last_finding"] = last_finding
+        context["density"] = density
+        context["assessment"] = assessment
+        context["imaging_result"] = imaging_result
+        context["assessment_date"] = (
+            imaging_result and imaging_result.assessment_date) or (last_finding and last_finding.create_date)
+        context["doctor"] = (imaging_result and imaging_result.doctor) or (
+            last_finding and last_finding.evaluated_by)
         return context

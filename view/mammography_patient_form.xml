@@ -40,9 +40,17 @@ contains the full copyright notices and license terms. -->
     <group id="patient_biopsies">
         <field name="biopsies" string="" colspan="4"/>
     </group>
-    <separator string="Other important information" id="sep_patient_other_info" colspan="4"/>
+    <separator name="general_info" id="sep_patient_other_info" colspan="4"/>
     <group id="patient_other_info">
         <field name="general_info" colspan="4"/>
+    </group>
+    <separator name="opinion" id="sep_patient_opinion" colspan="4"/>
+    <group id="patient_opinion">
+        <field name="opinion" colspan="4"/>
+    </group>
+    <separator name="recommendation" id="sep_patient_recommendation" colspan="4"/>
+    <group id="patient_recommendation">
+        <field name="recommendation" colspan="4"/>
     </group>
 
 </form>
