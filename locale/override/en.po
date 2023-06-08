@@ -1,0 +1,3 @@
+msgctxt "field:gnuhealth.patient,general_info:"
+msgid "General Information"
+msgstr "General Observations"
