@@ -31,6 +31,13 @@ class Party(metaclass=PoolMeta):
 
     @staticmethod
     def default_name_representation():
+        # Possible values are listed here:
+        # https://hg.savannah.gnu.org/hgweb/health/file/0540c046667a/tryton/health/health.py#l338
+        #  None  => ''
+        # 'pgfs' => 'Prefix Given Family, Suffix'
+        # 'gf'   => 'Given Family'
+        # 'fg'   => 'Family, Given'
+        # 'cjk'  => 'CJK: Family+Given'
         return 'gf'
 
 
