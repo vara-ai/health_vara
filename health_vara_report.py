@@ -76,7 +76,7 @@ class VaraFindingsReport(Report):
             density = _finding_density(last_finding)
 
         if not assessment and findings:
-            findings_with_birads = filter(lambda f: f.bi_rads, findings)
+            findings_with_birads = list(filter(lambda f: f.bi_rads, findings))
             if findings_with_birads:
                 assessment = max(
                     findings_with_birads, key=lambda f: _SORTED_BIRADS.index(f.bi_rads.code)).bi_rads
