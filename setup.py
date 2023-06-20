@@ -92,7 +92,7 @@ setup(name=name,
         ),
     package_data={
         'trytond.modules.health_vara': (info.get('xml', [])
-            + ['tryton.cfg', 'view/*.xml', 'locale/*.po', '*.fodt',
+            + ['tryton.cfg', 'view/*.xml', 'locale/*.po', 'locale/override/*.po', '*.fodt',
                 'report/*.fodt', 'icons/*.svg', 'tests/*.rst']),
         },
     classifiers=[

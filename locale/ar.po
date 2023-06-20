@@ -1,0 +1,187 @@
+msgctxt "view:gnuhealth.patient:"
+msgid "Anamnesis"
+msgstr "سوابق المريض"
+
+msgctxt "view:gnuhealth.patient:"
+msgid "Biopsies"
+msgstr "الخزعات"
+
+msgctxt "view:gnuhealth.patient:"
+msgid "Doctor's Referrals"
+msgstr "إحالات الطبيب"
+
+msgctxt "view:gnuhealth.patient:"
+msgid "General Observations"
+msgstr "ملاحظات عامة"
+
+msgctxt "view:gnuhealth.patient:"
+msgid "Imaging Findings"
+msgstr "نتائج التصوير"
+
+msgctxt "view:gnuhealth.patient:"
+msgid "Mammography Reports"
+msgstr "تقارير التصوير الشعاعي للثدي"
+
+msgctxt "view:gnuhealth.patient:"
+msgid "Opinion"
+msgstr "رأي"
+
+msgctxt "view:gnuhealth.patient:"
+msgid "Patient Summary"
+msgstr "ملخص المريض"
+
+msgctxt "view:gnuhealth.patient:"
+msgid "Recommendation"
+msgstr "توصية"
+
+msgctxt "view:gnuhealth.patient.evaluation:"
+msgid "Chief Complaint / Symptoms"
+msgstr "أعراض و شكاوى طبية"
+
+msgctxt "view:gnuhealth.patient.evaluation:"
+msgid "Post Treatment Surveillance"
+msgstr "متابعة ما بعد سرطان الثدي"
+
+msgctxt "view:gnuhealth.patient.evaluation:"
+msgid "Present Illness"
+msgstr "المرض الحالي"
+
+msgctxt "field:gnuhealth.patient.evaluation,breast_cancer_history_family:"
+msgid "Family Breast Cancer History"
+msgstr "هل لديك تاريخ عائلي للإصابة بسرطان الثدي؟"
+
+msgctxt "field:gnuhealth.patient.evaluation,breast_cancer_history_person:"
+msgid "Personal Breast Cancer History"
+msgstr "هل لديك تاريخ للإصابة بسرطان الثدي؟"
+
+msgctxt "field:gnuhealth.patient.evaluation,breast_lump:"
+msgid "New lump in breast or axilla (i.e. armpit)"
+msgstr "كتلة في الثدي أو الإبط"
+
+msgctxt "field:gnuhealth.patient.evaluation,breast_nipple_changes:"
+msgid "Nipple changes (e.g. redness, flaky skin, inversion, discharge)"
+msgstr "تغيرات بالحلمة (احمرار، تغير في الشكل، تشققات... الخ)"
+
+msgctxt "field:gnuhealth.patient.evaluation,breast_operational_intervention:"
+msgid "Was there any operational intervention in the breast?"
+msgstr "هل كان هناك أي تدخل جراحي في الثدي؟"
+
+msgctxt "field:gnuhealth.patient.evaluation,breast_operational_intervention_comment:"
+msgid "Other Surgery Type"
+msgstr "أخرى"
+
+msgctxt "field:gnuhealth.patient.evaluation,breast_operational_intervention_type:"
+msgid "Type of Breast Surgery"
+msgstr "نوع العلاج"
+
+msgctxt "field:gnuhealth.patient.evaluation,breast_skin_irritation:"
+msgid "Irritation or dimpling of breast skin"
+msgstr "تهيج أو تنقير في جلد الثدي"
+
+msgctxt "field:gnuhealth.patient.evaluation,breast_swelling:"
+msgid "Thickening or swelling of part of the breast"
+msgstr "سماكة أو تورم جزء من الثدي"
+
+msgctxt "field:gnuhealth.patient.evaluation,cancer_history_person:"
+msgid "Did the woman have any other cancer in the past?"
+msgstr "هل المرأة مصابة بأي سرطان آخر في الماضي؟"
+
+msgctxt "field:gnuhealth.patient.evaluation,chief_complaint:"
+msgid "Chief Complaint"
+msgstr "الشكوى الرئيسية"
+
+msgctxt "field:gnuhealth.patient.evaluation,diagnosis_date:"
+msgid "Date of diagnosis"
+msgstr "تاريخ التشخيص"
+
+msgctxt "field:gnuhealth.patient.evaluation,genetic_risks:"
+msgid "Genetic Information"
+msgstr "المعلومات الجينية"
+
+msgctxt "field:gnuhealth.patient.evaluation,known_brca_mutation:"
+msgid "Known BRCA1/2 mutation carrier?"
+msgstr "هل أنت حاملة لجينات الإصابة بسرطان الثدي BRCA1 / 2؟"
+
+msgctxt "field:gnuhealth.patient.evaluation,sequence_number:"
+msgid "Sequence Number"
+msgstr "تصنيف الورم"
+
+msgctxt "field:gnuhealth.patient.evaluation,surgery_date:"
+msgid "Date of surgery"
+msgstr "تاريخ الجراحة"
+
+msgctxt "field:gnuhealth.patient.evaluation,woman_lactating:"
+msgid "Is the woman lactating / breast feeding?"
+msgstr "هل تقومين بالرضاعة؟"
+
+msgctxt "field:gnuhealth.patient.evaluation,woman_pregnant:"
+msgid "Is the woman pregnant?"
+msgstr "هل أنت حامل؟"
+
+msgctxt "model:ir.message,text:evaluation_location_selection_left_breast"
+msgid "Left Breast"
+msgstr "الثدي الأيسر"
+
+msgctxt "model:ir.message,text:evaluation_location_selection_right_breast"
+msgid "Right Breast"
+msgstr " الثدي الأيمن"
+
+msgctxt "model:ir.message,text:evaluation_location_selection_both_breasts"
+msgid "Both Breasts"
+msgstr "كلا الثديين"
+
+msgctxt "selection:gnuhealth.patient.evaluation,breast_operational_intervention_type:"
+msgid ""
+msgstr ""
+
+msgctxt "selection:gnuhealth.patient.evaluation,breast_operational_intervention_type:"
+msgid "Mastectomy"
+msgstr "استئصال الثدي"
+
+msgctxt "selection:gnuhealth.patient.evaluation,breast_operational_intervention_type:"
+msgid "Conservative Breast Surgery"
+msgstr "استئصال جزئي للثدي"
+
+msgctxt "selection:gnuhealth.patient.evaluation,breast_operational_intervention_type:"
+msgid "Benign Lumpectomy"
+msgstr "استئصال الكتلة الورمية الحميدة"
+
+msgctxt "selection:gnuhealth.patient.evaluation,breast_operational_intervention_type:"
+msgid "Breast Augmentation Surgery"
+msgstr "جراحة تكبيرالثدي"
+
+msgctxt "selection:gnuhealth.patient.evaluation,breast_operational_intervention_type:"
+msgid "Breast Reduction Surgery"
+msgstr "  جراحة تصغير الثدي"
+
+msgctxt "selection:gnuhealth.patient.evaluation,breast_operational_intervention_type:"
+msgid "Other"
+msgstr "أخرى"
+
+msgctxt "selection:gnuhealth.patient.evaluation,visit_type:"
+msgid "Screening: First-time Routine Screening Visit"
+msgstr "فحص مبكر: فحص لأول مرة"
+
+msgctxt "selection:gnuhealth.patient.evaluation,visit_type:"
+msgid "Screening: Routine Annual Screening"
+msgstr "فحص مبكر: فحص روتيني"
+
+msgctxt "selection:gnuhealth.patient.evaluation,visit_type:"
+msgid "Screening: Get Second Opinion"
+msgstr "فحص مبكر: للحصول على استشارة طبية"
+
+msgctxt "selection:gnuhealth.patient.evaluation,visit_type:"
+msgid "Diagnostic: Recall"
+msgstr "فحص تشخيصي: استكمال الفحص"
+
+msgctxt "selection:gnuhealth.patient.evaluation,visit_type:"
+msgid "Diagnostic: Short-term follow-up (~6 months since last screening visit)"
+msgstr "فحص تشخيصي: متابعة قصيرة المدى (حوالي 6 أشهر منذ آخر زيارة)"
+
+msgctxt "selection:gnuhealth.patient.evaluation,visit_type:"
+msgid "Diagnostic: Breast symptoms"
+msgstr "فحص تشخيصي: وجود أعراض"
+
+msgctxt "selection:gnuhealth.patient.evaluation,visit_type:"
+msgid "Diagnostic: Post-treatment surveillance"
+msgstr "فحص تشخيصي: متابعة ما بعد سرطان الثدي"

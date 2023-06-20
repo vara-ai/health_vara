@@ -1,5 +1,6 @@
 # The COPYRIGHT file at the top level of this repository
 # contains the full copyright notices and license terms.
+from trytond.i18n import gettext
 from trytond.model import fields, DeactivableMixin
 from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Bool, Eval
@@ -73,14 +74,12 @@ class MammographyPatient(metaclass=PoolMeta):
 
 
 screening_types = [
-    (None, ''),
     ('screening_first_time',
         'Screening: First-time Routine Screening Visit'),
     ('screening_return', 'Screening: Routine Annual Screening'),
     ('screening_second_opinion', 'Screening: Get Second Opinion'),
     ]
 diagnostic_types = [
-    (None, ''),
     ('diagnostic_recall', 'Diagnostic: Recall'),
     ('diagnostic_short_term',
         'Diagnostic: Short-term follow-up '
@@ -88,7 +87,7 @@ diagnostic_types = [
     ('diagnostic_symptoms', 'Diagnostic: Breast symptoms'),
     ('diagnostic_post_treat', 'Diagnostic: Post-treatment surveillance'),
     ]
-vara_types = screening_types + diagnostic_types
+vara_types = [(None, '')] + screening_types + diagnostic_types
 
 
 class PatientEvaluation(DeactivableMixin, metaclass=PoolMeta):
@@ -246,11 +245,14 @@ class PatientEvaluation(DeactivableMixin, metaclass=PoolMeta):
 
     @classmethod
     def get_location_selection(cls):
+        # Requires using gettext and /data/messages/messages.xml objects as apparently it
+        # won't be supported for translations:
+        # https://foss.heptapod.net/tryton/tryton/-/issues/6277
         return [
             (None, ''),
-            ('left_breast', 'Left Breast'),
-            ('right_breast', 'Right Breast'),
-            ('both', 'Both Breasts'),
+            ('left_breast', gettext('health_vara.evaluation_location_selection_left_breast')),
+            ('right_breast', gettext('health_vara.evaluation_location_selection_right_breast')),
+            ('both', gettext('health_vara.evaluation_location_selection_both_breasts')),
             ]
 
     # Remove when Upstream Bug is solved (#4932)
