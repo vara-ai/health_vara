@@ -9,7 +9,7 @@ contains the full copyright notices and license terms. -->
         <field name="name" colspan="2"
             view_ids="health_vara.mammography_party_tree,health_vara.mammography_party_form"/>
         <field name="gender" width="60"/>
-        <label name="dob" string="Date of Birth"/>
+        <label name="dob"/>
         <field name="dob" width="80"/>
         <label name="puid"/>
         <field name="puid"/>

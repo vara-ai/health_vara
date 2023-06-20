@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository
+contains the full copyright notices and license terms. -->
+<tryton>
+    <data grouped="1">
+        <record model="ir.message" id="evaluation_location_selection_left_breast">
+            <field name="text">Left Breast</field>
+        </record>
+        <record model="ir.message" id="evaluation_location_selection_right_breast">
+            <field name="text">Right Breast</field>
+        </record>
+        <record model="ir.message" id="evaluation_location_selection_both_breasts">
+            <field name="text">Both Breasts</field>
+        </record>
+    </data>
+</tryton>
