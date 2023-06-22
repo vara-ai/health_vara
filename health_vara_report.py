@@ -46,53 +46,54 @@ class VaraFindingsReport(Report):
                                 key=lambda r: r.create_date,
                                 reverse=True)
 
-        context['today'] = Date.today()
-        context['has_ultrasound_findings'] = False
-
-        findings = []
-        imaging_result = None
-        assessment = None
-        density = None
-        last_finding = None
-
-        # Processing findings associated with the latest Imaging Result.
+        # get values for current imaging result
+        current_imaging_result = None
+        img_result_findings = []
+        img_result_assessment = None
+        img_result_density = None
         if len(imaging_results) != 0:
-            imaging_result = imaging_results[0]
-            findings = findings + list(imaging_result.findings)
-            density = imaging_result.density
-            assessment = imaging_result.assessment
+            current_imaging_result = imaging_results[0]
+            img_result_findings = list(current_imaging_result.findings)
+            img_result_density = current_imaging_result.density
+            img_result_assessment = current_imaging_result.assessment
 
-        # Processing findings outside the imaging results workflow.
-        imaging_finding_ids = set(map(lambda f: f.id, findings))
+        # FIXME other findings is probably wrong, we currently look at all findings, but should have a way to look at
+        # all findings related to the current study. I don't see how we'd link these other than by a guess on a date
+        # range sadly. For now we do nothing since no system is very old!
+        # https://app.asana.com/0/1201610932007292/1204823954787156
+        imaging_finding_ids = set(map(lambda f: f.id, img_result_findings))
         other_findings = list(filter(lambda f: f.id not in imaging_finding_ids,
                                      patient.findings))
-        findings = findings + other_findings
+        all_findings = sorted([] + other_findings + img_result_findings,
+                              key=lambda f: f.create_date, reverse=True)
+        last_finding = all_findings[0] if all_findings else None
 
-        if imaging_result and imaging_result.density:
-            density = imaging_result.density
-        elif other_findings:
-            last_finding = sorted(
-                other_findings, key=lambda f: f.create_date, reverse=True)[0]
-            density = _finding_density(last_finding)
+        # pick most recent non-null density
+        all_densities = [img_result_density] + list(map(lambda f: _finding_density(f), all_findings))
+        density = next(iter(filter(bool, all_densities)), None)
 
-        if not assessment and findings:
-            findings_with_birads = list(filter(lambda f: f.bi_rads, findings))
-            if findings_with_birads:
-                assessment = max(
-                    findings_with_birads, key=lambda f: _SORTED_BIRADS.index(f.bi_rads.code)).bi_rads
+        # pick most severe assessment
+        all_assessments = [img_result_assessment] + list(map(lambda f: f.bi_rads, all_findings))
+        assessment = next(iter(sorted(filter(bool, all_assessments),
+                                      key=lambda a: _SORTED_BIRADS.index(a.code),
+                                      reverse=True)), None)
 
-        for finding in findings:
+        has_ultrasound_finding = False
+        for finding in all_findings:
             if finding.method == "ultrasound":
-                context["has_ultrasound_findings"] = True
+                has_ultrasound_finding = True
                 break
 
-        context["findings"] = findings
-        context["last_finding"] = last_finding
+        context['today'] = Date.today()
+        context['has_ultrasound_findings'] = has_ultrasound_finding
+        context["findings"] = all_findings
         context["density"] = density
         context["assessment"] = assessment
-        context["imaging_result"] = imaging_result
-        context["assessment_date"] = (
-            imaging_result and imaging_result.assessment_date) or (last_finding and last_finding.create_date)
-        context["doctor"] = (imaging_result and imaging_result.doctor) or (
-            last_finding and last_finding.evaluated_by)
+        context["imaging_result"] = current_imaging_result
+        context["assessment_date"] = ((current_imaging_result and current_imaging_result.assessment_date)
+                                      or
+                                      (last_finding and last_finding.create_date))
+        context["doctor"] = ((current_imaging_result and current_imaging_result.doctor)
+                             or
+                             (last_finding and last_finding.evaluated_by))
         return context
