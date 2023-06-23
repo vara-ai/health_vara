@@ -146,7 +146,7 @@ class PatientEvaluation(DeactivableMixin, metaclass=PoolMeta):
     woman_lactating = fields.Boolean(
         "Is the woman lactating / breast feeding?")
     breast_cancer_history_person = fields.Boolean(
-        "Personal Breast Cancer History")
+        "Does the woman have a personal history of breast cancer?")
     breast_cancer_history_person_text = fields.Text(
         "Personal Breast Cancer History Text",
         states={
@@ -173,7 +173,7 @@ class PatientEvaluation(DeactivableMixin, metaclass=PoolMeta):
             }, depends=['breast_cancer_history_person'])
 
     breast_cancer_history_family = fields.Boolean(
-        "Family Breast Cancer History")
+        "Does the woman's family have a history of breast cancer?")
     breast_cancer_history_family_text = fields.Text(
         "Family Breast Cancer History Text",
         states={
