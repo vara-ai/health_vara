@@ -120,15 +120,11 @@ msgstr "الثدي الأيسر"
 
 msgctxt "model:ir.message,text:evaluation_location_selection_right_breast"
 msgid "Right Breast"
-msgstr " الثدي الأيمن"
+msgstr "الثدي الأيمن"
 
 msgctxt "model:ir.message,text:evaluation_location_selection_both_breasts"
 msgid "Both Breasts"
 msgstr "كلا الثديين"
-
-msgctxt "selection:gnuhealth.patient.evaluation,breast_operational_intervention_type:"
-msgid ""
-msgstr ""
 
 msgctxt "selection:gnuhealth.patient.evaluation,breast_operational_intervention_type:"
 msgid "Mastectomy"
@@ -144,11 +140,11 @@ msgstr "استئصال الكتلة الورمية الحميدة"
 
 msgctxt "selection:gnuhealth.patient.evaluation,breast_operational_intervention_type:"
 msgid "Breast Augmentation Surgery"
-msgstr "جراحة تكبيرالثدي"
+msgstr "جراحة تكبير الثدي"
 
 msgctxt "selection:gnuhealth.patient.evaluation,breast_operational_intervention_type:"
 msgid "Breast Reduction Surgery"
-msgstr "  جراحة تصغير الثدي"
+msgstr "جراحة تصغير الثدي"
 
 msgctxt "selection:gnuhealth.patient.evaluation,breast_operational_intervention_type:"
 msgid "Other"
