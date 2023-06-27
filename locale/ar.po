@@ -150,6 +150,10 @@ msgctxt "selection:gnuhealth.patient.evaluation,breast_operational_intervention_
 msgid "Other"
 msgstr "أخرى"
 
+msgctxt "field:gnuhealth.patient.evaluation,visit_type:"
+msgid "Visit"
+msgstr "سبب الزيارة"
+
 msgctxt "selection:gnuhealth.patient.evaluation,visit_type:"
 msgid "Screening: First-time Routine Screening Visit"
 msgstr "فحص مبكر: فحص لأول مرة"
