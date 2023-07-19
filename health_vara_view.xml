@@ -3,48 +3,16 @@
 contains the full copyright notices and license terms. -->
 <tryton>
     <data>
-        <!-- Mammography Party Views -->
-        <record model="ir.ui.view" id="mammography_party_tree">
-            <field name="model">party.party</field>
-            <field name="type">tree</field>
-            <field name="name">party_tree</field>
-        </record>
-        <record model="ir.ui.view" id="mammography_party_form">
-            <field name="model">party.party</field>
-            <field name="type">form</field>
-            <field name="name">party_form</field>
-        </record>
-
-        <!-- Mammography Patient Views -->
-        <record model="ir.ui.view" id="mammography_patient_tree">
-            <field name="model">gnuhealth.patient</field>
-            <field name="type">tree</field>
-            <field name="name">mammography_patient_tree</field>
-        </record>
         <record model="ir.ui.view" id="mammography_patient_form">
             <field name="model">gnuhealth.patient</field>
-            <field name="type">form</field>
+            <field name="inherit" ref="health.gnuhealth_patient_view_form"/>
             <field name="name">mammography_patient_form</field>
         </record>
 
-        <!-- Mammography Menu -->
-        <menuitem name="Mammography" sequence="0" id="mammography_menu" parent="health_imaging.menu_imaging" icon="gnuhealth.imaging"/>
-
-        <record model="ir.action.act_window" id="act_mammography_patient_view">
-            <field name="name">Mammography Patients</field>
-            <field name="res_model">gnuhealth.patient</field>
-        </record>
-        <menuitem parent="mammography_menu" action="act_mammography_patient_view" id="mammography_menu_patient_view" icon="gnuhealth-patient" sequence="20"/>
-        
-        <record model="ir.action.act_window.view" id="act_mammography_patient_view1">
-            <field name="view" ref="mammography_patient_tree"/>
-            <field name="act_window" ref="act_mammography_patient_view"/>
-            <field name="sequence" eval="10"/>
-        </record>
-        <record model="ir.action.act_window.view" id="act_mammography_patient_view2">
-            <field name="view" ref="mammography_patient_form"/>
-            <field name="act_window" ref="act_mammography_patient_view"/>
-            <field name="sequence" eval="20"/>
+        <record model="ir.ui.view" id="mammography_patient_tree">
+            <field name="model">gnuhealth.patient</field>
+            <field name="inherit" ref="health.gnuhealth_patient_tree"/>
+            <field name="name">mammography_patient_tree</field>
         </record>
 
         <!-- Mammography Result Views -->
@@ -57,6 +25,19 @@ contains the full copyright notices and license terms. -->
             <field name="model">gnuhealth.imaging.test.result</field>
             <field name="type">tree</field>
             <field name="name">imaging_test_result_tree</field>
+        </record>
+
+        <!-- Override menu item view for imaging results tree -->
+        <record model="ir.action.act_window.view" id="act_imaging_test_result_view_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="imaging_test_result_tree"/>
+            <field name="act_window" ref="health_imaging.act_imaging_test_result_view"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_imaging_test_result_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="imaging_test_result_form"/>
+            <field name="act_window" ref="health_imaging.act_imaging_test_result_view"/>
         </record>
 
         <!-- Finding Views -->
