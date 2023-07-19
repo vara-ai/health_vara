@@ -7,33 +7,6 @@ contains the full copyright notices and license terms. -->
             <field name="name">Health Medical Assistant</field>
         </record>
 
-        <!-- Access to Menus -->
-        <record model="ir.ui.menu-res.group" id="menu_access_mammography_admin">
-            <field name="menu" ref="mammography_menu"/>
-            <field name="group" ref="health.group_health_admin"/>
-        </record>
-        <record model="ir.ui.menu-res.group" id="menu_access_mammography_doctor">
-            <field name="menu" ref="mammography_menu"/>
-            <field name="group" ref="health.group_health_doctor"/>
-        </record>
-        <record model="ir.ui.menu-res.group" id="menu_access_mammography_medical_assistant">
-            <field name="menu" ref="mammography_menu"/>
-            <field name="group" ref="group_health_medical_assistant"/>
-        </record>
-
-        <record model="ir.ui.menu-res.group" id="menu_access_mammography_patient_view_admin">
-            <field name="menu" ref="mammography_menu_patient_view"/>
-            <field name="group" ref="health.group_health_admin"/>
-        </record>
-        <record model="ir.ui.menu-res.group" id="menu_access_mammography_patient_view_doctor">
-            <field name="menu" ref="mammography_menu_patient_view"/>
-            <field name="group" ref="health.group_health_doctor"/>
-        </record>
-        <record model="ir.ui.menu-res.group" id="menu_access_mammography_patient_view_medical_assistant">
-            <field name="menu" ref="mammography_menu_patient_view"/>
-            <field name="group" ref="group_health_medical_assistant"/>
-        </record>
-
         <record model="ir.ui.menu-res.group" id="menu_access_health_medical_assistant">
             <field name="menu" ref="health.gnuhealth_menu"/>
             <field name="group" ref="group_health_medical_assistant"/>
