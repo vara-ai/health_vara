@@ -46,6 +46,14 @@ msgctxt "view:gnuhealth.patient.evaluation:"
 msgid "Present Illness"
 msgstr "المرض الحالي"
 
+msgctxt "field:gnuhealth.patient,firstname:"
+msgid "Name"
+msgstr "الاسم"
+
+msgctxt "field:gnuhealth.patient,mobile:"
+msgid "Mobile"
+msgstr "رقم التلفون"
+
 msgctxt "field:gnuhealth.patient.evaluation,breast_cancer_history_family:"
 msgid "Does the woman's family have a history of breast cancer?"
 msgstr "هل لدى عائلة المريضة تاريخ من الاصابة في سرطان الثدي؟"

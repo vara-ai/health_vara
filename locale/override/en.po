@@ -1,3 +1,7 @@
 msgctxt "field:gnuhealth.patient,dob:health."
 msgid "DoB"
 msgstr "Date of Birth"
+
+msgctxt "field:gnuhealth.patient,lastname:"
+msgid "Lastname"
+msgstr "Last Names"

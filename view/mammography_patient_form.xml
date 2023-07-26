@@ -8,11 +8,16 @@ contains the full copyright notices and license terms. -->
             <!-- Mammography Patient -->
             <separator string="Patient Summary" id="sep_patient_summary" colspan="4"/>
             <group id="patient_summary">
-                <label name="name"/>
-                <field name="name" colspan="2"/>
+                <label name="firstname"/>
+                <field name="firstname"/>
+                <label name="lastname"/>
+                <field name="lastname"/>
+                <label name="gender"/>
                 <field name="gender" width="60"/>
                 <label name="dob"/>
                 <field name="dob" width="80"/>
+                <label name="mobile"/>
+                <field name="mobile"/>
                 <label name="puid"/>
                 <field name="puid"/>
             </group>
