@@ -19,6 +19,10 @@ class Party(metaclass=PoolMeta):
         cls.lastname.states.update(states_required)
         cls.dob.states.update(states_required)
 
+        mobile_field = getattr(cls, 'mobile')
+        setattr(mobile_field, 'setter', 'set_mobile')
+        setattr(mobile_field, 'readonly', False)
+
     @classmethod
     def view_attributes(cls):
         return super().view_attributes() + [
@@ -41,9 +45,61 @@ class Party(metaclass=PoolMeta):
         # 'cjk'  => 'CJK: Family+Given'
         return 'gf'
 
+    @classmethod
+    def set_mobile(cls, parties, _field_name, value):
+        Party = Pool().get('party.party')
+        # treat whitespace values the same as None
+        value = None if (value is None) or (value == '') or (value.isspace()) else value
+
+        for party in parties:
+            mobile = next((mechanisms for
+                           mechanisms in party.contact_mechanisms
+                           if mechanisms.type == 'mobile' and mechanisms.active),
+                          None)
+
+            if value is None and mobile is None:
+                # we have nothing and want nothing, so do nothing!
+                change = None
+            elif value is None:
+                # we had a value, but want nothing, so delete it.
+                change = {'contact_mechanisms': [['delete', [mobile.id]]]}
+            elif mobile is None:
+                # we have no value, but want one, so create it.
+                change = {'contact_mechanisms': [['create', [{'type': 'mobile', 'value': value}]]]}
+            else:
+                # update the existing value with a new one.
+                change = {'contact_mechanisms': [['write', [mobile.id], {'value': value}]]}
+
+            if change:
+                Party.write([party], change)
+
+
+def get_patient_passthrough_val(patient_field_name, passthrough_config_key, default_val):
+    return MammographyPatient.patient_passthrough_fields \
+        .get(patient_field_name, {}) \
+        .get(passthrough_config_key, default_val)
+
+
+def get_patient_passthrough_party_field_name(patient_field_name):
+    return get_patient_passthrough_val(patient_field_name, 'party_field', patient_field_name)
+
+
+def get_patient_passthrough_party_field(patient_field_name):
+    Party = Pool().get('party.party')
+    return getattr(Party, get_patient_passthrough_party_field_name(patient_field_name))
+
 
 class MammographyPatient(metaclass=PoolMeta):
     __name__ = 'gnuhealth.patient'
+
+    # map of patient field names to config for where (party_field) to set the value on the party
+    patient_passthrough_fields = {
+        'firstname': {'party_field': 'name'},
+        'lastname': {},
+        'dob': {},
+        'gender': {},
+        'mobile': {'required': False}
+    }
 
     doctor_referrals = fields.One2Many('ir.attachment',
         'resource', "Doctor's Referrals")
@@ -66,11 +122,77 @@ class MammographyPatient(metaclass=PoolMeta):
     opinion = fields.Text('Opinion')
     recommendation = fields.Text('Recommendation')
 
+    firstname = fields.Function(
+        fields.Char('Name'), 'get_patient_name',
+        searcher='search_patient_name')
+
+    mobile = fields.Function(fields.Char('Mobile'), 'get_mobile')
+
     @classmethod
     def __setup__(cls):
         super().__setup__()
         # Enable the editing of parties from the patient relate
         cls.name.states['readonly'] = False
+        cls.name.states['required'] = False
+
+        # ensures all the patient fields that should pass on values to party
+        # are settable and inherit the 'required' state
+        for patient_field_name in MammographyPatient.patient_passthrough_fields:
+            patient_field = getattr(cls, patient_field_name)
+            setattr(patient_field, 'setter', 'set_passthrough_field')
+            setattr(patient_field, 'readonly', False)
+            setattr(patient_field, 'required', get_patient_passthrough_val(patient_field_name, 'required', True))
+
+    @classmethod
+    def create(cls, vlist):
+        # overrides creation to also create a new party
+        # with sensible defaults derived from the patient fields
+        vlist = [x.copy() for x in vlist]
+        Party = Pool().get('party.party')
+
+        for values in vlist:
+            # sets the default party data
+            party_data = {'fed_country': '',
+                          'active': True,
+                          'is_patient': True,
+                          'is_person': True}
+
+            # passthrough the appropriate values into party_data
+            for patient_field_name in MammographyPatient.patient_passthrough_fields:
+                party_field_name = get_patient_passthrough_party_field_name(patient_field_name)
+                party_data[party_field_name] = values.get(patient_field_name)
+
+            # creates a party, and reference it from the patient by its id
+            party, = Party.create([party_data])
+            values['name'] = party.id
+        return super(MammographyPatient, cls).create(vlist)
+
+    @classmethod
+    def search_patient_name(cls, _name, clause):
+        res = []
+        op = clause[1]
+        value = clause[2]
+        # the party is stored in a field called name,
+        # hence 'name.name' really means 'party.name'
+        res.append(('name.name', op, value))
+        return res
+
+    def get_patient_name(self, _name):
+        # the party is stored in a field called name,
+        # hence 'name.name' really means 'party.name'
+        return self.name.name
+
+    def get_mobile(self, _name):
+        # the party is stored in a field called name,
+        # hence 'name.name' really means 'party.name'
+        return self.name.mobile
+
+    @classmethod
+    def set_passthrough_field(cls, patients, patient_field_name, value):
+        # Passes the value to Party, to be written there instead
+        Party = Pool().get('party.party')
+        party_field_name = get_patient_passthrough_party_field_name(patient_field_name)
+        Party.write([patient.name for patient in patients], {party_field_name: value})
 
 
 screening_types = [
