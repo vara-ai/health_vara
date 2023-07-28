@@ -74,19 +74,14 @@ class Party(metaclass=PoolMeta):
                 Party.write([party], change)
 
 
-def get_patient_passthrough_val(patient_field_name, passthrough_config_key, default_val):
+def get_party_val(patient_field_name, passthrough_config_key, default_val):
     return MammographyPatient.patient_passthrough_fields \
         .get(patient_field_name, {}) \
         .get(passthrough_config_key, default_val)
 
 
-def get_patient_passthrough_party_field_name(patient_field_name):
-    return get_patient_passthrough_val(patient_field_name, 'party_field', patient_field_name)
-
-
-def get_patient_passthrough_party_field(patient_field_name):
-    Party = Pool().get('party.party')
-    return getattr(Party, get_patient_passthrough_party_field_name(patient_field_name))
+def get_party_field_name(patient_field_name):
+    return get_party_val(patient_field_name, 'party_field', patient_field_name)
 
 
 class MammographyPatient(metaclass=PoolMeta):
@@ -141,7 +136,7 @@ class MammographyPatient(metaclass=PoolMeta):
             patient_field = getattr(cls, patient_field_name)
             setattr(patient_field, 'setter', 'set_passthrough_field')
             setattr(patient_field, 'readonly', False)
-            setattr(patient_field, 'required', get_patient_passthrough_val(patient_field_name, 'required', True))
+            setattr(patient_field, 'required', get_party_val(patient_field_name, 'required', True))
 
     @classmethod
     def create(cls, vlist):
@@ -159,7 +154,7 @@ class MammographyPatient(metaclass=PoolMeta):
 
             # passthrough the appropriate values into party_data
             for patient_field_name in MammographyPatient.patient_passthrough_fields:
-                party_field_name = get_patient_passthrough_party_field_name(patient_field_name)
+                party_field_name = get_party_field_name(patient_field_name)
                 party_data[party_field_name] = values.get(patient_field_name)
 
             # creates a party, and reference it from the patient by its id
@@ -191,7 +186,7 @@ class MammographyPatient(metaclass=PoolMeta):
     def set_passthrough_field(cls, patients, patient_field_name, value):
         # Passes the value to Party, to be written there instead
         Party = Pool().get('party.party')
-        party_field_name = get_patient_passthrough_party_field_name(patient_field_name)
+        party_field_name = get_party_field_name(patient_field_name)
         Party.write([patient.name for patient in patients], {party_field_name: value})
 
 
