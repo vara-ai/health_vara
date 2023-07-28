@@ -1,3 +1,7 @@
 msgctxt "field:gnuhealth.patient,dob:health."
 msgid "DoB"
 msgstr "تاريخ الميلاد"
+
+msgctxt "model:ir.ui.menu,name:health.gnuhealth_patients_menu"
+msgid "Patients"
+msgstr "مرضى التصوير الشعاعي للثدي"

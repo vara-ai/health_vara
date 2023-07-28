@@ -5,3 +5,7 @@ msgstr "Date of Birth"
 msgctxt "field:gnuhealth.patient,lastname:"
 msgid "Lastname"
 msgstr "Last Names"
+
+msgctxt "model:ir.ui.menu,name:health.gnuhealth_patients_menu"
+msgid "Patients"
+msgstr "Mammography Patients"
