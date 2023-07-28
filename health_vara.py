@@ -4,6 +4,17 @@ from trytond.i18n import gettext
 from trytond.model import fields, DeactivableMixin
 from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Bool, Eval
+import re
+
+
+def normalise_mobile_number(value):
+    # treat whitespace-only values the same as None
+    value = None if (value is None) or (value == '') or (value.isspace()) else value
+
+    # replace leading '00' with '+' to standardise international numbers
+    value = re.sub('^00', '+', value) if value else None
+
+    return value
 
 
 class Party(metaclass=PoolMeta):
@@ -21,6 +32,7 @@ class Party(metaclass=PoolMeta):
 
         mobile_field = getattr(cls, 'mobile')
         setattr(mobile_field, 'setter', 'set_mobile')
+        setattr(mobile_field, 'searcher', 'search_mobile')
         setattr(mobile_field, 'readonly', False)
 
     @classmethod
@@ -46,10 +58,19 @@ class Party(metaclass=PoolMeta):
         return 'gf'
 
     @classmethod
+    def search_mobile(cls, _name, clause):
+        res = []
+        op = clause[1]
+        value = clause[2]
+
+        res.append(('contact_mechanisms.type', '=', 'mobile'))
+        res.append(('contact_mechanisms.value', op, value))
+        return res
+
+    @classmethod
     def set_mobile(cls, parties, _field_name, value):
         Party = Pool().get('party.party')
-        # treat whitespace values the same as None
-        value = None if (value is None) or (value == '') or (value.isspace()) else value
+        value = normalise_mobile_number(value)
 
         for party in parties:
             mobile = next((mechanisms for
@@ -96,10 +117,17 @@ class MammographyPatient(metaclass=PoolMeta):
         'mobile': {'required': False}
     }
 
+    partner_patient_id = fields.Char('Patient ID', select=True)
+
     doctor_referrals = fields.One2Many('ir.attachment',
         'resource', "Doctor's Referrals")
     evaluations = fields.One2Many('gnuhealth.patient.evaluation', 'patient',
         "Evaluations",
+        domain=[
+            ('patient', '=', Eval('id')),
+            ], depends=['id'])
+    imaging_test_requests = fields.One2Many('gnuhealth.imaging.test.request',
+        'patient', "Imaging Requests",
         domain=[
             ('patient', '=', Eval('id')),
             ], depends=['id'])
@@ -118,10 +146,17 @@ class MammographyPatient(metaclass=PoolMeta):
     recommendation = fields.Text('Recommendation')
 
     firstname = fields.Function(
-        fields.Char('Name'), 'get_patient_name',
-        searcher='search_patient_name')
+        fields.Char('Name'), 'get_firstname',
+        searcher='search_firstname')
 
-    mobile = fields.Function(fields.Char('Mobile'), 'get_mobile')
+    mobile = fields.Function(
+        fields.Char('Mobile', help='Mobile numbers should start with a country code +XX'), 'get_mobile',
+        searcher='search_mobile')
+
+    most_recent_imaging_request_datetime = fields.Function(
+        fields.DateTime('Last Imaging Request', depends=['imaging_test_requests']),
+        'get_most_recent_imaging_request_datetime'
+    )
 
     @classmethod
     def __setup__(cls):
@@ -162,8 +197,13 @@ class MammographyPatient(metaclass=PoolMeta):
             values['name'] = party.id
         return super(MammographyPatient, cls).create(vlist)
 
+    def get_firstname(self, _name):
+        # the party is stored in a field called name,
+        # hence 'name.name' really means 'party.name'
+        return self.name.name
+
     @classmethod
-    def search_patient_name(cls, _name, clause):
+    def search_firstname(cls, _name, clause):
         res = []
         op = clause[1]
         value = clause[2]
@@ -172,15 +212,25 @@ class MammographyPatient(metaclass=PoolMeta):
         res.append(('name.name', op, value))
         return res
 
-    def get_patient_name(self, _name):
-        # the party is stored in a field called name,
-        # hence 'name.name' really means 'party.name'
-        return self.name.name
-
     def get_mobile(self, _name):
         # the party is stored in a field called name,
         # hence 'name.name' really means 'party.name'
         return self.name.mobile
+
+    @classmethod
+    def search_mobile(cls, _name, clause):
+        res = []
+        op = clause[1]
+        value = clause[2]
+        # the party is stored in a field called name,
+        # hence 'name.name' really means 'party.name'
+        res.append(('name.mobile', op, value))
+        return res
+
+    def get_most_recent_imaging_request_datetime(self, _name):
+        if self.imaging_test_requests:
+            dt = max(i.date for i in self.imaging_test_requests)
+            return dt
 
     @classmethod
     def set_passthrough_field(cls, patients, patient_field_name, value):
@@ -188,6 +238,20 @@ class MammographyPatient(metaclass=PoolMeta):
         Party = Pool().get('party.party')
         party_field_name = get_party_field_name(patient_field_name)
         Party.write([patient.name for patient in patients], {party_field_name: value})
+
+    # Overrides to add in the general search by 'partner_patient_id', otherwise identical
+    @classmethod
+    def search_rec_name(cls, _name, clause):
+        if clause[1].startswith('!') or clause[1].startswith('not '):
+            bool_op = 'AND'
+        else:
+            bool_op = 'OR'
+        return [bool_op,
+                ('puid',) + tuple(clause[1:]),
+                ('name',) + tuple(clause[1:]),
+                ('lastname',) + tuple(clause[1:]),
+                ('partner_patient_id',) + tuple(clause[1:]),
+                ]
 
 
 screening_types = [

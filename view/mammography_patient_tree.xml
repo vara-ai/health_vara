@@ -7,7 +7,9 @@ contains the full copyright notices and license terms. -->
         <tree>
             <field name="name" expand="1" widget="char"/>
             <field name="dob" expand="1"/>
-            <field name="puid" expand="1"/>
+            <field name="partner_patient_id" expand="1"/>
+            <field name="mobile" expand="1"/>
+            <field name="most_recent_imaging_request_datetime" expand="1" widget="date"/>
             <field name="lastname" tree_invisible="1"/>
             <field name="active" tree_invisible="1"/>
         </tree>
