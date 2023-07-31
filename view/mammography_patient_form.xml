@@ -20,6 +20,8 @@ contains the full copyright notices and license terms. -->
                 <field name="partner_patient_id"/>
                 <label name="mobile"/>
                 <field name="mobile"/>
+                <label name="puid"/>
+                <field name="puid"/>
             </group>
             <separator string="Doctor's Referrals" id="sep_doctor_referral" colspan="4"/>
             <group id="doctor_referral">
