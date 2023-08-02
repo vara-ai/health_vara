@@ -165,6 +165,17 @@ class MammographyPatient(metaclass=PoolMeta):
         cls.name.states['readonly'] = False
         cls.name.states['required'] = False
 
+        setattr(cls.gender, 'selection',
+                [
+                    (None, ''),
+                    ('m', 'Male'),
+                    ('f', 'Female'),
+                    ('nb', 'Non-binary'),
+                    ('other', 'Other'),
+                    ('nd', 'Non disclosed'),
+                    ('u', 'Unknown'),
+                ])
+
         # ensures all the patient fields that should pass on values to party
         # are settable and inherit the 'required' state
         for patient_field_name in MammographyPatient.patient_passthrough_fields:
@@ -196,6 +207,13 @@ class MammographyPatient(metaclass=PoolMeta):
             party, = Party.create([party_data])
             values['name'] = party.id
         return super(MammographyPatient, cls).create(vlist)
+
+    @staticmethod
+    def default_gender():
+        return 'f'
+
+    def get_patient_gender(self, _name):
+        return self.name.gender
 
     def get_firstname(self, _name):
         # the party is stored in a field called name,
