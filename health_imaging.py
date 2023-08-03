@@ -6,8 +6,9 @@ from trytond.config import config
 from trytond.model import ModelSQL, ModelView, fields
 from trytond.modules.health.core import (
     compute_age_from_dates, get_health_professional)
-from trytond.pool import PoolMeta
-from trytond.pyson import Eval
+from trytond.pool import PoolMeta, Pool
+from trytond.pyson import Eval, PYSONEncoder
+from trytond.wizard import Wizard, StateAction
 
 if config.getboolean('health_vara', 'filestore', default=True):
     file_id = 'result_report_cache_id'
@@ -45,6 +46,10 @@ class ImagingTestRequest(metaclass=PoolMeta):
         for values in vlist:
             values['study_instance_uid'] = generate_uid(prefix=None)
         return super(ImagingTestRequest, cls).create(vlist)
+
+    @staticmethod
+    def default_state():
+        return 'requested'
 
     def get_accession_number(self, name):
         return '%s%s' % (_accession_number_prefix, str(self.id))
@@ -637,3 +642,106 @@ class BIRADS(ModelSQL, ModelView):
 
     def get_rec_name(self, name):
         return '%s: %s' % (self.code, self.classification)
+
+
+class RequestPatientImagingTestOverride(Wizard):
+    'Request Patient Imaging Test'
+    __name__ = 'gnuhealth.patient.imaging.test.request'
+
+    open_requests = StateAction('health_imaging.act_imaging_test_request_view')
+
+    created_requests = []
+
+    def transition_request(self):
+        ImagingTestRequest = Pool().get('gnuhealth.imaging.test.request')
+        request_number = self.generate_code()
+        imaging_tests = []
+        for test in self.start.tests:
+            imaging_test = {
+                'request': request_number,
+                'requested_test': test.id,
+                'patient': self.start.patient.id
+            }
+            if self.start.doctor:
+                imaging_test['doctor'] = self.start.doctor.id
+            if self.start.context:
+                imaging_test['context'] = self.start.context.id
+
+            imaging_test['date'] = self.start.date
+            imaging_test['urgent'] = self.start.urgent
+            imaging_tests.append(imaging_test)
+
+        self.created_requests = ImagingTestRequest.create(imaging_tests)
+        return 'open_requests'
+
+    def do_open_requests(self, action):
+        # Normally the action view we are returning has 3 premade domains
+        # requested, done, and all.
+        # We want to see everything without tabs in this case, so we remove the tabs
+        action['domains'] = []
+        # we set a fixed (invisible) domain for this patient, so we will only ever see this patient's requests in the
+        # view
+        action['pyson_domain'] = PYSONEncoder().encode([('patient.id', '=', self.start.patient.id)])
+        # and initially we set the search to be only for the TestRequests we just created
+        action['pyson_search_value'] = PYSONEncoder().encode([('id', 'in', [r.id for r in self.created_requests])])
+
+        return action, {}
+
+
+class RequestPatientImagingTestStart(ModelView):
+    'Request Patient Imaging Test Start'
+    __name__ = 'gnuhealth.patient.imaging.test.request.start'
+
+    existing_requests_count = fields.Function(
+        fields.Integer('Existing Imaging Test Requests'),
+        'on_change_with_existing_requests_count'
+    )
+
+    existing_requests_description = fields.Function(
+        fields.Char('Existing Imaging Test Requests Description',
+                    states={
+                        'invisible': (Eval('existing_requests_count', 0) == 0),
+                    },
+                    depends=['existing_requests_count']
+                    ),
+        'on_change_with_existing_requests_description'
+    )
+
+    @classmethod
+    def view_attributes(cls):
+        return super().view_attributes() + [
+            ('//image[@id="warning-icon"]', "states", {
+                'invisible': (Eval('existing_requests_count', 0) == 0),
+            })]
+
+    @fields.depends('patient')
+    def on_change_with_existing_requests_count(self, _name=None):
+        ImagingTestRequest = Pool().get('gnuhealth.imaging.test.request')
+
+        if self.patient:
+            return len(ImagingTestRequest.search([
+                ('patient.id', '=', self.patient.id),
+                ('state', 'in', ['draft', 'requested'])
+            ]))
+        else:
+            return 0
+
+    @fields.depends('existing_requests_count', 'patient')
+    def on_change_with_existing_requests_description(self, _name=None):
+        if self.existing_requests_count == 0:
+            return None
+        elif self.existing_requests_count == 1:
+            return 'There is 1 outstanding imaging requests for the patient'
+        else:
+            return 'There are {} outstanding imaging requests for the patient'.format(self.existing_requests_count)
+
+    def get_existing_requests_icon(self, _name):
+        return 'tryton-warning'
+
+    @staticmethod
+    def default_tests():
+        ImagingTest = Pool().get('gnuhealth.imaging.test')
+        # add any tests that have the code 'MG'
+        mg_tests = ImagingTest.search([('code', '=', 'MG'),
+                                       ('active', '=', True)])
+        return [test.id for test in mg_tests]
