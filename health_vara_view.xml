@@ -3,6 +3,7 @@
 contains the full copyright notices and license terms. -->
 <tryton>
     <data>
+        <!-- Mammography Patient Views -->
         <record model="ir.ui.view" id="mammography_patient_form">
             <field name="model">gnuhealth.patient</field>
             <field name="inherit" ref="health.gnuhealth_patient_view_form"/>
@@ -13,6 +14,18 @@ contains the full copyright notices and license terms. -->
             <field name="model">gnuhealth.patient</field>
             <field name="inherit" ref="health.gnuhealth_patient_tree"/>
             <field name="name">mammography_patient_tree</field>
+        </record>
+
+        <!-- Create Imaging Request Wizard View -->
+        <record model="ir.ui.view" id="patient_imaging_test_request_start_view_form">
+            <field name="model">gnuhealth.patient.imaging.test.request.start</field>
+            <field name="inherit" ref="health_imaging.patient_imaging_test_request_start_view_form"/>
+            <field name="name">patient_imaging_test_request_start_form</field>
+        </record>
+
+        <!-- Deactivate the 'draft' domain for Mammography requests as we skip that state -->
+        <record model="ir.action.act_window.domain" id="health_imaging.act_imaging_test_request_domain_draft">
+            <field name="active" eval="False"/>
         </record>
 
         <!-- Mammography Result Views -->
@@ -33,6 +46,38 @@ contains the full copyright notices and license terms. -->
             <field name="view" ref="imaging_test_result_tree"/>
             <field name="act_window" ref="health_imaging.act_imaging_test_result_view"/>
         </record>
+
+        <!-- Improved icons for mammography imaging requests/results -->
+        <record model="ir.ui.icon" id="warning_icon">
+            <field name="name">gnuhealth.warning</field>
+            <field name="path">icons/warning.svg</field>
+        </record>
+
+        <record model="ir.ui.icon" id="imaging_icon">
+            <field name="name">gnuhealth.imaging-result</field>
+            <field name="path">icons/mammo_imaging_result.svg</field>
+        </record>
+
+        <record model="ir.ui.icon" id="new_imaging_request_icon">
+            <field name="name">gnuhealth-execute</field>
+            <field name="path">icons/mammo_new_imaging_request.svg</field>
+            <field name="sequence">5</field>
+        </record>
+
+        <record model="ir.ui.icon" id="imaging_request_icon">
+            <field name="name">gnuhealth.imaging-request</field>
+            <field name="path">icons/mammo_imaging_request.svg</field>
+        </record>
+
+        <menuitem parent="health_imaging.menu_imaging"
+                  action="health_imaging.act_imaging_test_request_view"
+                  id="health_imaging.menu_imaging_test_request_view" icon="gnuhealth.imaging-request"
+                  sequence="20"/>
+
+        <menuitem parent="health_imaging.menu_imaging"
+                  action="health_imaging.act_imaging_test_result_view"
+                  id="health_imaging.menu_imaging_test_result_view" icon="gnuhealth.imaging-result"
+                  sequence="30"/>
 
         <record model="ir.action.act_window.view" id="act_imaging_test_result_view_form">
             <field name="sequence" eval="20"/>

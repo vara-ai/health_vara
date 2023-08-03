@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository
+contains the full copyright notices and license terms. -->
+
+<data>
+    <xpath expr="/form/label[@name='patient']" position="before">
+        <newline/>
+    </xpath>
+
+    <xpath expr="/form/field[@name='patient']" position="after">
+        <image id="warning-icon" name="gnuhealth.warning" xexpand="0" xfill="0" size="36"/>
+        <field name="existing_requests_description"/>
+        <newline/>
+    </xpath>
+</data>

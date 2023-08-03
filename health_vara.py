@@ -1,7 +1,7 @@
 # The COPYRIGHT file at the top level of this repository
 # contains the full copyright notices and license terms.
 from trytond.i18n import gettext
-from trytond.model import fields, DeactivableMixin
+from trytond.model import fields, DeactivableMixin, ModelView
 from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Bool, Eval
 import re
@@ -179,6 +179,17 @@ class MammographyPatient(metaclass=PoolMeta):
             setattr(patient_field, 'setter', 'set_passthrough_field')
             setattr(patient_field, 'readonly', False)
             setattr(patient_field, 'required', get_party_val(patient_field_name, 'required', True))
+
+        # Buttons
+        cls._buttons.update({
+            'create_imaging_request': {},
+        })
+
+    @classmethod
+    @ModelView.button
+    @ModelView.button_action('health_imaging.patient_imaging_test_request')
+    def create_imaging_request(cls, records):
+        pass
 
     @classmethod
     def create(cls, vlist):
