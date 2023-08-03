@@ -170,10 +170,6 @@ class MammographyPatient(metaclass=PoolMeta):
                     (None, ''),
                     ('m', 'Male'),
                     ('f', 'Female'),
-                    ('nb', 'Non-binary'),
-                    ('other', 'Other'),
-                    ('nd', 'Non disclosed'),
-                    ('u', 'Unknown'),
                 ])
 
         # ensures all the patient fields that should pass on values to party
