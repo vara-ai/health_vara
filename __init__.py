@@ -21,7 +21,6 @@ def register():
         health_imaging.RequestPatientImagingTestStart,
         module='health_vara', type_='model')
     Pool.register(
-        health_imaging.RequestPatientImagingTestOverride,
         module='health_vara', type_='wizard')
     Pool.register(
         health_vara_report.VaraFindingsReport,

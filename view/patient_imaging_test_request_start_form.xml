@@ -8,7 +8,7 @@ contains the full copyright notices and license terms. -->
     </xpath>
 
     <xpath expr="/form/field[@name='patient']" position="after">
-        <image id="warning-icon" name="gnuhealth.warning" xexpand="0" xfill="0" size="36"/>
+        <image name="gnuhealth.warning" xexpand="0" xfill="0" size="32"/>
         <field name="existing_requests_description"/>
         <newline/>
     </xpath>

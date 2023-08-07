@@ -32,17 +32,17 @@ contains the full copyright notices and license terms. -->
                 <field name="evaluations" string="" colspan="4"
                        view_ids="health_vara.patient_evaluation_tree,health_vara.patient_evaluation_form"/>
             </group>
-            <separator string="Mammography Reports" id="sep_mammography_report" colspan="4"/>
-            <group id="pre-report-links">
-                <button name="create_imaging_request" string="Create imaging request" icon="gnuhealth-execute"/>
-            </group>
             <newline/>
+            <group id="pre-report-links" xexpand="0" xfill="0">
+                <button name="create_imaging_request" icon="gnuhealth-execute"/>
+            </group>
+            <separator string="Mammography Reports" id="sep_mammography_report" colspan="4"/>
             <group id="patient_mammography_report">
                 <field name="imaging_test_results" string="" colspan="4"
                        view_ids="health_vara.imaging_test_result_tree,health_imaging.view_imaging_test_result_form"/>
             </group>
             <newline/>
-            <group id="post-report-links">
+            <group id="post-report-links" xexpand="0" xfill="0">
                 <link icon="gnuhealth.imaging-result" name="health_imaging.act_imaging_test_result_view2"/>
             </group>
             <separator string="Imaging Findings" id="sep_patient_findings" colspan="4"/>
