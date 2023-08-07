@@ -644,50 +644,6 @@ class BIRADS(ModelSQL, ModelView):
         return '%s: %s' % (self.code, self.classification)
 
 
-class RequestPatientImagingTestOverride(Wizard):
-    'Request Patient Imaging Test'
-    __name__ = 'gnuhealth.patient.imaging.test.request'
-
-    open_requests = StateAction('health_imaging.act_imaging_test_request_view')
-
-    created_requests = []
-
-    def transition_request(self):
-        ImagingTestRequest = Pool().get('gnuhealth.imaging.test.request')
-        request_number = self.generate_code()
-        imaging_tests = []
-        for test in self.start.tests:
-            imaging_test = {
-                'request': request_number,
-                'requested_test': test.id,
-                'patient': self.start.patient.id
-            }
-            if self.start.doctor:
-                imaging_test['doctor'] = self.start.doctor.id
-            if self.start.context:
-                imaging_test['context'] = self.start.context.id
-
-            imaging_test['date'] = self.start.date
-            imaging_test['urgent'] = self.start.urgent
-            imaging_tests.append(imaging_test)
-
-        self.created_requests = ImagingTestRequest.create(imaging_tests)
-        return 'open_requests'
-
-    def do_open_requests(self, action):
-        # Normally the action view we are returning has 3 premade domains
-        # requested, done, and all.
-        # We want to see everything without tabs in this case, so we remove the tabs
-        action['domains'] = []
-        # we set a fixed (invisible) domain for this patient, so we will only ever see this patient's requests in the
-        # view
-        action['pyson_domain'] = PYSONEncoder().encode([('patient.id', '=', self.start.patient.id)])
-        # and initially we set the search to be only for the TestRequests we just created
-        action['pyson_search_value'] = PYSONEncoder().encode([('id', 'in', [r.id for r in self.created_requests])])
-
-        return action, {}
-
-
 class RequestPatientImagingTestStart(ModelView):
     'Request Patient Imaging Test Start'
     __name__ = 'gnuhealth.patient.imaging.test.request.start'
@@ -710,7 +666,7 @@ class RequestPatientImagingTestStart(ModelView):
     @classmethod
     def view_attributes(cls):
         return super().view_attributes() + [
-            ('//image[@id="warning-icon"]', "states", {
+            ('//image[@name="gnuhealth.warning"]', "states", {
                 'invisible': (Eval('existing_requests_count', 0) == 0),
             })]
 

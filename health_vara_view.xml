@@ -16,6 +16,12 @@ contains the full copyright notices and license terms. -->
             <field name="name">mammography_patient_tree</field>
         </record>
 
+        <record model="ir.model.button" id="patient_create_imaging_request">
+            <field name="name">create_imaging_request</field>
+            <field name="string">Create Imaging Request</field>
+            <field name="model" search="[('model', '=', 'gnuhealth.patient')]"/>
+        </record>
+
         <!-- Create Imaging Request Wizard View -->
         <record model="ir.ui.view" id="patient_imaging_test_request_start_view_form">
             <field name="model">gnuhealth.patient.imaging.test.request.start</field>
