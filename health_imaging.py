@@ -691,9 +691,6 @@ class RequestPatientImagingTestStart(ModelView):
         else:
             return 'There are {} outstanding imaging requests for the patient'.format(self.existing_requests_count)
 
-    def get_existing_requests_icon(self, _name):
-        return 'tryton-warning'
-
     @staticmethod
     def default_tests():
         ImagingTest = Pool().get('gnuhealth.imaging.test')
