@@ -1,11 +1,17 @@
 # The COPYRIGHT file at the top level of this repository
 # contains the full copyright notices and license terms.
+from datetime import datetime, timedelta
+import logging
+import re
+from sql.aggregate import Max
+from sql.functions import ToChar
+from sql.operators import And, Equal, LessEqual, GreaterEqual, Or, Not
 from trytond.i18n import gettext
 from trytond.model import fields, DeactivableMixin, ModelView
 from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Bool, Eval
-import re
 
+logger = logging.getLogger(__name__)
 
 def normalise_mobile_number(value):
     # treat whitespace-only values the same as None
@@ -64,8 +70,23 @@ class Party(metaclass=PoolMeta):
         value = clause[2]
 
         res.append(('contact_mechanisms.type', '=', 'mobile'))
-        res.append(('contact_mechanisms.value', op, value))
+        res.append(('contact_mechanisms.rec_name', op, value))
         return res
+
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        if clause[1].startswith('!') or clause[1].startswith('not '):
+            bool_op = 'AND'
+        else:
+            bool_op = 'OR'
+
+        base = super().search_rec_name(name, clause)
+
+        # GnuHealth module removes the contact mechanisms from the global search
+        # This adds it back in again, ontop of the usual logic
+        return [bool_op,
+                base,
+                ('contact_mechanisms.rec_name',) + tuple(clause[1:]),]
 
     @classmethod
     def set_mobile(cls, parties, _field_name, value):
@@ -103,6 +124,37 @@ def get_party_val(patient_field_name, passthrough_config_key, default_val):
 
 def get_party_field_name(patient_field_name):
     return get_party_val(patient_field_name, 'party_field', patient_field_name)
+
+
+def datetime_sql_where_clause(original_op, value, column):
+    # breaks the op into the usual part e.g. '='
+    # and boolean for if the operator should be "not-ed" e.g. True for '!=' and 'not like', False for '='
+    opposite_op = (original_op.startswith('!') or original_op.startswith('not '))
+    op = original_op.replace('!', '').replace('not ', '')
+
+    end_of_day = value
+    if isinstance(end_of_day, datetime):
+        end_of_day = value + timedelta(days=1)
+
+    Operator = fields.SQL_OPERATORS[op]
+    if op == '=' and value is None:
+        where = Equal(column, value)
+    elif op == '=':
+        where = And((GreaterEqual(column, value),
+                     LessEqual(column, end_of_day)))
+    elif op in ('like', 'ilike'):
+        where = Operator(ToChar(column), value)
+    elif op == 'in':
+        where = Or(list(datetime_sql_where_clause('=', i, column) for i in value))
+    elif op.startswith('<'):
+        where = Operator(column, end_of_day)
+    else:
+        where = Operator(column, value)
+
+    if opposite_op:
+        where = Not(where)
+
+    return where
 
 
 class MammographyPatient(metaclass=PoolMeta):
@@ -155,7 +207,8 @@ class MammographyPatient(metaclass=PoolMeta):
 
     most_recent_imaging_request_datetime = fields.Function(
         fields.DateTime('Last Imaging Request', depends=['imaging_test_requests']),
-        'get_most_recent_imaging_request_datetime'
+        'get_most_recent_imaging_request_datetime',
+        searcher='search_most_recent_imaging_request_datetime'
     )
 
     @classmethod
@@ -256,6 +309,47 @@ class MammographyPatient(metaclass=PoolMeta):
         if self.imaging_test_requests:
             dt = max(i.date for i in self.imaging_test_requests)
             return dt
+
+    @classmethod
+    def search_most_recent_imaging_request_datetime(cls, _name, clause):
+        name, op, value = clause
+
+        patient = cls.__table__()
+
+        ImagingTestRequest = Pool().get('gnuhealth.imaging.test.request')
+        imaging_test_requests = ImagingTestRequest.__table__()
+
+        patient_with_requests = patient.join(
+            imaging_test_requests,
+            'LEFT',
+            condition=patient.id == imaging_test_requests.patient
+        )
+
+        max_date_col = Max(imaging_test_requests.date).as_('max_date')
+        where = datetime_sql_where_clause(op, value, max_date_col)
+
+        grouped_patients = patient_with_requests.select(patient.id, max_date_col, group_by=patient.id)
+        max_date_query = grouped_patients.select(grouped_patients.id, where=where)
+        
+        return [('id', 'in', max_date_query)]
+
+    @classmethod
+    def order_most_recent_imaging_request_datetime(cls, tables):
+        patient, _ = tables[None]
+        grouped_requests = tables.get('imaging_test_requests')
+
+        if grouped_requests is None:
+            ImagingTestRequest = Pool().get('gnuhealth.imaging.test.request')
+            imaging_test_requests = ImagingTestRequest.__table__()
+            max_date_col = Max(imaging_test_requests.date).as_('max_date')
+            grouped_requests = imaging_test_requests.select(
+                imaging_test_requests.patient,
+                max_date_col,
+                group_by=imaging_test_requests.patient
+            )
+            tables['imaging_test_requests'] = {None: (grouped_requests, grouped_requests.patient == patient.id)}
+
+        return [grouped_requests.max_date]
 
     @classmethod
     def set_passthrough_field(cls, patients, patient_field_name, value):
