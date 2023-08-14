@@ -7,6 +7,24 @@ from trytond.pyson import Bool, Eval
 import re
 
 
+
+class User(metaclass=PoolMeta):
+    __name__ = 'res.user'
+
+    @staticmethod
+    def default_language():
+        preferred_language = 'en'
+
+        Lang = Pool().get('ir.lang')
+        languages = Lang.search([
+            ('code', '=', preferred_language),
+            ('translatable', '=', True)
+        ])
+
+        if len(languages) > 0:
+            return languages[0].id
+
+
 def normalise_mobile_number(value):
     # treat whitespace-only values the same as None
     value = None if (value is None) or (value == '') or (value.isspace()) else value
