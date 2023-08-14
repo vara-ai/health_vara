@@ -146,7 +146,7 @@ def datetime_sql_where_clause(original_op, value, column):
         where = Operator(ToChar(column), value)
     elif op == 'in':
         where = Or(list(datetime_sql_where_clause('=', i, column) for i in value))
-    elif op.startswith('<'):
+    elif op in ('>', '<='):
         where = Operator(column, end_of_day)
     else:
         where = Operator(column, value)
