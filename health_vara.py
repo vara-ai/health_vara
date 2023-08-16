@@ -340,9 +340,8 @@ class MammographyPatient(metaclass=PoolMeta):
     # `tables` is mutable and altering it changes what joins will be cached and used when ordering.
     def order_most_recent_imaging_request_datetime(cls, tables):
         patient, _ = tables[None]
-        grouped_requests = tables.get('imaging_test_requests')
 
-        if grouped_requests is None:
+        if 'imaging_test_requests' not in tables:
             ImagingTestRequest = Pool().get('gnuhealth.imaging.test.request')
             imaging_test_requests = ImagingTestRequest.__table__()
 
@@ -357,6 +356,8 @@ class MammographyPatient(metaclass=PoolMeta):
                     grouped_requests,                       # to 'grouped_requests' table (in this case a subquery)
                     grouped_requests.patient == patient.id  # using this condition
                 )}
+        else:
+            grouped_requests, _ = tables['imaging_test_requests'][None]
 
         return [grouped_requests.max_date]
 
