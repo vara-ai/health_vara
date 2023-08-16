@@ -126,7 +126,7 @@ def get_party_field_name(patient_field_name):
     return get_party_val(patient_field_name, 'party_field', patient_field_name)
 
 
-def datetime_sql_where_clause(original_op, value, column):
+def matching_datetime_sql_clause(original_op, value, column):
     # breaks the op into the usual part e.g. '='
     # and boolean for if the operator should be "not-ed" e.g. True for '!=' and 'not like', False for '='
     opposite_op = (original_op.startswith('!') or original_op.startswith('not '))
@@ -145,7 +145,7 @@ def datetime_sql_where_clause(original_op, value, column):
     elif op in ('like', 'ilike'):
         where = Operator(ToChar(column), value)
     elif op == 'in':
-        where = Or(list(datetime_sql_where_clause('=', i, column) for i in value))
+        where = Or(list(matching_datetime_sql_clause('=', i, column) for i in value))
     elif op in ('>', '<='):
         where = Operator(column, end_of_day)
     else:
@@ -311,6 +311,7 @@ class MammographyPatient(metaclass=PoolMeta):
             return dt
 
     @classmethod
+    # https://docs.tryton.org/projects/server/en/latest/ref/fields.html#trytond.model.fields.Function.searcher
     def search_most_recent_imaging_request_datetime(cls, _name, clause):
         name, op, value = clause
 
@@ -319,21 +320,24 @@ class MammographyPatient(metaclass=PoolMeta):
         ImagingTestRequest = Pool().get('gnuhealth.imaging.test.request')
         imaging_test_requests = ImagingTestRequest.__table__()
 
-        patient_with_requests = patient.join(
-            imaging_test_requests,
-            'LEFT',
-            condition=patient.id == imaging_test_requests.patient
-        )
+        patient_with_latest_appointment = (
+            patient.join(
+                imaging_test_requests,
+                'LEFT',
+                condition=patient.id == imaging_test_requests.patient
+            ).select(
+                patient.id,
+                having=(matching_datetime_sql_clause(op, value, Max(imaging_test_requests.date))),
+                group_by=patient.id
+            ))
 
-        max_date_col = Max(imaging_test_requests.date).as_('max_date')
-        where = datetime_sql_where_clause(op, value, max_date_col)
-
-        grouped_patients = patient_with_requests.select(patient.id, max_date_col, group_by=patient.id)
-        max_date_query = grouped_patients.select(grouped_patients.id, where=where)
-        
-        return [('id', 'in', max_date_query)]
+        return [('id', 'in', patient_with_latest_appointment)]
 
     @classmethod
+    # https://docs.tryton.org/projects/server/en/latest/ref/fields.html#ordering
+    # the tables value is weird, specifically 'None' is often used to reference the default table,
+    # i.e. this classes table, the table for the Tryton type 'gnuhealth.patient' in our case.
+    # `tables` is mutable and altering it changes what joins will be cached and used when ordering.
     def order_most_recent_imaging_request_datetime(cls, tables):
         patient, _ = tables[None]
         grouped_requests = tables.get('imaging_test_requests')
@@ -341,13 +345,18 @@ class MammographyPatient(metaclass=PoolMeta):
         if grouped_requests is None:
             ImagingTestRequest = Pool().get('gnuhealth.imaging.test.request')
             imaging_test_requests = ImagingTestRequest.__table__()
-            max_date_col = Max(imaging_test_requests.date).as_('max_date')
+
             grouped_requests = imaging_test_requests.select(
                 imaging_test_requests.patient,
-                max_date_col,
+                Max(imaging_test_requests.date).as_('max_date'),
                 group_by=imaging_test_requests.patient
             )
-            tables['imaging_test_requests'] = {None: (grouped_requests, grouped_requests.patient == patient.id)}
+
+            tables['imaging_test_requests'] = {
+                None: (                                     # join from the default table (specified by None)
+                    grouped_requests,                       # to 'grouped_requests' table (in this case a subquery)
+                    grouped_requests.patient == patient.id  # using this condition
+                )}
 
         return [grouped_requests.max_date]
 
