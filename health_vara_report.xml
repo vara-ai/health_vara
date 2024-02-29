@@ -11,6 +11,9 @@ contains the full copyright notices and license terms. -->
             <field name="report_name">patient.vara.findings</field>
             <field name="report">health_vara/report/patient_vara_findings.fodt</field>
             <field name="extension">pdf</field>
+            <!-- it is considered unsafe to produce this report right now. Disabling rather than deleting and leaving
+                 the code since I don't want to find how to do it again in future-->
+            <field name="active" eval="False"/>
         </record>
         <record model="ir.action.keyword" id="report_patient_vara_findings_keyword">
             <field name="keyword">form_print</field>
